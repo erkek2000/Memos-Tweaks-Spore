@@ -1,0 +1,7 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Change Archetype: Diplomat"
+int32 missionAcceptCost 1000000
+uint32 missionChangeArchetypeNumActionsNeeded 1
+key missionChangeArchetypeTo diplomat
+key missionConversation mission_change_archetype_diplomat
+key missionType ChangeArchetype

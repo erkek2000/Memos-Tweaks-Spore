@@ -1,0 +1,38 @@
+string16 description "Default mission template"
+float missionAbortPunishmentRelation -1.2
+int32 missionAcceptCost 0
+float missionAccidentProneRewardMoney 0
+bool missionCanAbort true
+float missionDuration 0
+floats missionDurationEmpireMultiplier
+	1
+	0.9
+	0.8
+	0.7
+	0.6
+	0.5
+end
+float missionFailPunishmentRelation -1.5
+float missionGenericRewardMoney 0
+float missionGenerousRewardMoney 0
+bool missionIsEvent false
+bool missionIsTutorial false
+float missionLandmarkSearchRadius 3
+int32 missionNumJumps 2
+bool missionPickClosestStar false
+bool missionPreferAllies false
+bool missionPreferEnemies false
+float missionRangeMax 2.5
+float missionRangeMin 0
+float missionRejectPunishmentRelation -0.5
+floats missionRewardEmpireMultiplier
+	1
+	1.5
+	2
+	3
+	4
+	5
+end
+float missionStingyRewardMoney 0
+bool missionVisibleToPlayer true
+uint32 0x61E37E5F 0x74bf58cb

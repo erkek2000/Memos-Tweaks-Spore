@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_statues_01
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_statues_01
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xb0adf9b0) "The Hand of Quimby"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xc914ca51) "The original hand was rumored to be clasping a writing device. Legend has it that if you encounter the hand your life will be well organized."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sculpture_01.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 150000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af453) "Rare Statues"
+end
+int32 spaceTradingRareGroupID 3
+key spaceTradingType rare

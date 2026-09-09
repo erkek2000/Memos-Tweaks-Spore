@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_01
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x57b81821) "Stone of Force Vol.1"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xe84f75a0) "The universe seethes with violence.  It came into being in a vast explosion.  Giant black holes lurk at the center of galaxies.  Supernovas, gamma ray bursters, and pulsars destroy all life within reach."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_warrior_01.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierWarrior 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x7c4c7967) "Stones of Force"
+end
+int32 spaceTradingRareGroupID 20
+key spaceTradingType rare

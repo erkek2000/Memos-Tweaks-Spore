@@ -1,0 +1,32 @@
+key missionManagerDefaultDisasterIcon graphics_misc_2~!0x97D3B418.png
+key missionManagerDefaultMissionIcon graphics_misc_2~!icon_mission.png
+float missionManagerGapBetweenColonyMissions 60
+float missionManagerGapBetweenNPCMissions 120
+uint32 missionManagerMaxNumMissions 40
+uint32 missionManagerMinEmpireSizeForArchetypeMissions 4
+keys missionManagerTeachingExpandMissions
+	TutorialColonize
+	TutorialTerraform
+	TutorialTradespice
+	TutorialTraderare
+	TutorialSetupTradeRoute
+	TutorialWar
+end
+keys missionManagerTeachingExploreMissions
+	TutorialFindAliens
+	TutorialFindRare
+	TutorialColorTerrainPurple
+end
+keys missionManagerTeachingInteractMissions
+	TutorialFindAliens
+	TutorialTradespice
+	TutorialSetupTradeRoute
+	TutorialMakeally
+	TutorialWar
+end
+uint32s missionManagerTrackColors
+	0xffae84dc
+	0xffdc5217
+	0xff12c430
+	0xffdccf00
+end

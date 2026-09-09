@@ -1,0 +1,15 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Bribe"
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0xb5b2991e) "Bribe"
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+float spaceToolMaxRange 60
+float spaceToolRechargeRate 2
+key spaceToolStrategy artillery
+key spaceToolType weapon
+int32 spaceToolUseCost 1
+key spaceToolWeaponSubType Projectile
+key toolProjectileType bribe

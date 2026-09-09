@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_relics_05
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_relic_05
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xb02e21d1) "The History of Spore"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x3dac8270) "These rotting tomes chronicle the meteoric rise and abrupt fall of a long-dead civilization. Their tattered pages, though utterly compelling, reveal little in the way of useful information. Except for a chicken soup recipe scribbled in the margin. That's "
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_relics_05.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 22500
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af455) "Rare Relics"
+end
+int32 spaceTradingRareGroupID 1
+key spaceTradingType rare

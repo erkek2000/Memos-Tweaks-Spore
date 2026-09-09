@@ -1,0 +1,47 @@
+texts spaceToolDescription
+	(spacegame_tools!0xbe68817f) "Global Mind Erase"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xd4f93796) "Subdues all the inhabitants of a planet, they will not attack."
+end
+key spaceToolImageID ufotools~!spg_social_globalminderase.png
+float spaceTradingAbundance 5
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 50000
+float spaceTradingChance 3
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 100
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 100
+float spaceTradingChancePlayerDiplomat 100
+float spaceTradingChancePlayerEcologist 100
+float spaceTradingChancePlayerKnight 100
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 100
+float spaceTradingChancePlayerTrader 100
+float spaceTradingChancePlayerWanderer 100
+float spaceTradingChancePlayerWarrior 100
+float spaceTradingChancePlayerZealot 100
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 100
+float spaceTradingChanceTrader 100
+float spaceTradingChanceWarrior 0
+float spaceTradingChanceZealot 100
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierEcologist 0.6
+float spaceTradingCostMultiplierShaman 0.6
+float spaceTradingCostMultiplierTrader 0.6
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierZealot 0.5
+key spaceTradingExchangeFor globalminderase.prop
+uint32 spaceTradingQuantityToOffer 10
+key spaceTradingRequiresBadge brainsurgeon-3
+key spaceTradingRequiresBadgeOr cleaner-3
+int32 spaceTradingRequiresTier 5
+key spaceTradingToolClass social
+int32 spaceTradingToolReofferRate 60
+key spaceTradingType tool
+key toolGenericEffectID SG_ufo_global_mind_erase

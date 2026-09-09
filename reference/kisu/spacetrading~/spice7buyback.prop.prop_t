@@ -1,0 +1,12 @@
+uint32 spaceEconomySpiceColor 0x00ffffff
+texts spaceToolDescription
+	(kisutweaks!0x00000001) "White Spice"
+end
+texts spaceToolDetailDescription
+	(kisutweaks!0x00000002) "A white spice used in the making of luxurious perfumes."
+end
+uint32s spaceToolImageColors
+	0xffffffff
+end
+key spaceToolImageID ufotools~!spg_cargopas_spice.png
+key spaceTradingType SpiceBuyBack

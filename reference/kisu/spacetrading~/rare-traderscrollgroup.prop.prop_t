@@ -1,0 +1,14 @@
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xc7b5d82b) "Tablets of Prosperity"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x4b54a922) "~blank text~"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+float spaceTradingBaseCost 10000000
+float spaceTradingCostMultiplierTrader 2
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x7d5d9d31) "Tablets of Prosperity"
+end
+int32 spaceTradingRareGroupID 27
+key spaceTradingType group

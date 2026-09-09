@@ -1,0 +1,14 @@
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x6713e0c9) "Stones of Force"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x9d63aee8) "~blank text~"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+float spaceTradingBaseCost 10000000
+float spaceTradingCostMultiplierWarrior 2
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x181feb5f) "Stones of Force"
+end
+int32 spaceTradingRareGroupID 20
+key spaceTradingType group

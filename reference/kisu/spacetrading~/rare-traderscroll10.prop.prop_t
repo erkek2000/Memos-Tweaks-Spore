@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_10
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xc44b4b83) "Tablet of Prosperity No.10"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x4beafb1a) "Possession of this scroll entitles you to a sizeable discount at our boutique!"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_trader_10.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierTrader 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x0be922d9) "Tablets of Prosperity"
+end
+int32 spaceTradingRareGroupID 27
+key spaceTradingType rare

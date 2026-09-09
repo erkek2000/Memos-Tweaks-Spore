@@ -1,0 +1,26 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Laser"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 1
+texts spaceToolDescription
+	(spacegame_tools!0xc5c6da6f) "Laser"
+end
+key spaceToolImageID ufotools~!0x0815A0F5.png
+float spaceToolMaxDamage 100
+float spaceToolMaxRange 150
+float spaceToolMinDamage 100
+float spaceToolMinRange 1
+float spaceToolRechargeRate 5
+key spaceToolStrategy DefaultBeam
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+key toolBeamEffectID SG_turret_laser_beam
+key toolHitCombatantEffectID SG_turret_laser_impact
+key toolHitGroundEffectID SG_turret_laser_impact
+bool toolHitOrientsToTerrain true
+key toolHitPlayerEffectID SG_turret_laser_impact
+key toolHitWaterEffectID SG_turret_laser_impact
+bool toolIsHoming true
+bool toolPassThroughAll true

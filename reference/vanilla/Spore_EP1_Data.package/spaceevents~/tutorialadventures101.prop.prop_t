@@ -1,0 +1,8 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Tutorial Adventures 101"
+key missionAdventureID Adventures101
+key missionConversation mission_adventure101
+bool missionIsAdventure true
+bool missionIsTutorial true
+key missionTrackBadgeID badgecollector-1
+key missionType Adventure

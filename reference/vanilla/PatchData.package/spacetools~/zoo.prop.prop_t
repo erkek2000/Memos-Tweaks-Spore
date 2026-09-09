@@ -1,0 +1,55 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Zoo Planet"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 15
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0x0f6556a4) "Wildlife Sanctuary"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x45795585) "Use on a planet to designate it as a wildlife sanctuary, allowing you to place a variety of abducted creatures to live in safety."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_main_wildlife_sanctuary.png
+int32 spaceToolInitialAmmoCount 99
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+int32 spaceToolMaxDiscoveredAmmo 1
+float spaceToolMaxRange 300
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey SocialConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy placeObject
+key spaceToolType special
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+bool toolDeselectsOnPlanetExit true
+key toolDiscoverableRarity SuperRare
+bool toolDoActionPostEffect true
+key toolHitGroundEffectID SG_colonytool_place_preserve
+key toolHitWaterEffectID SG_colonytool_place_preserve
+int32 toolMeaningOfLifeRewardCount 0
+key toolMuzzleEffectID 0x448D5F72
+key toolPlacedModelKey SG_colonytool_preserve
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0x23D7D504
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 50
+float toolProjectileTimeOut 15
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x061ab566) "You must choose a valid ground target to fire this weapon."
+end

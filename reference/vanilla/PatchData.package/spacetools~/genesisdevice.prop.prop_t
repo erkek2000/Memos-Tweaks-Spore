@@ -1,0 +1,53 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Genesis Device"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 25000
+key spaceToolContext planet
+float spaceToolDamageArea 35
+texts spaceToolDescription
+	(spacegame_tools!0x0c7c683c) "Genesis Device"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x2b488e7d) "Use on planet to totally terraform it instantly."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+bool spaceToolHide true
+key spaceToolImageID ufotools~!spg_terraformlan_genesisdevice.png
+int32 spaceToolInitialAmmoCount 5
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxRange -1
+key spaceToolPanelKey AtmosphericConsumablePanel
+float spaceToolRechargeRate 120
+key spaceToolStrategy genesisdevice
+key spaceToolType terraforming
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+key toolHitGroundEffectID 0xE405E3EA
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID 0x7D210BD0
+int32 toolMeaningOfLifeRewardCount 42
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0x59852035
+float toolProjectileExplosionExpansionRate 1
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 15
+key toolProjectileType Healing
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+bool toolUseOnActivate false

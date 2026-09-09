@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_01
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x54bb7d1f) "Scroll of Harmony Vol.1"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x0ebbdc36) "Science is all well and good, but all it does is tell us about the universe.  It tells us how this atom bounces off of that atom, and how to measure this effect or that, and how heat moves around."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sharman_01.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierShaman 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x31c7c2c5) "Scrolls of Harmony"
+end
+int32 spaceTradingRareGroupID 23
+key spaceTradingType rare

@@ -1,0 +1,13 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "GenericPressure"
+int32 MissionGenericPressureTimeToRespond 1000
+float missionAccidentProneRewardMoney 0
+key missionConversation event_generic
+float missionGenericRewardMoney 0
+float missionGenerousRewardMoney 0
+bool missionHideStarName true
+bool missionIsEvent true
+key missionStarMapEffect 0x9381682B
+key missionStarMapEffectGroup disaster
+float missionStingyRewardMoney 0
+key missionType GenericPressure

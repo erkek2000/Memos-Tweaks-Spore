@@ -1,0 +1,44 @@
+texts spaceToolDescription
+	(spacegame_tools!0xeba16d0d) "Large Cargo Upgrade"
+end
+texts spaceToolDetailDescription
+	(kisutweaks!0x00000092) "Increase your spaceship's cargo capacity."
+end
+key spaceToolImageID ufotools~!spg_main_cargoupgrade4.png
+float spaceTradingAbundance 100
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 400000
+float spaceTradingChance 1
+float spaceTradingChanceBard 100
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 100
+float spaceTradingChancePlayerDiplomat 100
+float spaceTradingChancePlayerEcologist 100
+float spaceTradingChancePlayerKnight 100
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 100
+float spaceTradingChancePlayerTrader 100
+float spaceTradingChancePlayerWanderer 100
+float spaceTradingChancePlayerWarrior 100
+float spaceTradingChancePlayerZealot 100
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 100
+float spaceTradingChanceTrader 0
+float spaceTradingChanceWarrior 100
+float spaceTradingChanceZealot 100
+float spaceTradingCostMultiplierBard 0.5
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierShaman 0.5
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierWarrior 0.5
+float spaceTradingCostMultiplierZealot 0.5
+key spaceTradingExchangeFor cargoupgrade4.prop
+key spaceTradingRequires cargoupgrade3.prop
+key spaceTradingRequiresBadge collector-4
+key spaceTradingRequiresBadgeOr merchant-4
+key spaceTradingToolClass passive
+key spaceTradingType upgrade

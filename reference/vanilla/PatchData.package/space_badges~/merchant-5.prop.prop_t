@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0xe22ee5b5) "You need to earn ~badge_left~ more Sporebucks through trading. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0xdcb23590) "You've traded for ~badge_progress~ Sporebucks."
+end
+uint32 badgeEffectID 0x06605050
+texts badgeGroup
+	(spacegame_badges!0xbe4aa580) "Merchant"
+end
+texts badgeHintAction
+	(spacegame_badges!0xa88152f6) "Trade for ~badge_needed~ Sporebucks to earn the Merchant 5 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_merchant_00.png
+texts badgeName
+	(spacegame_badges!0x0594b7f6) "Merchant 5"
+end
+int32 badgePointValue 10
+key badgeReplacesBadge merchant-4
+int32 badgeReqTradesComplete 0x00e4e1c0
+keys badgeRequirementList
+	badgeReqTradesComplete
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0594c878) "You've earned the Merchant 5 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_merchant_05.png

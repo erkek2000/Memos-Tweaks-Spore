@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_02
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x9c06180f) "Stone of Life 2"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xd3775a86) "The care of nature and the environment is of ultimate importance.  We cannot prosper- we cannot even survive- without a healthy, viable ecosystem to support us."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_ecologist_02.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierEcologist 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x67172115) "Stones of Life"
+end
+int32 spaceTradingRareGroupID 26
+key spaceTradingType rare

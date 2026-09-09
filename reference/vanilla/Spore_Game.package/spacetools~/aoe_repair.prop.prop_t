@@ -1,0 +1,27 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "AOE Repair"
+int32 spaceToolAmmoUsedPerShot 1
+key spaceToolContext passive
+texts spaceToolDescription
+	(spacegame_tools!0xb9121d2b) "AOE Repair"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xfda6c622) "Repairs all friendly units near you."
+end
+bool spaceToolDisableOnHomeworld false
+key spaceToolImageID ufotools~!spg_combat_aoerepair.png
+int32 spaceToolInitialAmmoCount 5
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxDamage 50000
+float spaceToolMaxRange 500
+float spaceToolMinDamage 50000
+key spaceToolPanelKey CombatConsumablePanel
+float spaceToolRechargeRate 30
+key spaceToolStrategy 0x63E333CB
+key spaceToolType weapon
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+bool toolUseOnActivate true

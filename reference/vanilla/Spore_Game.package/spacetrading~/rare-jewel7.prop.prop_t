@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_gem_03
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_gem_03
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x42dedf37) "Opals"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x3f4af1ee) "My ex-fianc once told me that giving your significant other an opal as a gift spelled certain doom for the relationship.   I guess she was right .  I recommend holding on to this for yourself."
+end
+key spaceToolImageID ufotools~!spg_cargopas_gems.png
+key spaceToolThumbnailID spg_badges~!sg_rare_gem_03.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af456) "Rare Jewels"
+end
+int32 spaceTradingRareGroupID 0
+key spaceTradingType rare

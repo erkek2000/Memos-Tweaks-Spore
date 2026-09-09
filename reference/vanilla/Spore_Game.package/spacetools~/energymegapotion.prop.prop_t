@@ -1,0 +1,31 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Energy Potion"
+int32 spaceToolAmmoUsedPerShot 1
+key spaceToolContext passive
+texts spaceToolDescription
+	(spacegame_tools!0xdd6d2133) "Energy Mega Pack"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x51ce942a) "Recharges your spaceship's energy to full."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+key spaceToolImageID ufotools~!spg_main_energymegapotion.png
+int32 spaceToolInitialAmmoCount 1
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxDamage 0
+int32 spaceToolMaxDiscoveredAmmo 0
+float spaceToolMinDamage 100
+int32 spaceToolMinDiscoveredAmmo 0
+key spaceToolPanelKey CombatConsumablePanel
+float spaceToolRechargeRate 10
+key spaceToolStrategy energyrepair
+key spaceToolType special
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+key toolDiscoverableRarity rare
+key toolGenericEffectID 0x67783029
+bool toolUseOnActivate true

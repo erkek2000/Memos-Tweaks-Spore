@@ -1,0 +1,10 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "ScanFetch"
+key missionConversation mission_scan_fetch
+float missionRangeMax 15
+float missionRangeMin 0
+keys missionSubMissions
+	scanfetch_scan
+	scanfetch_fetch
+end
+key missionType multistep

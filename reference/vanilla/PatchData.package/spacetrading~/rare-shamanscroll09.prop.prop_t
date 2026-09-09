@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_09
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xedb78507) "Scroll of Harmony Vol.9"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x55d6c41e) "It is not known who or what created the Grox, or why."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sharman_09.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierShaman 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xd39a975d) "Scrolls of Harmony"
+end
+int32 spaceTradingRareGroupID 23
+key spaceTradingType rare

@@ -1,0 +1,10 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Tutorial Contact Grob"
+float missionAccidentProneRewardMoney 30000
+bool missionContactGrob true
+key missionConversation mission_tutorial_contact_grob
+float missionGenericRewardMoney 30000
+float missionGenerousRewardMoney 30000
+bool missionIsTutorial true
+float missionStingyRewardMoney 30000
+key missionType findaliens

@@ -1,0 +1,12 @@
+int32 archetypeBard 10
+int32 archetypeDiplomat 10
+int32 archetypeEcologist 10
+int32 archetypeScientist 10
+int32 archetypeShaman 10
+int32 archetypeTrader 10
+int32 archetypeWarrior 10
+int32 archetypeZealot 10
+int32 traitWeightAccidentProne 0
+int32 traitWeightGenerous 0
+int32 traitWeightNone 100
+int32 traitWeightStingy 0

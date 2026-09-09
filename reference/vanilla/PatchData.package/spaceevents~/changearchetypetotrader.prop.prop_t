@@ -1,0 +1,7 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Change Archetype: Trader"
+int32 missionAcceptCost 2500000
+uint32 missionChangeArchetypeNumActionsNeeded 5000
+key missionChangeArchetypeTo trader
+key missionConversation mission_change_archetype_trader
+key missionType ChangeArchetype

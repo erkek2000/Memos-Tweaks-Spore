@@ -1,0 +1,33 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Planet Scan"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 30
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0xc9433e6d) "Planet Scan"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x6fd8772c) "Use on a planet to scan all the plants and animals."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+key spaceToolImageID ufotools~!spg_main_planetscan.png
+int32 spaceToolInitialAmmoCount 2
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+int32 spaceToolMaxDiscoveredAmmo 3
+float spaceToolMaxRange -1
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey TravelConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy DefaultToolStrategy
+key spaceToolType special
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+key toolDiscoverableRarity Common
+key toolGenericEffectID SG_ufo_scan_planet
+bool toolPreventsPlanetExit true
+bool toolUseOnActivate false

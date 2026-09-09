@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_10
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xd930d271) "Stone of Force Vol.10"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x8b3beb10) "Though the Grox are formidable, machines are incapable of warrior spirit.  In time, once the technology gap is narrowed, we will prove more than a match for them."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_warrior_02.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierWarrior 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xd1eadb17) "Stones of Force"
+end
+int32 spaceTradingRareGroupID 20
+key spaceTradingType rare

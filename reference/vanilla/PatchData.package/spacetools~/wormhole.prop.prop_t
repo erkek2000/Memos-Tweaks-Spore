@@ -1,0 +1,15 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Wormhole Key"
+int32 spaceToolBuyCost 2000
+key spaceToolContext passive
+texts spaceToolDescription
+	(spacegame_tools!0xc304de3b) "Wormhole Key"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x2b657392) "Allows you to fly through a black hole."
+end
+key spaceToolImageID ufotools~!spg_cargopas_wormhole.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+key spaceToolType other

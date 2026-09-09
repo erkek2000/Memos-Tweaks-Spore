@@ -1,0 +1,16 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Cargo Upgrade"
+int32 spaceToolBuyCost 2000
+key spaceToolContext passive
+texts spaceToolDescription
+	(spacegame_tools!0x52145143) "Basic Cargo Hold"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x813233da) "Increase your spaceship's cargo capacity, so you can fit more loot in your boot."
+end
+key spaceToolImageID ufotools~!spg_main_cargoupgrade1.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxRange 1
+key spaceToolType CargoSlots

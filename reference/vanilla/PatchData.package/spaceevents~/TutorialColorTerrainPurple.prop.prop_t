@@ -1,0 +1,19 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "TutorialColorTerrainPurple"
+float missionAccidentProneRewardMoney 10000
+key missionConversation mission_tutorial_color_terrain_purple
+float missionGenericRewardMoney 10000
+float missionGenerousRewardMoney 10000
+keys missionGiveOnAcceptTools
+	ColorTerrainPurple
+	ColorWaterBlue
+	ColorAtmoRed
+end
+bool missionIsTutorial true
+float missionStingyRewardMoney 10000
+key missionType usetool
+keys missionUseToolID
+	ColorTerrainPurple
+	ColorWaterBlue
+	ColorAtmoRed
+end

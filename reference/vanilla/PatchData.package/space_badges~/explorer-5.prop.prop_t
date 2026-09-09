@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0x7d9b3e0b) "You need to explore ~badge_left~ more Solar Systems. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0xcd9efc1b) "You've explored ~badge_progress~ Solar Systems."
+end
+uint32 badgeEffectID 0xf4652c5b
+texts badgeGroup
+	(spacegame_badges!0x1f0f9c03) "Explorer"
+end
+texts badgeHintAction
+	(spacegame_badges!0x97aa2b2f) "Explore ~badge_needed~ Solar Systems to earn the Explorer 5 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_explorer_00.png
+texts badgeName
+	(spacegame_badges!0x047fc351) "Explorer 5"
+end
+int32 badgePointValue 10
+key badgeReplacesBadge explorer-4
+int32 badgeReqStarsExplored 500
+keys badgeRequirementList
+	badgeReqStarsExplored
+end
+texts badgeUnlockString
+	(spacegame_badges!0x047fc3a2) "You've earned the Explorer 5 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_explorer_05.png

@@ -1,0 +1,13 @@
+key parent spacetools~!0xE2D044A6.prop
+float spaceToolAutoFireRate 0.1
+float spaceToolDamageArea 2
+float spaceToolMaxDamage 1
+float spaceToolMaxProjectileScale 1
+float spaceToolMaxRange 125
+float spaceToolMinDamage 1
+key spaceToolStrategy DefaultBeam
+key toolBeamEffectID civ_weapons_military_beam_laser_3
+key toolHitCombatantEffectID civ_weapons_military_beam_laser_3_explosion
+bool toolHitOrientsToTerrain true
+bool toolIsHoming true
+key toolMuzzleEffectID civ_weapons_military_beam_laser_3_muzzle

@@ -1,0 +1,26 @@
+texts badgeCardDescription
+	(spacegame_badges!0x81f1ffe6) "You need to promote ~badge_left~ more Creature. ~badge_count~/~badge_needed~"
+end
+int32 badgeCreaturespromoted 1
+texts badgeDescriptionString
+	(spacegame_badges!0x88962957) "You've promoted ~badge_progress~ Creatures to Tribe."
+end
+uint32 badgeEffectID 0xd52961d8
+texts badgeGroup
+	(spacegame_badges!0x37bcd3f7) "Brain Surgeon"
+end
+texts badgeHintAction
+	(spacegame_badges!0xe7bb01d7) "Promote ~badge_needed~ Creature to Tribe to earn the Brain Surgeon 1 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_brainsurgeon_00.png
+texts badgeName
+	(spacegame_badges!0x0594b62c) "Brain Surgeon 1"
+end
+int32 badgePointValue 2
+keys badgeRequirementList
+	badgeCreaturespromoted
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0594c7cb) "You've earned the Brain Surgeon 1 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_brainsurgeon_01.png

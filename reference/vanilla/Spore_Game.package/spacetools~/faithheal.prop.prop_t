@@ -1,0 +1,24 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Faith Heal"
+key spaceToolContext planet
+float spaceToolDamageArea 100
+float spaceToolDetectableRange 2000
+float spaceToolMaxDamage 300
+float spaceToolMinDamage 150
+float spaceToolRechargeRate 60
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+key toolHitCombatantEffectID 0x1F358C04
+key toolHitGroundEffectID 0x1F358C04
+key toolHitWaterEffectID 0x1F358C04
+bool toolIsHoming true
+bool toolPassThroughAll true
+float toolProjectileEccentricity 5
+key toolProjectileEffectID 0x99548793
+float toolProjectileExplosionExpansionRate 50
+key toolProjectileMotion strikedown
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 90
+key toolProjectileType Healing
+float toolRelationshipDelta -5
+key toolTargetEffectID 0xCED43751

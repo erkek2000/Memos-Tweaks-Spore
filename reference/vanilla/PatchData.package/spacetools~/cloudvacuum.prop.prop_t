@@ -1,0 +1,57 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Cloud Vacuum"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 200
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+texts spaceToolDescription
+	(spacegame_tools!0x1812cfee) "Cloud Vacuum"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x58f17547) "Use on a planet to lower its atmosphere level."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.5
+key spaceToolImageID ufotools~!spg_terraformatm_cloudvacuum.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 0
+float spaceToolMaxRange 500
+float spaceToolMinDamage 0
+key spaceToolPanelKey AtmosphericAbilityPanel
+key spaceToolStrategy DefaultBeam
+key spaceToolType terraforming
+int32 spaceToolUseCost 0
+float toolHitAirAtmosphereVelocity -0.01
+float toolHitAirTemperatureVelocity 0
+float toolHitAirWaterVelocity 0
+float toolHitCombatantAtmosphereVelocity -0.01
+float toolHitCombatantTemperatureVelocity 0
+float toolHitCombatantWaterVelocity 0
+float toolHitGroundAtmosphereVelocity -0.01
+float toolHitGroundTemperatureVelocity 0
+float toolHitGroundWaterVelocity 0
+bool toolHitOrientsToTerrain true
+float toolHitWaterAtmosphereVelocity -0.01
+float toolHitWaterTemperatureVelocity 0
+float toolHitWaterWaterVelocity 0
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+key toolMuzzleEffectID SG_ufo_cloudkill_muzzleEffect
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+	hash(air)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+uint32 toolTerraformingIconKey 0x44bb4db9

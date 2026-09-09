@@ -1,0 +1,46 @@
+texts spaceToolDescription
+	(spacegame_tools!0xcf45829a) "Monolith"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x870c8c43) "Place on a tribal or civilized planet to uplift the species on this planet."
+end
+key spaceToolImageID ufotools~!spg_social_monolith.png
+float spaceTradingAbundance 5
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 500000
+float spaceTradingChance 1
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 100
+float spaceTradingChancePlayerDiplomat 100
+float spaceTradingChancePlayerEcologist 100
+float spaceTradingChancePlayerKnight 100
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 100
+float spaceTradingChancePlayerTrader 100
+float spaceTradingChancePlayerWanderer 100
+float spaceTradingChancePlayerWarrior 100
+float spaceTradingChancePlayerZealot 100
+float spaceTradingChanceScientist 100
+float spaceTradingChanceShaman 100
+float spaceTradingChanceTrader 100
+float spaceTradingChanceWarrior 0
+float spaceTradingChanceZealot 100
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierScientist 0.5
+float spaceTradingCostMultiplierShaman 0.5
+float spaceTradingCostMultiplierTrader 0.6
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierZealot 0.5
+key spaceTradingExchangeFor monolith.prop
+uint32 spaceTradingQuantityToOffer 3
+key spaceTradingRequiresBadge traveler-2
+key spaceTradingRequiresBadgeOr zoologist-2
+int32 spaceTradingRequiresTier 2
+key spaceTradingToolClass social
+int32 spaceTradingToolReofferRate 120
+key spaceTradingType tool

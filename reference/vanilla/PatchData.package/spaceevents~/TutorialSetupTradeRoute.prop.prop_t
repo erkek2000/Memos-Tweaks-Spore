@@ -1,0 +1,9 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Tutorial Setup Trade Route"
+float missionAccidentProneRewardMoney 20000
+key missionConversation mission_tutorial_setup_trade_route
+float missionGenericRewardMoney 20000
+float missionGenerousRewardMoney 20000
+bool missionIsTutorial true
+float missionStingyRewardMoney 20000
+key missionType TradeRoute

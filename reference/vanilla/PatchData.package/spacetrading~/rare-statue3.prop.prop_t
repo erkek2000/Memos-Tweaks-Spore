@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_statues_03
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_statues_03
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x58fb6df2) "The Bust of Bradford"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x67682e3b) "Hand hewn likeness of Bradford, the Fourth Ruler of Xenogg.  On the bottom of the sculpture reads the inscription:  He was always kind to his mother."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sculpture_03.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af453) "Rare Statues"
+end
+int32 spaceTradingRareGroupID 3
+key spaceTradingType rare

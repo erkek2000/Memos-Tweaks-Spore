@@ -1,0 +1,9 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Ecologist Adventure 01"
+key missionAdventureID 0xE8CA06B0
+key missionConversation mission_ecologist_01
+float missionGenericRewardMoney 30000
+float missionGenericRewardRelation 3
+bool missionIsAdventure true
+bool missionIsTutorial false
+key missionType Adventure

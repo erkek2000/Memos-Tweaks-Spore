@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_gem_09
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_gem_09
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x075db8e1) "Jade"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x26103860) "A wise man once said: ''Just find the Jade, and You've Got it Made!  Congratulations!  You should be very proud."
+end
+key spaceToolImageID ufotools~!spg_cargopas_gems.png
+key spaceToolThumbnailID spg_badges~!sg_rare_gem_09.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 67500
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af456) "Rare Jewels"
+end
+int32 spaceTradingRareGroupID 0
+key spaceTradingType rare

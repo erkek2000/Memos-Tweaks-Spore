@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_fossils_05
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_fossil_05
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x7f3b2610) "Ancient Epic Boot Scraper"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x1556a1b1) "This artifact was commonly found on the back porch of Epic caverns.  Epic creatures used these to scrape the mud off of their feet before entering their home.  They called it a boot scraper, even though they didn't wear boots.  Now *that's* foresight."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_fossils_05.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af454) "Rare Fossils"
+end
+int32 spaceTradingRareGroupID 2
+key spaceTradingType rare

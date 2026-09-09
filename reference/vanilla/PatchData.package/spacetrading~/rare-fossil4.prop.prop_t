@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_fossils_04
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_fossil_04
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x70e9f48f) "Fossilized Tribal Sheriff's Badge"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xf5585306) "This artifact was worn by creatures of old who were seen as law bringers or peacekeepers of newly settled tribal villages. In actuality, all this did was point out to attacking tribes which guy to go after first. Speculation rages as to whether tribesmen "
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_fossils_04.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af454) "Rare Fossils"
+end
+int32 spaceTradingRareGroupID 2
+key spaceTradingType rare

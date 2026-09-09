@@ -1,0 +1,26 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Destroy Turrets"
+float missionAccidentProneRewardMoney 50000
+float missionAccidentProneRewardRelation 3
+keys missionAccidentProneRewardTool
+end
+key missionConversation mission_destroy_turrets
+float missionDuration 300
+float missionGenericRewardMoney 50000
+float missionGenericRewardRelation 4
+keys missionGenericRewardTool
+end
+float missionGenerousRewardMoney 50000
+float missionGenerousRewardRelation 3
+keys missionGenerousRewardTool
+end
+bool missionPreferEnemies true
+float missionRangeMax 15
+float missionRangeMin 0
+float missionStingyRewardMoney 50000
+float missionStingyRewardRelation 3
+keys missionStingyRewardTool
+end
+bool missionTimerStartsOnFirstEntry true
+key missionType war
+bool missionWarTurretsOnly true

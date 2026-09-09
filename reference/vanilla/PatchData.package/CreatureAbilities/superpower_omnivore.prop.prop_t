@@ -1,0 +1,13 @@
+key parent AbilityTemplates!CreatureSuperPower
+uint32s creatureAbilityAnimationIDs
+	0x06006992
+end
+texts creatureAbilityDescription
+	(consequence!0x00010025) "SuperPower_Omnivore (PLACEHOLDER)"
+end
+texts creatureAbilityName
+	(consequence!0x00010024) "SuperPower_Omnivore (PLACEHOLDER)"
+end
+float creatureAbilityRefresh 360
+int32 creatureAbilityType 51
+key verbIconImageID 0x81EAA39F

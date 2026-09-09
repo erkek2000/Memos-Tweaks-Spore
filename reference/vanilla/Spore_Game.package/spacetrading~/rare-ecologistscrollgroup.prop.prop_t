@@ -1,0 +1,14 @@
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xa50c7362) "Stones of Life"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x5f622b0b) "Stones of Life"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+float spaceTradingBaseCost 4500000
+float spaceTradingCostMultiplierEcologist 2
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xe17c7c4e) "Stones of Life"
+end
+int32 spaceTradingRareGroupID 26
+key spaceTradingType group

@@ -1,0 +1,122 @@
+float abductSpeedHighAltitude 280
+float abductSpeedLowAltitude 28
+float dropOffSpeedHighAltitude 280
+float dropOffSpeedLowAltitude 28
+float ufoAccelerationBankBonus 2
+float ufoAccelerationFactor 0.00005
+float ufoAccelerationFactorNPC 0.00002
+float ufoAllyHitSphereRadius 1
+float ufoAllyScale 2
+float ufoAllyVelocityFactor 0.02
+float ufoBankTiltFactor 6
+float ufoBankTiltRate 2
+float ufoBaseDamagePush 0.005
+float ufoBasePlanetScale 3
+float ufoBomberGalaxyScale 4
+float ufoBomberScale 4
+float ufoBomberVelocityFactor 0.008
+float ufoBrakeFactor 4
+float ufoCameraAngleSpeed 1
+float ufoCollisionElasticity 0
+float ufoCollisionRestitution 0.2
+float ufoDamageToDestScale 0
+float ufoDamageToVelocityScale 0.0001
+float ufoDamageVelocityDecayRate 3000
+float ufoDefenderGalaxyScale 2
+float ufoDefenderScale 2
+float ufoDistFactor 0
+float ufoEscapeSequenceSpinRate 10
+float ufoEscapeSequenceVelocity 700
+float ufoFighterGalaxyScale 0.7
+float ufoFighterScale 2
+float ufoFighterVelocityFactor 0.01
+float ufoGalaxyAcceleration 0.0000015
+float ufoGalaxyBomberWarpMultiplier 0.5
+float ufoGalaxyCinematicsScale 0.01
+float ufoGalaxyMaxNPCPlump 0.05
+float ufoGalaxyMaxPlump 0.05
+float ufoGalaxyMaxPlumpDistance 25
+float ufoGalaxyMinNPCPlump 0.00085
+float ufoGalaxyMinPlump 0.00085
+float ufoGalaxyMinPlumpDistance 0.1
+float ufoGalaxyOffsetMax 0.3
+float ufoGalaxyOffsetMaxDistance 25
+float ufoGalaxyOffsetMin 0.03
+float ufoGalaxyOffsetMinDistance 0.1
+float ufoGalaxySpeed 0.005
+bool ufoGalaxyUseWarp false
+floats ufoGalaxyWarpMultipliers
+	0.5
+	1
+	1.5
+	1
+end
+floats ufoGalaxyWarpTimes
+	0.25
+	0.25
+	0.25
+end
+float ufoHeightFactor 0.5
+float ufoHeightOffset 7
+float ufoHitSphereActiveDistance 5
+float ufoHitSphereRadius 6
+float ufoHitTerrainDamage 0
+float ufoInitialPlanetZoom 0.2
+float ufoKeyboardAccelerationZoomedIn 100
+float ufoKeyboardAccelerationZoomedOut 300
+float ufoKeyboardMovementSpeedZoomedIn 100
+float ufoKeyboardMovementSpeedZoomedOut 300
+float ufoLeavePlanetTimePad 0
+float ufoMaxAltitude 1600
+float ufoMaxAltitudeDestinationDelta 0.04
+float ufoMaxBankTilt 30
+float ufoMaxDamagePush 1
+float ufoMaxExtent 4
+float ufoMaxNoseTilt 30
+float ufoMaxRotation 30
+float ufoMaxVerticalTilt 30
+float ufoMerchantGalaxyScale 2
+float ufoMinAltitude 20
+float ufoMinExtent 1.4
+float ufoMouseDriveEdgeZoomHeight 0.13
+float ufoMouseDriveMoveWidth 0.2
+float ufoMouseDriveTurnWidth 0.02
+float ufoMouseMovementSpeedZoomedIn 1
+float ufoMouseMovementSpeedZoomedOut 6
+float ufoMouseRotationSpeedZoomedIn 1
+float ufoMouseRotationSpeedZoomedOut 6
+float ufoNPCPlumpScale 1
+float ufoNoseTiltFactor 1
+float ufoNoseTiltRate 4
+float ufoPlanetCinematicsScale 1
+float ufoPlumpDistance 500
+float ufoPlumpScale 1
+float ufoPlumpTransitionScale 1
+float ufoRotationPercentageRate 3
+float ufoSmoothingFactor 0.1
+float ufoSolarAcceleration 0.00015
+float ufoSolarCinematicsScale 0.5
+float ufoSolarMaxPlump 3
+float ufoSolarMaxPlumpDistance 1500
+float ufoSolarMinPlump 0.067
+float ufoSolarMinPlumpDistance 5
+float ufoSolarOffsetMax 5
+float ufoSolarOffsetMaxDistance 1500
+float ufoSolarOffsetMin 1
+float ufoSolarOffsetMinDistance 5
+float ufoSolarSpeed 0.25
+float ufoTargetFallOffRadius 5
+bool ufoTrailEffectAlwaysOn false
+float ufoTrailEffectMaxSpeedGalaxy 1
+float ufoTrailEffectMaxSpeedPlanet 100
+float ufoTrailEffectMaxSpeedSolar 70
+float ufoTrailEffectMinSize 0.25
+float ufoUberTurretScale 1
+float ufoUberTurretVelocityFactor 0.05
+float ufoVelocityFactor 0.09
+float ufoVelocityFactorNPC 0.01
+float ufoVelocityFactorZoomedOut 18
+float ufoVerticalAccelerationDown 6
+float ufoVerticalAccelerationUp 18
+float ufoVerticalTiltFactor 0.05
+float ufoWidthFactor 0.7

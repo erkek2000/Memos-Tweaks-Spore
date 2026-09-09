@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_10
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x8af35d89) "Book of Science Pt. 10"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xa529e6a8) "Some of our theoreticians suggest that the motivation for the Grox's actions may lie in the difference between machines and organic life, though there seems no way to test this hypothesis."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_scientist_10.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierScientist 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x521b8a1f) "Books of Science"
+end
+int32 spaceTradingRareGroupID 24
+key spaceTradingType rare

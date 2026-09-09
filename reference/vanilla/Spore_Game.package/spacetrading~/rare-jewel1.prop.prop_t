@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_gem_10
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_gem_10
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xb6a7bb45) "Purple-ish Gems of Rabban Ankott"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xb00a3ec4) "The historic significance of these particular gems is that they were ordered by the Twelfth King, Rabban Ankott for his wife, The Seventh Wife of Rabban Ankott. The acquisition of these gems led directly to the arrival of the Eighth Wife of Rabban Ankott,"
+end
+key spaceToolImageID ufotools~!spg_cargopas_gems.png
+key spaceToolThumbnailID spg_badges~!sg_rare_gem_10.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 67500
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af456) "Rare Jewels"
+end
+int32 spaceTradingRareGroupID 0
+key spaceTradingType rare

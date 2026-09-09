@@ -1,0 +1,45 @@
+texts spaceToolDescription
+	(spacegame_tools!0xdd6d2133) "Energy Mega Pack"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x51ce942a) "Recharges your spaceship's energy to full."
+end
+key spaceToolImageID ufotools~!spg_main_energymegapotion.png
+float spaceTradingAbundance 5
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 20000
+float spaceTradingChance 1
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 100
+float spaceTradingChanceEcologist 100
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 100
+float spaceTradingChancePlayerDiplomat 100
+float spaceTradingChancePlayerEcologist 100
+float spaceTradingChancePlayerKnight 100
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 100
+float spaceTradingChancePlayerTrader 100
+float spaceTradingChancePlayerWanderer 100
+float spaceTradingChancePlayerWarrior 100
+float spaceTradingChancePlayerZealot 100
+float spaceTradingChanceScientist 100
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 100
+float spaceTradingChanceWarrior 0
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierDiplomat 0.5
+float spaceTradingCostMultiplierEcologist 0.5
+float spaceTradingCostMultiplierScientist 0.5
+float spaceTradingCostMultiplierTrader 0.5
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+key spaceTradingExchangeFor energymegapotion.prop
+uint32 spaceTradingQuantityToOffer 3
+key spaceTradingRequiresBadge missionista-3
+key spaceTradingRequiresBadgeOr trader-3
+int32 spaceTradingRequiresTier 5
+key spaceTradingToolClass travel
+int32 spaceTradingToolReofferRate 120
+key spaceTradingType tool

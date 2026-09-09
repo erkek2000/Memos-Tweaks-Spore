@@ -1,0 +1,23 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "TutorialFlight101_EradicateAnimals"
+key creatureGoalCardLayout layouts~!SpaceEradicateAnimals
+float missionAccidentProneRewardMoney 0
+bool missionEradicateCanFail false
+key missionEradicateDiseaseEffect SG_mission_eradicate_diseasedCreature
+int32 missionEradicateMaxPerHerd 2
+int32 missionEradicateMinPerHerd 1
+int32 missionEradicateNumCreatures 10
+int32 missionEradicateNumKillsNeeded 5
+key missionEradicateType Animals
+float missionGenericRewardMoney 0
+float missionGenerousRewardMoney 0
+keys missionGiveOnAcceptTools
+	laserlevel1.prop
+end
+bool missionIsTutorial true
+key missionPickTargetAnimalSpecies 0xD4923304
+key missionPickTargetPlanet 0xAC595460
+float missionStingyRewardMoney 0
+key missionType eradicate
+uint32 0x5D6796FD 0x74c1935d
+uint32 0x61E37E5F 0xb4c1a518

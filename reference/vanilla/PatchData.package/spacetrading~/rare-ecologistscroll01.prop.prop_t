@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_01
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xa73db1d2) "Stone of Life 1"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xe4c3c81b) "When all is said and done, we are creatures of nature.  We were created by natural means, we live inside nature, and when we travel, we must carry nature with us in order to survive."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_ecologist_01.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierEcologist 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x09e0595e) "Stones of Life"
+end
+int32 spaceTradingRareGroupID 26
+key spaceTradingType rare

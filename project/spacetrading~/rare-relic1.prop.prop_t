@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_relics_01
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_relic_01
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x50d1af75) "Ancient Urn of the Spurg"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x3ed61f14) "Expert historians note that a race called the Spurgs were the first to invent the two-handled jug. Ironically, the Spurgs only had one arm."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_relics_01.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 500000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af455) "Rare Relics"
+end
+int32 spaceTradingRareGroupID 1
+key spaceTradingType rare

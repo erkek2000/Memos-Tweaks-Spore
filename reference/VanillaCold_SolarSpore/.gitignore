@@ -1,0 +1,18 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Chocice75_SS-RareSpices/.vs/Chocice75_SS-RareSpices/v16
+/Chocice75_SS-RareSpices/SolarSpore - Rare Spices/Debug
+/CustomTools/.vs/CustomTools/v16
+/SS-HomeworldSpice/.vs/SS-HomeworldSpice/v16
+/SS-HomeworldSpice/Solar Spore - Random Homeworld Spice/Debug
+/CustomTools/CustomTools/Debug
+/SS-ProtosystemBlackHole/.vs/SS-ProtosystemBlackHole/v16
+/SS-ProtosystemBlackHole/SS-ProtosystemBlackHole/Debug
+/SS-CustomAbilities
+/SS-ProtosystemBlackHole
+/SMFX Projects/Solar Spore - Custom Abilities
+/CustomTools/CustomTools/Release
+/Chocice75_SS-RareSpices/SolarSpore - Rare Spices/Release

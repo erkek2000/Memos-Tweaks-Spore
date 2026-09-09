@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0x62af38aa) "You need to contact ~badge_left~ more Empires. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0xe932aafb) "You've contacted ~badge_progress~ Empires."
+end
+uint32 badgeEffectID 0x04ec3ce5
+texts badgeGroup
+	(spacegame_badges!0x809ea6e3) "Traveler"
+end
+texts badgeHintAction
+	(spacegame_badges!0x72a31eba) "Contact ~badge_needed~ Empires to earn the Traveler 4 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_traveler_00.png
+texts badgeName
+	(spacegame_badges!0x04868b4d) "Traveler 4"
+end
+int32 badgePointValue 4
+key badgeReplacesBadge traveler-3
+int32 badgeReqEmpiresMet 20
+keys badgeRequirementList
+	badgeReqEmpiresMet
+end
+texts badgeUnlockString
+	(spacegame_badges!0x04868b86) "You've earned the Traveler 4 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_traveler_04.png

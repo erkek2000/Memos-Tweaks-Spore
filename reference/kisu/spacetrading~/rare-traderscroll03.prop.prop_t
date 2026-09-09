@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_03
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xf4328d27) "Tablet of Prosperity No.3"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xa849333e) "It seems evident that the universe has resources enough to make everyone happy, and each sentient being should have sufficient freedom as to make that happiness possible."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_trader_03.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierTrader 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xfe244cfd) "Tablets of Prosperity"
+end
+int32 spaceTradingRareGroupID 27
+key spaceTradingType rare

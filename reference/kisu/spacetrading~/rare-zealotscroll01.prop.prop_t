@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_01
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x76ab7e1e) "Scrolls of Faith Book 1"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xb4a5e857) "The questions of a million years oppress us.  Who am I?  Why was I made?  What is my purpose?  What is the purpose of the universe?  Shall I survive after death?  Can I be happy?  Scientists can tell us only about forces and matter.  Philosophers chase ea"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_zealot_01.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierZealot 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x0a80721a) "Scrolls of Faith"
+end
+int32 spaceTradingRareGroupID 25
+key spaceTradingType rare

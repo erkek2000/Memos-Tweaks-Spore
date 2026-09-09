@@ -1,0 +1,24 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Defense Missile"
+float spaceToolAutoFireRate 0
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 20
+float spaceToolMaxDamage 600
+float spaceToolMaxRange 700
+float spaceToolMinDamage 600
+float spaceToolMinRange 200
+float spaceToolRechargeRate 30
+key spaceToolStrategy turretdefensemissile
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+key toolHitGroundEffectID SG_homing_missile_explosion_holder
+bool toolHitOrientsToTerrain false
+key toolHitPlayerEffectID SG_homing_missile_explosion_holder
+float toolProjectileDetonationDistance 10
+key toolProjectileEffectID SG_homing_missile
+float toolProjectileExplosionExpansionRate 20
+float toolProjectileMaxAltitude 1000
+float toolProjectileSpeed 80
+float toolProjectileTimeOut 10
+float toolProjectileTurnRate 3.1415901

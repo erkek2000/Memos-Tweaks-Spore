@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_01
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x1e52ba9f) "Scroll of Order I"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x7aad2db6) "We have made every imaginable mistake.  We've fought unnecessary wars, we've abused the environment, we've squandered resources, and furthermore we've wasted a lot of time discussing what to do about all these problems."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_diplomat_01.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierDiplomat 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x0add9345) "Scrolls of Order"
+end
+int32 spaceTradingRareGroupID 21
+key spaceTradingType rare

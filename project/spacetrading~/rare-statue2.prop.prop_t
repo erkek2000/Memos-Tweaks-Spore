@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_statues_02
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_statues_02
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x284ddd79) "The Bust of Yaman"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x6389acb8) "Ancient marble portrait carving of Yaman, bloodthirsty savage of the Fertile Plains and lover of fine music."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sculpture_02.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 150000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af453) "Rare Statues"
+end
+int32 spaceTradingRareGroupID 3
+key spaceTradingType rare

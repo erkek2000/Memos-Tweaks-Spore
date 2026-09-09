@@ -1,0 +1,3 @@
+key parent TribeGame!MotiveTuning.prop
+float TribeHungerDrain 0.278
+float hungerDecayDelay 120

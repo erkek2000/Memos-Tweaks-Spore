@@ -1,0 +1,11 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Tutorial War"
+float missionAccidentProneRewardMoney 20000
+key missionConversation mission_tutorial_war
+float missionGenericRewardMoney 20000
+float missionGenerousRewardMoney 20000
+bool missionIsTutorial true
+float missionRangeMax 15
+float missionRangeMin 0
+float missionStingyRewardMoney 20000
+key missionType war

@@ -1,0 +1,10 @@
+int32 clickFruitOrTrees 1
+bool creatureTreesEnabled false
+bool effectSpawnedRocksEnabled false
+bool fruitAutoDroppingEnabled false
+bool fruitEnabled false
+float fruitPropMaxHangingTime 200
+float fruitPropMaxOnGroundTime 50
+float fruitPropMaxRegrowthTime 500
+float fruitPropMaxRottingTime 20
+float fruitPropMinHangingTime 10

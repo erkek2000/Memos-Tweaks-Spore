@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_08
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x1cab04d8) "Book of Science Pt. 8"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x2eb0df99) "The Grox are an experiment that has not yet run its course."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_scientist_08.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierScientist 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x4bd6c454) "Books of Science"
+end
+int32 spaceTradingRareGroupID 24
+key spaceTradingType rare

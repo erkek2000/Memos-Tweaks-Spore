@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_fossils_06
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_fossil_06
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xc0a141d9) "Petrified Sun Dried Nautilus"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x79499918) "Archaeologists to this day still debate the actual source of this rare fossilized find. Could it be the remains of an ancient sea creature that somehow made it out of the ocean and migrated to its final resting place on terra firma, or is it indelible pro"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_fossils_06.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af454) "Rare Fossils"
+end
+int32 spaceTradingRareGroupID 2
+key spaceTradingType rare

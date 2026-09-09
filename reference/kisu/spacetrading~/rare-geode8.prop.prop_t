@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_geodes_08
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_geode_08
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xf628637d) "An Aqua Geode"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x0062f71c) "This particular geode is highly coveted on hot, arid planets due to its cool blue aquamarine color.  Desperate and confused creatures have been known to choke to death trying to suck the moisture from it."
+end
+key spaceToolImageID ufotools~!spg_cargopas_geodes.png
+key spaceToolThumbnailID spg_badges~!sg_rare_geode_08.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 200000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af452) "Rare Geodes"
+end
+int32 spaceTradingRareGroupID 4
+key spaceTradingType rare

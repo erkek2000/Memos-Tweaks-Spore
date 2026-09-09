@@ -1,0 +1,36 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Torpedo Galaxy 3"
+float spaceToolAutoFireRate 1
+int32 spaceToolBuyCost 0
+key spaceToolContext space
+float spaceToolDamageArea 0.03
+texts spaceToolDescription
+	(spacegame_tools!0xcca62f06) "Mega Auto Blaster"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x0ed9431f) "A defensive weapon that will automatically fire on enemy turrets and spaceships when attacked. Can be toggled on and off."
+end
+float spaceToolEnergyCost 0.75
+key spaceToolImageID ufotools~!0xE5F742F6.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 60
+float spaceToolMaxRange 2
+float spaceToolMinDamage 60
+float spaceToolRechargeRate 1
+key spaceToolStrategy DefaultProjectile
+key spaceToolType other
+key spaceToolUpgradeFile torpedogalaxy2.prop
+int32 spaceToolUseCost 0
+bool toolCanPlayerLockOn true
+bool toolDestroysFloraAndFauna false
+key toolHitCombatantEffectID SG_autoblaster_hit_strong
+key toolHitGroundEffectID SG_autoblaster_hit_strong
+bool toolHitOrientsToTerrain false
+bool toolIsHoming true
+key toolMuzzleEffectID SG_autoblaster_muzzle
+key toolProjectileEffectID SG_autoblaster_strong
+float toolProjectileExplosionExpansionRate 10
+float toolProjectileSpeed 1
+float toolProjectileTimeOut 1.5

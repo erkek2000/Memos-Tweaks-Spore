@@ -1,0 +1,14 @@
+key parent TribeAbilityTemplates!tribesuperpower
+uint32s creatureAbilityAnimationIDs
+	0x06006751
+end
+texts creatureAbilityDescription
+	(consequence!0x00010028) "SuperPower_Herbivore (PLACEHOLDER)"
+end
+texts creatureAbilityName
+	(consequence!0x00010027) "SuperPower_Herbivore (PLACEHOLDER)"
+end
+float creatureAbilityRange 60
+float creatureAbilityRefresh 120
+int32 creatureAbilityType 53
+key verbIconImageID 0xC6388A15

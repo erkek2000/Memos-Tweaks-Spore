@@ -1,0 +1,33 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Eradicate City Citizens"
+key creatureGoalCardLayout layouts~!SpaceEradicateAnimals
+float missionAccidentProneRewardMoney 30000
+float missionAccidentProneRewardRelation 3
+keys missionAccidentProneRewardTool
+end
+key missionConversation mission_eradicate_city_citizens
+float missionDuration 90
+bool missionEradicateCanFail true
+key missionEradicateDiseaseEffect 0xE1C1BB56
+int32 missionEradicateMaxNumHealthyKills 20
+int32 missionEradicateNumCreatures 5
+key missionEradicateType CityCitizens
+float missionGenericRewardMoney 30000
+float missionGenericRewardRelation 3
+keys missionGenericRewardTool
+end
+float missionGenerousRewardMoney 30000
+float missionGenerousRewardRelation 3
+keys missionGenerousRewardTool
+end
+bool missionPreferAllies true
+float missionRangeMax 15
+float missionRangeMin 0
+float missionStingyRewardMoney 30000
+float missionStingyRewardRelation 3
+keys missionStingyRewardTool
+end
+bool missionTimerStartsOnFirstEntry true
+key missionType eradicate
+uint32 0x5D6796FD 0x74c1935d
+uint32 0x61E37E5F 0xb4c1a518

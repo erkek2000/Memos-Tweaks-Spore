@@ -1,0 +1,26 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "War"
+float missionAccidentProneRewardMoney 200000
+float missionAccidentProneRewardRelation 3
+keys missionAccidentProneRewardTool
+end
+key missionConversation mission_war
+float missionDuration 600
+float missionGenericRewardMoney 200000
+float missionGenericRewardRelation 4
+keys missionGenericRewardTool
+end
+float missionGenerousRewardMoney 200000
+float missionGenerousRewardRelation 3
+keys missionGenerousRewardTool
+end
+bool missionPickClosestStar true
+bool missionPreferEnemies true
+float missionRangeMax 15
+float missionRangeMin 0
+float missionStingyRewardMoney 200000
+float missionStingyRewardRelation 3
+keys missionStingyRewardTool
+end
+bool missionTimerStartsOnFirstEntry true
+key missionType war

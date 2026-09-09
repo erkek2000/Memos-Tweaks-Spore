@@ -1,0 +1,18 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Interstellar Drive 2"
+int32 spaceToolBuyCost 2000
+key spaceToolContext passive
+texts spaceToolDescription
+	(spacegame_tools!0xda5d06eb) "Interstellar Drive 2"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x9f22e5e2) "Increases your spaceship's travel range."
+end
+float spaceToolDetectableRange 20
+key spaceToolImageID ufotools~!spg_main_interstellardrive2.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxRange 5
+key spaceToolType other
+key spaceToolUpgradeFile interstellardrive.prop

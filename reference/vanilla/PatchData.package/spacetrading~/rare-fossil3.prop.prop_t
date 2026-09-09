@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_fossils_03
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_fossil_03
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x4ecd7056) "Fossilized Domesticated Animal Treat"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x21a0e58f) "At first glance, one would think that they have discovered a fossilized bone from an ancient civilization.  Look again.  Do bones really look like that?!?!?!  Perhaps in cartoons, but not around these parts, pal.  This, my friend, is the fossilized remain"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_fossils_03.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af454) "Rare Fossils"
+end
+int32 spaceTradingRareGroupID 2
+key spaceTradingType rare

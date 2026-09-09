@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_05
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xb92f6985) "Stone of Force Vol.5"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x46f0fa04) "We offer total allegiance to our species, as represented by the state.  We stand guard against all forms of threat.   We do not value our own lives except as they are viewed as extensions of our species as a whole, and we ask nothing of ourselves other th"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_warrior_06.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierWarrior 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xe59f9cdb) "Stones of Force"
+end
+int32 spaceTradingRareGroupID 20
+key spaceTradingType rare

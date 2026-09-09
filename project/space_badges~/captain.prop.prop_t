@@ -1,0 +1,26 @@
+texts badgeCardDescription
+	(spacegame_badges!0xab46b0cd) "You need to complete Flight School."
+end
+int32 badgeCargoReward 7
+texts badgeDescriptionString
+	(spacegame_badges!0x9de29c48) "You've proven your skills as a Captain of your spaceship."
+end
+int32 badgeFlight101Complete 1
+texts badgeGroup
+	(spacegame_badges!0x0487ae1e) "Captain's Badge"
+end
+texts badgeHintAction
+	(spacegame_badges!0xb3123e02) "Prove your skills as a Captain of your spaceship to earn the Captain's badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_flightschool_00.png
+texts badgeName
+	(spacegame_badges!0x0487ae1e) "Captain's Badge"
+end
+int32 badgePointValue 1
+keys badgeRequirementList
+	badgeFlight101Complete
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0487ae7e) "You've earned the Captain's badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_flightschool_01.png

@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_gem_05
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_gem_05
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xc87fa79a) "Emeralds"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x534d8943) "This rare gem is noteworthy due to its brilliant shade of green.   We are tempted to say that this green gem is far more beautiful than even emeralds, but that would be silly, because this is an emerald."
+end
+key spaceToolImageID ufotools~!spg_cargopas_gems.png
+key spaceToolThumbnailID spg_badges~!sg_rare_gem_05.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 50000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af456) "Rare Jewels"
+end
+int32 spaceTradingRareGroupID 0
+key spaceTradingType rare

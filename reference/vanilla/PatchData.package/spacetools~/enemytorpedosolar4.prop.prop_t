@@ -1,0 +1,26 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Enemy Torpedo Solar 3"
+int32 spaceToolBuyCost 0
+key spaceToolContext space
+float spaceToolDamageArea 5
+texts spaceToolDescription
+	(spacegame_tools!0x26e247fc) "Mega Galactic Torpedo"
+end
+key spaceToolImageID ufotools~!0xB8F022EE.png
+float spaceToolMaxDamage 40
+float spaceToolMaxRange 75
+float spaceToolMinDamage 40
+float spaceToolRechargeRate 1
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+bool toolDestroysFloraAndFauna false
+key toolHitCombatantEffectID 0xF3F0EF7B
+key toolHitGroundEffectID 0xF3F0EF7B
+bool toolHitOrientsToTerrain false
+bool toolIsHoming true
+key toolMuzzleEffectID 0xD151342B
+key toolProjectileEffectID 0x0C14C369
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileSpeed 100
+float toolProjectileTimeOut 1.5

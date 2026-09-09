@@ -1,0 +1,17 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Energy Store 5"
+int32 spaceToolBuyCost 30000
+key spaceToolContext passive
+texts spaceToolDescription
+	(spacegame_tools!0x2384dc15) "Extreme Energy Storage"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x577558b4) "Increase your spaceship's energy to maximum capacity."
+end
+key spaceToolImageID ufotools~!0x826502EB.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxRange 3
+key spaceToolType other
+key spaceToolUpgradeFile energyupgrade4.prop

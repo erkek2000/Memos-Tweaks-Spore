@@ -1,0 +1,13 @@
+key parent TribeAbilityTemplates!tribesuperpower
+texts creatureAbilityDescription
+	(consequence!0x00010030) "SuperPower_Versatile (PLACEHOLDER)"
+end
+texts creatureAbilityName
+	(consequence!0x0001002f) "SuperPower_Versatile (PLACEHOLDER)"
+end
+float creatureAbilityRange 150
+float creatureAbilityRefresh 120
+int32 creatureAbilityType 57
+key verbIconImageID 0x0FB060F8
+int32 0x217997F4 10
+float 0x83028513 120

@@ -1,0 +1,63 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Ice Storm"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 16000
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0xdab82a46) "Ice Storm"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x4aeae75f) "Place on the planet to lower the temperature."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_terraformatm_dryice.png
+int32 spaceToolInitialAmmoCount 1
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxDamage 100
+float spaceToolMaxRange 500
+float spaceToolMinDamage 100
+key spaceToolPanelKey AtmosphericConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy DefaultProjectile
+key spaceToolType terraforming
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+float toolHitAirAtmosphereVelocity 0
+float toolHitAirTemperatureVelocity -1
+float toolHitAirWaterVelocity 0
+float toolHitCombatantAtmosphereVelocity 0
+key toolHitCombatantEffectID SG_ufo_dryice_generator_hitCombatant
+float toolHitCombatantTemperatureVelocity -1
+float toolHitCombatantWaterVelocity 0
+float toolHitGroundAtmosphereVelocity 0
+key toolHitGroundEffectID SG_ufo_dryice_generator_hitGround
+float toolHitGroundTemperatureVelocity -1
+float toolHitGroundWaterVelocity 0
+float toolHitWaterAtmosphereVelocity 0
+key toolHitWaterEffectID SG_ufo_dryice_generator_hitWater
+float toolHitWaterTemperatureVelocity -1
+float toolHitWaterWaterVelocity 0
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+key toolMuzzleEffectID SG_ufo_dryice_generator_muzzle
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID SG_ufo_dryice_generator_projectile
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 25
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+uint32 toolTerraformingIconKey 0x44bb4dbb

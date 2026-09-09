@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_07
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x8ba5364b) "Tablet of Prosperity No.7"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x4f46ab42) "The Grox are a source of the utmost terror.  They have exterminated many races."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_trader_07.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierTrader 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x529e7fd1) "Tablets of Prosperity"
+end
+int32 spaceTradingRareGroupID 27
+key spaceTradingType rare

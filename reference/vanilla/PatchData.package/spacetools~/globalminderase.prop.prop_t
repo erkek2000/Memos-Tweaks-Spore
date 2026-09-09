@@ -1,0 +1,34 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Global Happiness"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0xbe68817f) "Global Mind Erase"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xd4f93796) "Subdues all the inhabitants of a planet, they will not attack."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_social_globalminderase.png
+int32 spaceToolInitialAmmoCount 2
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+int32 spaceToolMaxDiscoveredAmmo 0
+float spaceToolMaxRange -1
+int32 spaceToolMinDiscoveredAmmo 0
+key spaceToolPanelKey SocialConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy globalminderase
+key spaceToolType special
+int32 spaceToolUseCost 0
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+key toolDiscoverableRarity Common
+key toolGenericEffectID SG_ufo_global_mind_erase
+bool toolPreventsPlanetExit true
+bool toolUseOnActivate false

@@ -1,0 +1,19 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Radar"
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0x5a4c5cd0) "Radar"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x0e084571) "Signals when you are near important planetside targets.  Toggles on and off."
+end
+bool spaceToolDisableOnHomeworld false
+key spaceToolImageID ufotools~!spg_main_radar.png
+float spaceToolMaxDamage 3000
+float spaceToolMaxRange 1000
+float spaceToolMinDamage 1000
+float spaceToolMinRange 25
+key spaceToolPanelKey TravelAbilityPanel
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolStrategy 0xA5D0D08F
+key spaceToolType special

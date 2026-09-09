@@ -1,0 +1,36 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Call for backup"
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0x0601aa7b) "Summon Mini-U"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x0601aa80) "Summon a miniature clone of your spaceship to help you in your travels."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+bool spaceToolHide true
+key spaceToolImageID ConsequenceGraphics!0xE8F0B135.png
+float spaceToolMaxRange -1
+key spaceToolPanelKey CombatAbilityPanel
+float spaceToolRechargeRate 120
+key spaceToolStrategy DefaultProjectile
+key spaceToolType special
+bool toolDeselectsAfterUse true
+bool toolDoActionPostEffect true
+key toolGenericEffectID SG_ufo_summon_backup_muzzle
+key toolHitCombatantEffectID SG_ufo_summon_backup_portal
+key toolHitGroundEffectID SG_ufo_summon_backup_portal
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID SG_ufo_summon_backup_portal
+bool toolIsSuperWeapon true
+key toolMuzzleEffectID SG_ufo_summon_backup_muzzle
+bool toolPassThroughAll true
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID SG_ufo_summon_backup_projectile
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileLobAngle -30
+float toolProjectileSpeed 40
+float toolProjectileTimeOut 1
+bool toolUseOnActivate true

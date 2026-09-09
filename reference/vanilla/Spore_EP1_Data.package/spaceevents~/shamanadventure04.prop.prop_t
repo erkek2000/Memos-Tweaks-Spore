@@ -1,0 +1,10 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Shaman Adventure 04"
+key missionAchievementID 0x98DFFD61
+key missionAdventureID Spirits_are_Restless
+key missionConversation mission_shaman_04
+float missionGenericRewardMoney 30000
+float missionGenericRewardRelation 3
+bool missionIsAdventure true
+bool missionIsTutorial false
+key missionType Adventure

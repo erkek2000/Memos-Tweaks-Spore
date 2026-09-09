@@ -1,0 +1,4 @@
+<mod displayName="ERKEK2000 QoL Runtime 0.4.0" unique="ERKEK2000QoLRuntime" description="Runtime ERKEK2000 QoL: Space hotbar keys, Bio Protector immunity, dialogue and colony-building shortcuts, galaxy-map spice pickup, and live cargo-limit repair." installerSystemVersion="1.0.1.1" hasCustomInstaller="true" dllsBuild="2.5.20">
+    <prerequisite game="GalacticAdventures">ERKEK2000_QoL_Runtime.package</prerequisite>
+    <prerequisite>ERKEK2000_QoL_Runtime.dll</prerequisite>
+</mod>

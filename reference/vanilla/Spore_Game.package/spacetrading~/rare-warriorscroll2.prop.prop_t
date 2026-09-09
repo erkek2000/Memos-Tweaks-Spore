@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_02
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x73cd39d8) "Stone of Force Vol.2"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x89196c99) "Violence is not an unnatural thing.  It is the normal state of being."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_warrior_03.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierWarrior 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x76b03354) "Stones of Force"
+end
+int32 spaceTradingRareGroupID 20
+key spaceTradingType rare

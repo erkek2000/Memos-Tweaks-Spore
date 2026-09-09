@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_01
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x52e6bc9a) "Block of Chance Vol. 1"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x5fd3f643) "You want to know the meaning of life?  Okay, here goes: Did you hear about the aliens who went into a bar on the moon?  They left because it had no atmosphere! Hope that answers all your questions for you."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_bard_01.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierBard 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x54ee3d96) "Blocks of Chance"
+end
+int32 spaceTradingRareGroupID 22
+key spaceTradingType rare

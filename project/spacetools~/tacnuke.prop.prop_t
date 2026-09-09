@@ -1,0 +1,24 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Tac Nuke"
+key spaceToolContext planet
+float spaceToolDamageArea 100
+float spaceToolDetectableRange 2000
+float spaceToolMaxDamage 6000
+float spaceToolMinDamage 6000
+float spaceToolRechargeRate 1
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+key toolHitCombatantEffectID CG_nuke_explosion_center
+key toolHitGroundEffectID CG_nuke_explosion_center
+key toolHitWaterEffectID CG_nuke_explosion_center
+bool toolIsHoming true
+bool toolPassThroughAll true
+float toolProjectileAcceleration 50
+key toolProjectileEffectID CG_nuke_projectile
+float toolProjectileExplosionExpansionRate 5000
+key toolProjectileMotion icbm
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 120
+key toolProjectileType nuclear
+float toolRelationshipDelta -5
+key toolTargetEffectID 0x721DBD9C

@@ -1,0 +1,14 @@
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xdff10031) "Scrolls of Harmony"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xb9386dd0) "~blank text~"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+float spaceTradingBaseCost 4500000
+float spaceTradingCostMultiplierShaman 2
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x1c82ead7) "Scrolls of Harmony"
+end
+int32 spaceTradingRareGroupID 23
+key spaceTradingType group

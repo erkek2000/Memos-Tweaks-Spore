@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_08
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xb5fca628) "Scroll of Harmony Vol.8"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xf08872c9) "The Grox are a soulless race of killing machines.  They oppose the Life Force in every way!  They are incapable of enlightenment or transcendence."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sharman_08.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierShaman 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xa4b5fcc4) "Scrolls of Harmony"
+end
+int32 spaceTradingRareGroupID 23
+key spaceTradingType rare

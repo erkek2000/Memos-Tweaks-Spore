@@ -1,0 +1,7 @@
+float artifactPlumpDistance 475
+float artifactPlumpSize 4
+vector3 galacticBinaryModelOffset (0.018, 0, 0)
+float galacticPrimaryStarModelScale 0.0004
+float galacticSecondaryStarModelScale 0.0004
+int32 impostorResolution 128
+float ptolemaicSunScale 0.48

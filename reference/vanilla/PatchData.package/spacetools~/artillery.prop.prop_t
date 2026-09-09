@@ -1,0 +1,15 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Artillery"
+key spaceToolContext planet
+float spaceToolDamageArea 5
+texts spaceToolDescription
+	(spacegame_tools!0xc801cb3e) "Artillery"
+end
+float spaceToolMaxDamage 250
+float spaceToolMaxRange 80
+float spaceToolMinDamage 150
+float spaceToolRechargeRate 5
+key spaceToolStrategy artillery
+key spaceToolType weapon
+key spaceToolWeaponSubType Projectile
+key toolProjectileType artillery

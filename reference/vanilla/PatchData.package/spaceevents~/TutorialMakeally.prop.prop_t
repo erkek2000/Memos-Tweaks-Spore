@@ -1,0 +1,9 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Tutorial Make Ally"
+float missionAccidentProneRewardMoney 10000
+key missionConversation mission_tutorial_make_ally
+float missionGenericRewardMoney 10000
+float missionGenerousRewardMoney 10000
+bool missionIsTutorial true
+float missionStingyRewardMoney 10000
+key missionType makeally

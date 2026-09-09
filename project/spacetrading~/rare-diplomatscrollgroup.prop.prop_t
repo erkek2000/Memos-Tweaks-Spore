@@ -1,0 +1,14 @@
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xf04084b1) "Scrolls of Order"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x4de7ce50) "~blank text~"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+float spaceTradingBaseCost 10000000
+float spaceTradingCostMultiplierDiplomat 2
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x49b08057) "Scrolls of Order"
+end
+int32 spaceTradingRareGroupID 21
+key spaceTradingType group

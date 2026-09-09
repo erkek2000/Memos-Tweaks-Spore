@@ -1,0 +1,15 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Culture Shocker"
+key spaceToolContext planet
+float spaceToolDamageArea 6
+texts spaceToolDescription
+	(spacegame_tools!0xaca3549d) "Culture Shocker"
+end
+float spaceToolMaxDamage 1
+float spaceToolMaxRange 120
+float spaceToolMinDamage 1
+float spaceToolRechargeRate 2
+key spaceToolStrategy artillery
+key spaceToolType weapon
+key spaceToolWeaponSubType Projectile
+key toolProjectileType Culture

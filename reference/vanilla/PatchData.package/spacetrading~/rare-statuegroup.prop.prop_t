@@ -1,0 +1,13 @@
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x017e15b4) "Rare Statues"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xaabf9db5) "~blank text~"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+float spaceTradingBaseCost 4500000
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af453) "Rare Statues"
+end
+int32 spaceTradingRareGroupID 3
+key spaceTradingType group

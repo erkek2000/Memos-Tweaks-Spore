@@ -1,0 +1,26 @@
+texts badgeCardDescription
+	(spacegame_badges!0x8ce6fc89) "You need to discover ~badge_left~ more Story Book Planet. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0x86240214) "You've discovered ~badge_progress~ Storybook Planet."
+end
+uint32 badgeEffectID 0x50584ec3
+texts badgeGroup
+	(spacegame_badges!0x381bfe7c) "Wonderland Wanderer"
+end
+texts badgeHintAction
+	(spacegame_badges!0x4e64f3ce) "Discover ~badge_needed~ Storybook Planet to earn the Wonderland Wanderer 1 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_wonderland_00.png
+texts badgeName
+	(spacegame_badges!0x0594b7fc) "Wonderland Wanderer 1"
+end
+int32 badgePointValue 2
+keys badgeRequirementList
+	badgeStorybooksvisited
+end
+int32 badgeStorybooksvisited 1
+texts badgeUnlockString
+	(spacegame_badges!0x0594c87e) "You've earned the Wonderland Wanderer 1 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_wonderland_01.png

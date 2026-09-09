@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_03
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x6ab9b477) "Stone of Force Vol.3"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xb71e7b2e) "The physical form is weak.  We can be ravaged by disease, broken in an accident, drowned in a bowl of water.  Our own bodies can betray us with cancer or infection or organ failure.  If we survive a life of accidents, our own bodies break down and kill us"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_warrior_04.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierWarrior 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xdcd9066d) "Stones of Force"
+end
+int32 spaceTradingRareGroupID 20
+key spaceTradingType rare

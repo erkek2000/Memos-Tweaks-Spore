@@ -1,0 +1,13 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Energy Store"
+int32 spaceToolBuyCost 5000
+key spaceToolContext passive
+texts spaceToolDescription
+	(spacegame_tools!0x3f3c2a71) "Basic Energy Storage"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xf62c8310) "Increase your spaceship's energy capacity."
+end
+key spaceToolImageID ufotools~!0x826502EF.png
+float spaceToolMaxRange 1
+key spaceToolType other

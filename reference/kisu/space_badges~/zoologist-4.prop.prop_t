@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0x7e84f3f9) "You need to fill out ~badge_left~ more Ecosystems. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0x6e213e04) "You've filled out ~badge_progress~ Ecosystems."
+end
+uint32 badgeEffectID 0x05b966e6
+texts badgeGroup
+	(spacegame_badges!0xdea1a72c) "Zoologist"
+end
+texts badgeHintAction
+	(spacegame_badges!0x825c3177) "Fill out ~badge_needed~ Ecosystems to earn the Zoologist 4 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_zoologist_00.png
+texts badgeName
+	(spacegame_badges!0x0487ae18) "Zoologist 4"
+end
+int32 badgePointValue 7
+key badgeReplacesBadge zoologist-3
+int32 badgeReqFoodWebsComplete 15
+keys badgeRequirementList
+	badgeReqFoodWebsComplete
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0487ae77) "You've earned the Zoologist 4 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_zoologist_04.png

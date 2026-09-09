@@ -1,0 +1,14 @@
+key parent TribeAbilityTemplates!tribesuperpower
+uint32s creatureAbilityAnimationIDs
+	0x06006754
+end
+texts creatureAbilityDescription
+	(consequence!0x0001002e) "SuperPower_Social (PLACEHOLDER)"
+end
+texts creatureAbilityName
+	(consequence!0x0001002d) "SuperPower_Social (PLACEHOLDER)"
+end
+float creatureAbilityRange 25
+float creatureAbilityRefresh 300
+int32 creatureAbilityType 56
+key verbIconImageID 0xFE060A8D

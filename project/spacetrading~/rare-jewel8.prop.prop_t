@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_gem_08
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_gem_08
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x9c511e96) "Rubies"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x115b75cf) "Great!  You found the rubies!  Only 24,000,000 more and you can make yourself a pair of slippers so you can go home."
+end
+key spaceToolImageID ufotools~!spg_cargopas_gems.png
+key spaceToolThumbnailID spg_badges~!sg_rare_gem_08.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 150000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af456) "Rare Jewels"
+end
+int32 spaceTradingRareGroupID 0
+key spaceTradingType rare

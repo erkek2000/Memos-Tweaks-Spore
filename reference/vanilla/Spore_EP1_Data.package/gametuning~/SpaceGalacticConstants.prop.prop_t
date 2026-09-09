@@ -1,0 +1,33 @@
+float averageMoonOrbitPeriodGasGiant 250
+float averageMoonOrbitPeriodRocky 1250
+float averagePlanetaryOrbitPeriod 1000
+float galacticCoreTravelLimit 3
+vector2 galacticCoreTravelRadii (70, 100)
+float galacticRevolutionMaxDistance 1500
+float galacticRevolutionMinDistance 10
+float galacticRevolutionRateMax -0.04
+float galacticRevolutionRateMin 0
+int32 numAdventuresPreserved 10
+vector2s orbitEccentricity
+	(100, 0.1)
+	(50, 0.15)
+	(30, 0.25)
+	(10, 0.3)
+end
+vector2s orbitPlanarDeviation
+	(100, 2)
+	(20, 10)
+	(5, 20)
+end
+int32 percentChanceStarHasRare 25
+float planetStartingOrientation 270
+vector2s rotationAxisDevation
+	(100, 5)
+	(10, 15)
+	(1, 40)
+end
+vector2s rotationPeriod
+	(100, 300)
+	(10, 200)
+end
+float solarSpeedMultiplier 3

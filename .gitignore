@@ -1,0 +1,13 @@
+# Visual C++ build intermediates and debug symbols
+runtime/obj/
+dist/*.pdb
+dist/*.lib
+
+# Local reverse-engineering dependency cache
+tools/_capstone/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.user
+*.suo

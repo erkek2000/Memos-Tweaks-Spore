@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_08
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x7ade9919) "Block of Chance Vol. 8"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xbd200b58) "The Grox are machines with absolutely no sense of humor!  They destroy entire races and never offer an explanation of what it is that ticks them off!"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_bard_08.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierBard 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x5bb09fcf) "Blocks of Chance"
+end
+int32 spaceTradingRareGroupID 22
+key spaceTradingType rare

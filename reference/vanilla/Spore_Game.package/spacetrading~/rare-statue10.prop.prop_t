@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_statues_10
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_statues_10
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x403961da) "The Statue of The Three Crickets"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x5fa3db83) "The Three Cricketeers-  Memorial statue of Xanthos, Paxtos and Abraxas, the original Three Cricketeers from Asteroidal Dumaxx's  famous novel of the same name."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sculpture_10.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 22500
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af453) "Rare Statues"
+end
+int32 spaceTradingRareGroupID 3
+key spaceTradingType rare

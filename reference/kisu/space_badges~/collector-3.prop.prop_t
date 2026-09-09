@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0x243daffc) "You need to collect ~badge_left~ more Artifacts. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0xa40cbd6d) "You've collected ~badge_progress~ Artifacts."
+end
+uint32 badgeEffectID 0xac1c9d69
+texts badgeGroup
+	(spacegame_badges!0xb9b37965) "Collector"
+end
+texts badgeHintAction
+	(spacegame_badges!0x4f90344b) "Collect ~badge_needed~ Artifacts to earn the Collector 3 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_collector_00.png
+texts badgeName
+	(spacegame_badges!0x0487d5b3) "Collector 3"
+end
+int32 badgePointValue 6
+key badgeReplacesBadge collector-2
+int32 badgeReqRaresCollected 10
+keys badgeRequirementList
+	badgeReqRaresCollected
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0487d593) "You've earned the Collector 3 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_collector_03.png

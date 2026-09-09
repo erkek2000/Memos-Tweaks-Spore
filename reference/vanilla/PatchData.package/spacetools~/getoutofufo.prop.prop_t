@@ -1,0 +1,25 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Get Out"
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0xd51719a7) "Hologram Scout"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x90a55bbe) "Send a hologram to the planet for an up close examination."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+key spaceToolImageID ufotools~!spg_main_getoutofufo.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 0
+float spaceToolMaxRange -1
+float spaceToolMinDamage 0
+key spaceToolPanelKey TravelAbilityPanel
+key spaceToolStrategy getoutofufo
+key spaceToolType special
+int32 spaceToolUseCost 0
+bool toolDeselectsAfterUse true
+bool toolUseOnActivate true

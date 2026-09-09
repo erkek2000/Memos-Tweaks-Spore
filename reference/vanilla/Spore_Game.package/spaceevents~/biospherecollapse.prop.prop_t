@@ -1,0 +1,27 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Biosphere Collapse"
+key creatureGoalCardLayout layouts~!SpaceEradicateAnimals
+float missionAccidentProneRewardMoney 0
+float missionAccidentProneRewardRelation 3
+float missionBiosphereCollapseAnimalTime 240
+float missionBiosphereCollapsePlantTime 180
+int32 missionBuildingsPerAdditionalPlanet 0x3b9ac9ff
+key missionConversation event_biosphere_collapse
+key missionEradicateDiseaseEffect 0xE1C1BB56
+int32 missionEradicateMaxNumHealthyKills 10
+int32 missionEradicateNumCreatures 5
+float missionGenericRewardMoney 0
+float missionGenericRewardRelation 3
+float missionGenerousRewardMoney 0
+float missionGenerousRewardRelation 3
+bool missionIsEvent true
+int32 missionMinBuildingsForAdditionalPlanet 0x3b9ac9ff
+float missionRangeMax 15
+float missionRangeMin 0
+key missionStarMapEffect 0x9381682B
+key missionStarMapEffectGroup disaster
+float missionStingyRewardMoney 0
+float missionStingyRewardRelation 3
+key missionType biospherecollapse
+uint32 0x5D6796FD 0x74c1935d
+uint32 0x61E37E5F 0xb4c1a518

@@ -1,0 +1,7 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Change Archetype: Zealot"
+int32 missionAcceptCost 5000000
+uint32 missionChangeArchetypeNumActionsNeeded 15
+key missionChangeArchetypeTo zealot
+key missionConversation mission_change_archetype_zealot
+key missionType ChangeArchetype

@@ -1,0 +1,17 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Energy Store 2"
+int32 spaceToolBuyCost 10000
+key spaceToolContext passive
+texts spaceToolDescription
+	(spacegame_tools!0xaaf21ee8) "Small Energy Storage"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xf62c8310) "Increase your spaceship's energy capacity."
+end
+key spaceToolImageID ufotools~!0x826502EC.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxRange 1.5
+key spaceToolType other
+key spaceToolUpgradeFile energyupgrade1.prop

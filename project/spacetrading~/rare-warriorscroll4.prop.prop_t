@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_04
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x39a7647e) "Stone of Force Vol.4"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xc329ccb7) "All life betrays itself and dies.  To attempt to preserve one's life is pointless.  Loyalty must be given to something greater than a single life."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_warrior_05.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierWarrior 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x6f95b0fa) "Stones of Force"
+end
+int32 spaceTradingRareGroupID 20
+key spaceTradingType rare

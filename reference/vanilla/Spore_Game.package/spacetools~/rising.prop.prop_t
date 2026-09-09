@@ -1,0 +1,9 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Messianic Rising"
+key spaceToolContext planet
+float spaceToolDamageArea 100
+float spaceToolMaxDamage 500
+float spaceToolMinDamage 500
+float spaceToolRechargeRate 0
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon

@@ -1,0 +1,12 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Interplanetary Drive"
+key spaceToolContext passive
+texts spaceToolDescription
+	(spacegame_tools!0x6514f8ee) "Interplanetary Drive"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xf29a5647) "Your basic interplanetary drive, allows you to leave your planet's orbit."
+end
+key spaceToolImageID ufotools~!0x66E86527.png
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolType other

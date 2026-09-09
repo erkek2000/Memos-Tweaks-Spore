@@ -1,0 +1,15 @@
+key parent AbilityTemplates!CreatureSuperPower
+uint32s creatureAbilityAnimationIDs
+	0x06006935
+end
+texts creatureAbilityDescription
+	(consequence!0x00010021) "SuperPower_Carnivore (PLACEHOLDER)"
+end
+float creatureAbilityDuration 25
+texts creatureAbilityName
+	(consequence!0x00010020) "SuperPower_Carnivore (PLACEHOLDER)"
+end
+float creatureAbilityRange 30
+float creatureAbilityRefresh 240
+int32 creatureAbilityType 49
+key verbIconImageID 0x39B7B77B

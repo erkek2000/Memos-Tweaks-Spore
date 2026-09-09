@@ -1,0 +1,37 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Multi Delivery"
+float missionAccidentProneRewardMoney 40000
+float missionAccidentProneRewardRelation 3
+keys missionAccidentProneRewardTool
+end
+key missionConversation mission_multi_delivery
+keys missionFetchItem
+	multiDelivery_mision_objects~!goldenidol
+	multiDelivery_mision_objects~!chest
+	multiDelivery_mision_objects~!crown
+	multiDelivery_mision_objects~!gnome
+	multiDelivery_mision_objects~!grail
+	multiDelivery_mision_objects~!llama
+	multiDelivery_mision_objects~!plate
+	multiDelivery_mision_objects~!scepter
+	multiDelivery_mision_objects~!snowglobe
+end
+float missionGenericRewardMoney 40000
+float missionGenericRewardRelation 3
+keys missionGenericRewardTool
+end
+float missionGenerousRewardMoney 40000
+float missionGenerousRewardRelation 3
+keys missionGenerousRewardTool
+end
+int32 missionMultiDeliveryMaxNumBuyers 1
+int32 missionMultiDeliveryMaxNumItems 3
+int32 missionMultiDeliveryMinNumBuyers 1
+int32 missionMultiDeliveryMinNumItems 3
+float missionRangeMax 15
+float missionRangeMin 0
+float missionStingyRewardMoney 40000
+float missionStingyRewardRelation 3
+keys missionStingyRewardTool
+end
+key missionType multidelivery

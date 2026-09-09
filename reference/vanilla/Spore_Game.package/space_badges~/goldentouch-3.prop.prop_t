@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0xe1eb5977) "You need to accumulate ~badge_left~ more Sporebucks. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0xd20df38a) "You've accumulated ~badge_progress~ Sporebucks."
+end
+uint32 badgeEffectID 0x490a7392
+texts badgeGroup
+	(spacegame_badges!0xd196082a) "Golden Touch"
+end
+texts badgeHintAction
+	(spacegame_badges!0x68d61fa2) "Accumulate ~badge_needed~ Sporebucks to earn the Golden Touch 3 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_golden_00.png
+texts badgeName
+	(spacegame_badges!0x0594b803) "Golden Touch 3"
+end
+int32 badgePointValue 6
+int32 badgeReachedCash 2500000
+key badgeReplacesBadge goldentouch-2
+keys badgeRequirementList
+	badgeReachedCash
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0594c885) "You've earned the Golden Touch 3 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_golden_03.png

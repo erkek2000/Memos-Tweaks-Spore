@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0xb886be82) "You need to form ~badge_left~ more Alliances. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0xd457eb13) "You've formed ~badge_progress~ Alliances."
+end
+uint32 badgeEffectID 0xe59bebfe
+texts badgeGroup
+	(spacegame_badges!0xa20b887e) "Diplomat"
+end
+texts badgeHintAction
+	(spacegame_badges!0x01e91034) "Form ~badge_needed~ Alliances to earn the Diplomat 5 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_diplomat_00.png
+texts badgeName
+	(spacegame_badges!0x0486a656) "Diplomat 5"
+end
+int32 badgePointValue 10
+key badgeReplacesBadge diplomat-4
+int32 badgeReqAlliancesFormed 20
+keys badgeRequirementList
+	badgeReqAlliancesFormed
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0486a692) "You've earned the Diplomat 5 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_diplomat_05.png

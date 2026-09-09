@@ -1,0 +1,55 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "color terrain purple"
+key inventoryItemArtifactModel SG_pickup_terrainBrush
+float inventoryItemArtifactNormalScale 3
+float inventoryItemArtifactPlumpScale 3
+float spaceToolAutoFireRate -1
+int32 spaceToolBuyCost 30
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0xeb0e341c) "Purple Terra-Coloring"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x30ad9f5d) "Changes the terrain color of the planet to purple."
+end
+float spaceToolDetectableRange 1000
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 1
+bool spaceToolHide true
+uint32s spaceToolImageColors
+	0xff8000ff
+end
+key spaceToolImageID ufotools~!0x31E8CD4B.png
+int32 spaceToolMaxDiscoveredAmmo 1
+float spaceToolMaxRange -1
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey ColorPanel
+uint32 spaceToolPanelPosition 13
+float spaceToolRechargeRate 1
+key spaceToolStrategy DefaultProjectile
+key spaceToolType sculpting
+int32 spaceToolUseCost 0
+bool toolDeselectsAfterUse true
+key toolDiscoverableRarity Common
+key toolHitCombatantEffectID 0x64D0852E
+key toolHitGroundEffectID 0x64D0852E
+key toolHitWaterEffectID 0xC80DFEBC
+key toolMuzzleEffectID 0xA0B2221D
+bool toolPassThroughAll false
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0x0B583983
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 15
+float toolRelationshipDelta -0.5
+int32s toolTargetFlags
+	hash(world)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+int32 toolTerrainColorIndex 63
+bool toolUseOnActivate false

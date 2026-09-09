@@ -1,0 +1,50 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Create Crystal Mesas"
+key inventoryItemArtifactModel SG_pickup_terrainBrush
+float inventoryItemArtifactNormalScale 3
+float inventoryItemArtifactPlumpScale 3
+int32 spaceToolBuyCost 30
+key spaceToolContext planet
+float spaceToolDamageArea 100
+texts spaceToolDescription
+	(spacegame_tools!0xffa1ffe8) "Crystal Mesas"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x37587d89) "Use on a planet to terrasculpt crystal mesas."
+end
+float spaceToolDetectableRange 1000
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 1
+bool spaceToolHide true
+key spaceToolImageID ufotools~!spg_terraformlan_crystal.png
+float spaceToolMaxDamage 0
+int32 spaceToolMaxDiscoveredAmmo 1
+float spaceToolMaxRange 2000
+float spaceToolMinDamage 0
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey SculptingPanel
+uint32 spaceToolPanelPosition 34
+float spaceToolRechargeRate 20
+key spaceToolStrategy DefaultProjectile
+key spaceToolType sculpting
+int32 spaceToolUseCost 0
+key toolDiscoverableRarity Common
+key toolHitGroundEffectID 0x5F9D4442
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID 0x585EF618
+key toolMuzzleEffectID SG_pulse_weapon_muzzle
+bool toolPassThroughAll false
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0x9669E1D6
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 300
+float toolProjectileTimeOut 5
+float toolRelationshipDelta -0.5
+int32s toolTargetFlags
+	hash(world)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

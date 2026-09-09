@@ -1,0 +1,51 @@
+bool packageBlessCheck false
+key packageID 0x07A7F786
+int32 packagePriority 101
+uint32s packageRequirements
+	0x06f4a0ef
+end
+uint32s packageSignature
+	0x7e31930e
+	0x126fe862
+	0x014e9006
+	0x75f7347a
+	0xed0ea26b
+	0x998fef41
+	0x807c2c86
+	0xebd0115b
+	0x2e98f611
+	0xf6a9c9b8
+	0xaecb306b
+	0x5a667801
+	0x309aa2ba
+	0x9a9e7f4a
+	0x1cb834a6
+	0x61df27b0
+	0xdedb99b9
+	0x43ce87f8
+	0x97cddedb
+	0x0819f2f7
+	0x8ac203ea
+	0x5fb870bc
+	0xca277439
+	0xdb762f42
+	0x85744b1c
+	0x7d294d9c
+	0xdf59e6cc
+	0xdb05793c
+	0xbfdba623
+	0xb4325bb3
+	0xdd1b5c22
+	0xad22df35
+end
+uint32 packageSteamAppID 24720
+texts packageTitle
+	(0xFFFFFFFF!0xffffffff) "Expansion Pack 1"
+end
+key paletteSetButtonBackgroundIcon ScenarioEditor!ep1-button-background.png
+key paletteSetButtonIcon ScenarioEditor!ep1-button-icon.png
+key paletteSetButtonLayout layouts~!0x98F661C7.layout
+texts paletteSetName
+	(0xDCAC78EE!0x0792afc4) "Expansion Pack 1 (PLACEHOLDER)"
+end
+int32 paletteSetSequenceNumber 512

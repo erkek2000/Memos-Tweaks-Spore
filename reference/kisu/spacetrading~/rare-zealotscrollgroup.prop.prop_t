@@ -1,0 +1,14 @@
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xd246bede) "Scrolls of Faith"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xe1614a17) "~blank text~"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+float spaceTradingBaseCost 10000000
+float spaceTradingCostMultiplierZealot 2
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xc019ceda) "Scrolls of Faith"
+end
+int32 spaceTradingRareGroupID 25
+key spaceTradingType group

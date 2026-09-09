@@ -1,0 +1,34 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Eradicate Animals"
+key creatureGoalCardLayout layouts~!SpaceEradicateAnimals
+float missionAccidentProneRewardMoney 25000
+float missionAccidentProneRewardRelation 3
+keys missionAccidentProneRewardTool
+end
+key missionConversation mission_eradicate_animals
+float missionDuration 90
+bool missionEradicateCanFail true
+key missionEradicateDiseaseEffect 0xE1C1BB56
+int32 missionEradicateMaxNumHealthyKills 10
+int32 missionEradicateMaxPerHerd 2
+int32 missionEradicateMinPerHerd 1
+int32 missionEradicateNumCreatures 5
+key missionEradicateType Animals
+float missionGenericRewardMoney 25000
+float missionGenericRewardRelation 3
+keys missionGenericRewardTool
+end
+float missionGenerousRewardMoney 25000
+float missionGenerousRewardRelation 3
+keys missionGenerousRewardTool
+end
+float missionRangeMax 15
+float missionRangeMin 0
+float missionStingyRewardMoney 25000
+float missionStingyRewardRelation 3
+keys missionStingyRewardTool
+end
+bool missionTimerStartsOnFirstEntry true
+key missionType eradicate
+uint32 0x5D6796FD 0x74c1935d
+uint32 0x61E37E5F 0xb4c1a518

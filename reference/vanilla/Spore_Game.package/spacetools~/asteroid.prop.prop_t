@@ -1,0 +1,69 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Asteroid"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 12650
+key spaceToolContext planet
+float spaceToolDamageArea 70
+texts spaceToolDescription
+	(spacegame_tools!0x782c4e6f) "Asteroid Call Button"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x6b0d4ae6) "Use on a planet to summon an asteroid, raising the temperature and lowering atmosphere."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_terraformatm_asteroid.png
+int32 spaceToolInitialAmmoCount 1
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxDamage 1000
+int32 spaceToolMaxDiscoveredAmmo 3
+float spaceToolMaxRange 300
+float spaceToolMinDamage 1000
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey AtmosphericConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy 0x68ECCB0A
+key spaceToolType terraforming
+bool spaceToolUsesAmmo true
+key toolBeamEffectID SG_ufo_asteroid_tractor_beam
+bool toolDeselectsAfterUse true
+key toolDiscoverableRarity Uncommon
+float toolHitAirAtmosphereVelocity -0.75
+float toolHitAirTemperatureVelocity 0.75
+float toolHitAirWaterVelocity 0
+float toolHitCombatantAtmosphereVelocity -0.75
+key toolHitCombatantEffectID SG_ufo_asteroid_collision_ground
+float toolHitCombatantTemperatureVelocity 0.75
+float toolHitCombatantWaterVelocity 0
+float toolHitGroundAtmosphereVelocity -0.75
+key toolHitGroundEffectID SG_ufo_asteroid_collision_ground
+float toolHitGroundTemperatureVelocity 0.75
+float toolHitGroundWaterVelocity 0
+float toolHitWaterAtmosphereVelocity -0.75
+key toolHitWaterEffectID SG_ufo_asteroid_collision_water
+float toolHitWaterTemperatureVelocity 0.75
+float toolHitWaterWaterVelocity 0
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+key toolMuzzleEffectID SG_ufo_asteroid_tractor_beam_muzzle
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID SG_ufo_asteroid_projectile
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 25
+key toolTargetEffectID 0xB1E858ED
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+uint32 toolTerraformingIconKey 0x44bb4db8

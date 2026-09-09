@@ -1,0 +1,15 @@
+key parent TribeAbilityTemplates!tribesuperpower
+uint32s creatureAbilityAnimationIDs
+	0x06006753
+end
+float creatureAbilityDamage 15
+texts creatureAbilityDescription
+	(consequence!0x0001002c) "SuperPower_Aggressive (PLACEHOLDER)"
+end
+texts creatureAbilityName
+	(consequence!0x0001002b) "SuperPower_Aggressive (PLACEHOLDER)"
+end
+float creatureAbilityRange 15
+float creatureAbilityRefresh 240
+int32 creatureAbilityType 55
+key verbIconImageID 0xC2EBA868

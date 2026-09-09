@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_geodes_09
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_geode_09
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xf1de1d96) "A Reddish Geode"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xfc887ccf) "This ruby red geode, also known as the Bloodstone Geode, is as red as it is sparkly... what more could you want? Unless you think it looks purple..."
+end
+key spaceToolImageID ufotools~!spg_cargopas_geodes.png
+key spaceToolThumbnailID spg_badges~!sg_rare_geode_09.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 67500
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af452) "Rare Geodes"
+end
+int32 spaceTradingRareGroupID 4
+key spaceTradingType rare

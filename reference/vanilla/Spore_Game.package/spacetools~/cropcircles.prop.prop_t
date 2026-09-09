@@ -1,0 +1,44 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Crop Circles"
+key cropCircleDecalEffectID SG_ufo_crop_circle_projectile_explosion
+int32 spaceToolBuyCost 50
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0x14be5fdf) "Crop Circles"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x40052af6) "Draw crop circles near cities and tribes to interact with them."
+end
+float spaceToolDetectableRange 30
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 5
+key spaceToolImageID ufotools~!spg_social_cropcircles.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxRange 150
+key spaceToolPanelKey SocialAbilityPanel
+float spaceToolRechargeRate 4
+key spaceToolStrategy cropcircles
+key spaceToolType special
+int32 spaceToolUseCost 0
+bool toolDeselectsAfterUse false
+key toolHitCombatantEffectID SG_Ufo_Crop_Circle_Projectile_Fizzle
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID SG_Ufo_Crop_Circle_Projectile_Fizzle
+key toolMuzzleEffectID SG_ufo_crop_circle_muzzle
+key toolProjectileEffectID SG_ufo_crop_circle_projectile
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 300
+float toolProjectileTimeOut 5
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(world)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

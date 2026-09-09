@@ -1,0 +1,44 @@
+texts spaceToolDescription
+	(spacegame_tools!0xff2ba023) "Embassy"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x5134bcba) "Places an embassy on another alien race's planet. Increases your relationship with this empire over time."
+end
+key spaceToolImageID ufotools~!spg_main_placeembassy.png
+float spaceTradingAbundance 10
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 500000
+float spaceTradingChance 1
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 100
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 100
+float spaceTradingChancePlayerDiplomat 100
+float spaceTradingChancePlayerEcologist 100
+float spaceTradingChancePlayerKnight 100
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 100
+float spaceTradingChancePlayerTrader 100
+float spaceTradingChancePlayerWanderer 100
+float spaceTradingChancePlayerWarrior 100
+float spaceTradingChancePlayerZealot 100
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 100
+float spaceTradingChanceTrader 100
+float spaceTradingChanceWarrior 0
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierDiplomat 0.5
+float spaceTradingCostMultiplierShaman 0.5
+float spaceTradingCostMultiplierTrader 0.65
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+key spaceTradingExchangeFor placeembassy.prop
+uint32 spaceTradingQuantityToOffer 5
+key spaceTradingRequiresBadge diplomat-5
+key spaceTradingRequiresBadgeOr traveler-5
+int32 spaceTradingRequiresTier 4
+key spaceTradingToolClass social
+int32 spaceTradingToolReofferRate 60
+key spaceTradingType tool

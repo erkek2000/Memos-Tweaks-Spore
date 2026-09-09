@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_gem_07
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_gem_07
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x8091b48d) "Turquoise"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xbcf6e84c) "Turquoise is an opaque, blue-to-green mineral that is a hydrous phosphate of copper and aluminum, with the chemical formula CuAl6(PO4)4(OH)8-4H2O."
+end
+key spaceToolImageID ufotools~!spg_cargopas_gems.png
+key spaceToolThumbnailID spg_badges~!sg_rare_gem_07.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 50000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af456) "Rare Jewels"
+end
+int32 spaceTradingRareGroupID 0
+key spaceTradingType rare

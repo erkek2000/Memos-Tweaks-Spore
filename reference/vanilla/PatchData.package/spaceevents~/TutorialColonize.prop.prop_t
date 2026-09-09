@@ -1,0 +1,19 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "TutorialColonize"
+float missionAccidentProneRewardMoney 10000
+bool missionCanAbort false
+int32 missionColonizeBuildingsRequired 0
+key missionConversation mission_tutorial_colonize
+key missionExportTargetPlanetTo 0x779436FF
+float missionGenericRewardMoney 10000
+float missionGenerousRewardMoney 10000
+keys missionGiveOnAcceptTools
+	placecolony
+end
+bool missionIsTutorial true
+bool missionPickClosestStar true
+int32 missionPlanetTScore 0
+float missionRangeMax 6
+float missionRangeMin 0
+float missionStingyRewardMoney 10000
+key missionType colonize

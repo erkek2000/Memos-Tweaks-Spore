@@ -1,0 +1,34 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Mind Erase"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 30
+key spaceToolContext planet
+float spaceToolDamageArea 15
+texts spaceToolDescription
+	(spacegame_tools!0x8b3edf92) "Mind Erase"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xaf7570db) "Use on panicked citizens to subdue them and forestall attack."
+end
+float spaceToolDetectableRange 0.5
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.25
+key spaceToolImageID ufotools~!spg_social_minderase.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxRange 150
+key spaceToolPanelKey SocialAbilityPanel
+key spaceToolStrategy minderase
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+key toolBeamEffectID SG_ufo_mind_erase_beam
+int32 toolCulturalRewardCount 2
+bool toolDestroysFloraAndFauna false
+key toolHitCombatantEffectID SG_ufo_mind_erase_HitCombatant
+key toolHitGroundEffectID SG_ufo_mind_erase_HitGround
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID SG_ufo_mind_erase_HitWater
+key toolMuzzleEffectID SG_ufo_mind_erase_muzzle
+bool toolPicksFlora false

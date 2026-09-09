@@ -1,0 +1,3 @@
+<mod displayName="ERKEK2000 QoL 0.3.0" unique="ERKEK2000QoL" description="Configurable package-only personal fork of KisuTweaks 1.5, with instant Space communication panels and selected Kisu values restored to vanilla. Some inherited features require a fresh galaxy." installerSystemVersion="1.0.1.0" hasCustomInstaller="true" dllsBuild="2.5.20">
+    <prerequisite game="GalacticAdventures">ERKEK2000_QoL.package</prerequisite>
+</mod>

@@ -1,0 +1,23 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Turret Flak"
+float spaceToolAutoFireRate 0
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 20
+float spaceToolMaxDamage 20
+float spaceToolMaxRange 600
+float spaceToolMinDamage 20
+float spaceToolMinRange 125
+float spaceToolRechargeRate 7
+key spaceToolStrategy TurretFlak
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+key toolHitGroundEffectID SG_ack_ack_explosion_holder
+bool toolHitOrientsToTerrain false
+key toolHitPlayerEffectID SG_ack_ack_explosion_holder
+key toolProjectileEffectID SG_ack_ack_rocket
+float toolProjectileExplosionExpansionRate 500
+float toolProjectileMaxAltitude 600
+float toolProjectileMinAltitude 65
+float toolProjectileSpeed 100
+float toolProjectileTimeOut 15

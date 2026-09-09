@@ -1,0 +1,62 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Meteor Shower"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 16000
+key spaceToolContext planet
+float spaceToolDamageArea 70
+texts spaceToolDescription
+	(spacegame_tools!0xf696a88d) "Meteor Shower"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x53343c4c) "Use to hurl meteors at a planet to raise the temperature."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_terraformatm_rainfire.png
+int32 spaceToolInitialAmmoCount 1
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+int32 spaceToolMaxDiscoveredAmmo 3
+float spaceToolMaxRange 300
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey AtmosphericConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy 0x68ECCB0A
+key spaceToolType terraforming
+bool spaceToolUsesAmmo true
+key toolBeamEffectID 0x2E35E3BA
+bool toolDeselectsAfterUse true
+key toolDiscoverableRarity Uncommon
+float toolHitAirAtmosphereVelocity 0
+float toolHitAirTemperatureVelocity 1
+float toolHitAirWaterVelocity 0
+float toolHitCombatantAtmosphereVelocity 0
+key toolHitCombatantEffectID 0x13AF2904
+float toolHitCombatantTemperatureVelocity 1
+float toolHitCombatantWaterVelocity 0
+float toolHitGroundAtmosphereVelocity 0
+key toolHitGroundEffectID 0x0A35986C
+float toolHitGroundTemperatureVelocity 1
+float toolHitGroundWaterVelocity 0
+float toolHitWaterAtmosphereVelocity 0
+key toolHitWaterEffectID 0xD3E595CE
+float toolHitWaterTemperatureVelocity 1
+float toolHitWaterWaterVelocity 0
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+key toolMuzzleEffectID 0x80FC2D95
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0x8DC1223B
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 25
+key toolTargetEffectID 0xB1E858ED
+int32s toolTargetFlags
+	hash(world)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+uint32 toolTerraformingIconKey 0x44bb4dbf

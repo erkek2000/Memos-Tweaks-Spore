@@ -1,0 +1,24 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Terraform"
+float missionAccidentProneRewardMoney 400000
+float missionAccidentProneRewardRelation 3
+keys missionAccidentProneRewardTool
+end
+key missionConversation mission_terraform
+float missionGenericRewardMoney 400000
+float missionGenericRewardRelation 4
+keys missionGenericRewardTool
+end
+float missionGenerousRewardMoney 400000
+float missionGenerousRewardRelation 3
+keys missionGenerousRewardTool
+end
+bool missionHidePlanetName false
+bool missionHideStarName true
+float missionRangeMax 15
+float missionRangeMin 0
+float missionStingyRewardMoney 400000
+float missionStingyRewardRelation 3
+keys missionStingyRewardTool
+end
+key missionType terraform

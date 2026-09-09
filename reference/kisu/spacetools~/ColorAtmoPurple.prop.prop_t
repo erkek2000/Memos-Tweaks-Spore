@@ -1,0 +1,57 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "color atmo purple"
+key inventoryItemArtifactModel SG_pickup_terrainBrush
+float inventoryItemArtifactNormalScale 3
+float inventoryItemArtifactPlumpScale 3
+float spaceToolAutoFireRate -1
+int32 spaceToolBuyCost 30
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0x22770d44) "Grape Flavored Sky"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x6c54e325) "Changes the atmosphere color of the planet to purple."
+end
+float spaceToolDetectableRange 1000
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 1
+bool spaceToolHide true
+uint32s spaceToolImageColors
+	0xff8000ff
+end
+key spaceToolImageID ufotools~!0x31E8CD4B.png
+int32 spaceToolMaxDiscoveredAmmo 1
+float spaceToolMaxRange -1
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey ColorPanel
+uint32 spaceToolPanelPosition 5
+float spaceToolRechargeRate 1
+key spaceToolStrategy DefaultProjectile
+key spaceToolType sculpting
+int32 spaceToolUseCost 0
+int32 toolAtmosphereColorIndex 13
+bool toolDeselectsAfterUse true
+key toolDiscoverableRarity Common
+key toolHitCombatantEffectID 0x8C8208B9
+key toolHitGroundEffectID 0x8C8208B9
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID 0x8C8208B9
+key toolMuzzleEffectID 0x5995B453
+bool toolPassThroughAll false
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0x6AB732F1
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileLobAngle -80
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 2
+float toolRelationshipDelta -0.5
+int32s toolTargetFlags
+	hash(world)
+	hash(air)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+bool toolUseOnActivate false

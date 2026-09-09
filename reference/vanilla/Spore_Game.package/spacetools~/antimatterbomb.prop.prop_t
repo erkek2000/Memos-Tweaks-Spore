@@ -1,0 +1,68 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Antimatter Bomb"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 5000
+key spaceToolContext planet
+float spaceToolDamageArea 140
+texts spaceToolDescription
+	(spacegame_tools!0x3478653f) "Anti-Matter Bomb"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xc2b26356) "A very powerful weapon, capable of destroying entire cities."
+end
+float spaceToolDetectableRange 2000
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_combat_antimatterbomb.png
+int32 spaceToolInitialAmmoCount 5
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxDamage 1000000
+int32 spaceToolMaxDiscoveredAmmo 3
+float spaceToolMaxRange 300
+float spaceToolMinDamage 1000000
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey CombatConsumablePanel
+float spaceToolRechargeRate 20
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+bool spaceToolUsesAmmo true
+key toolDiscoverableRarity rare
+float toolHitAirAtmosphereVelocity 0
+float toolHitAirTemperatureVelocity 0
+float toolHitAirWaterVelocity 0
+float toolHitCombatantAtmosphereVelocity 0
+key toolHitCombatantEffectID SG_antimatter_explosion_center
+float toolHitCombatantTemperatureVelocity 0
+float toolHitCombatantWaterVelocity 0
+float toolHitGroundAtmosphereVelocity 0
+key toolHitGroundEffectID SG_antimatter_explosion_center
+float toolHitGroundTemperatureVelocity 0
+float toolHitGroundWaterVelocity 0
+float toolHitWaterAtmosphereVelocity 0
+key toolHitWaterEffectID SG_antimatter_explosion_center
+float toolHitWaterTemperatureVelocity 0
+float toolHitWaterWaterVelocity 0
+int32 toolMeaningOfLifeRewardCount 0
+key toolMuzzleEffectID SG_pulse_weapon_muzzle
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID SG_antimatter_weapon
+float toolProjectileExplosionExpansionRate 25
+float toolProjectileSpeed 40
+float toolProjectileTimeOut 25
+float toolRelationshipDelta -5
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x061ab566) "You must choose a valid ground target to fire this weapon."
+end

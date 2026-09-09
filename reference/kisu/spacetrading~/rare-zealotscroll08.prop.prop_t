@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_08
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x895ea95d) "Scrolls of Faith Book 8"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xb38260fc) "The Grox prevent us from shining the Light of Spode on the center of the galaxy.  On the Day of Reckoning, we shall destroy them in Spode's holy name!"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_zealot_08.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierZealot 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x2c88b563) "Scrolls of Faith"
+end
+int32 spaceTradingRareGroupID 25
+key spaceTradingType rare

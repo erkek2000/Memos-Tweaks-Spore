@@ -1,0 +1,22 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Uber Turret Missiles"
+float spaceToolAutoFireRate -1
+float spaceToolDamageArea 12
+float spaceToolMaxDamage 500
+float spaceToolMaxProjectileScale 1
+float spaceToolMaxRange 250
+float spaceToolMinDamage 500
+float spaceToolRechargeRate 1
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+key toolHitCombatantEffectID civ_weapons_military_projectile_shell_1_explosion
+key toolHitGroundEffectID civ_weapons_military_projectile_shell_1_explosion
+key toolHitWaterEffectID civ_weapons_military_projectile_shell_1_explosion
+bool toolIsHoming true
+key toolMuzzleEffectID civ_weapons_military_projectile_shell_1_muzzle
+float toolProjectileEccentricity 1
+key toolProjectileEffectID 0x85C7D440
+float toolProjectileExplosionExpansionRate 5000
+key toolProjectileMotion accelerating
+float toolProjectileSpeed 180
+float toolProjectileTimeOut 8

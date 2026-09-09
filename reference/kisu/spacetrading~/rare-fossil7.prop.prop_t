@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_fossils_07
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_fossil_07
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x7c218e52) "Big Dead Fish on a Little Non Living Rock"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x06a4c09b) "Anthropologists take great interest in this particular find. This artifact proves that fish from ancient times actually used rocks as beds in order to be more comfortable while sleeping . After a hard day of swimming, jumping and not being caught, it was "
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_fossils_07.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af454) "Rare Fossils"
+end
+int32 spaceTradingRareGroupID 2
+key spaceTradingType rare

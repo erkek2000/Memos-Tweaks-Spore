@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0x7adca4cb) "You need to fly between ~badge_left~ more Solar Systems. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0x1ee6549e) "You've made ~badge_progress~ Interstellar Flights."
+end
+uint32 badgeEffectID 0x974eca2e
+int32 badgeFlightsmade 800
+texts badgeGroup
+	(spacegame_badges!0xfaa2bbf6) "Frequent Flyer"
+end
+texts badgeHintAction
+	(spacegame_badges!0x455083cc) "Fly between ~badge_needed~ Solar Systems to earn the Frequent Flyer 5 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_frequentflyer_00.png
+texts badgeName
+	(spacegame_badges!0x0594b8de) "Frequent Flyer 5"
+end
+int32 badgePointValue 10
+key badgeReplacesBadge frequentflyer-4
+keys badgeRequirementList
+	badgeflightsmade
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0594c8bf) "You've earned the Frequent Flyer 5 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_frequentflyer_05.png

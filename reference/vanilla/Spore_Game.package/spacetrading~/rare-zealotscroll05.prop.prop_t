@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_05
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xc0449e7a) "Scrolls of Faith Book 5"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xb9dc4123) "That is also why we are vigilant against those who do not accept the Truth.  If false doctrine causes a follower to doubt, that person's eternal happiness is in jeopardy!  In order to free ourselves from doubt, we strive to eliminate all who reject Spode'"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_zealot_05.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierZealot 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xc0fb6bf6) "Scrolls of Faith"
+end
+int32 spaceTradingRareGroupID 25
+key spaceTradingType rare

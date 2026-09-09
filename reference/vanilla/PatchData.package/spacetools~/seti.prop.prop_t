@@ -1,0 +1,19 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "SETI"
+int32 spaceToolBuyCost 500
+key spaceToolContext passive
+texts spaceToolDescription
+	(spacegame_tools!0xd90bafcd) "SETI"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x04ebc561) "Automatically detects intelligent life in other star systems.  Look for the radio lines in the galactic view."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+key spaceToolImageID ufotools~!0x5A5B9CF4.png
+float spaceToolSetiChanceFalseNegativeEmpire 0
+float spaceToolSetiChanceFalseNegativeRare 0
+float spaceToolSetiChanceFalsePositiveEmpire 0
+float spaceToolSetiChanceFalsePositiveRare 0.05
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolType other

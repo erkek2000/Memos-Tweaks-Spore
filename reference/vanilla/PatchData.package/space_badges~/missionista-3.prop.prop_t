@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0x4b9a308e) "You need to complete ~badge_left~ more Missions. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0xaef0b81f) "You've completed ~badge_progress~ Missions."
+end
+uint32 badgeEffectID 0xd4222363
+texts badgeGroup
+	(spacegame_badges!0xcdab6def) "Missionista"
+end
+texts badgeHintAction
+	(spacegame_badges!0x094c36f9) "Complete ~badge_needed~ Missions to earn the Missionista 3 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_missionista_00.png
+texts badgeName
+	(spacegame_badges!0x0594b8e6) "Missionista 3"
+end
+int32 badgePointValue 6
+key badgeReplacesBadge missionista-2
+int32 badgeReqMissionsComplete 18
+keys badgeRequirementList
+	badgeReqMissionsComplete
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0594c8c7) "You've earned the Missionista 3 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_missionista_03.png

@@ -1,0 +1,17 @@
+key parent TribeAbilityTemplates!tribesuperpower
+int32 FadeTime 10
+int32 LifeTime 25
+float PoisonRange 20
+float TrapRange 150
+texts creatureAbilityDescription
+	(consequence!0x00020026) "SuperPower_Carnivore (PLACEHOLDER)"
+end
+texts creatureAbilityName
+	(consequence!0x00020025) "SuperPower_Carnivore (PLACEHOLDER)"
+end
+float creatureAbilityRefresh 120
+int32 creatureAbilityType 52
+float triggerTime 10
+key verbIconImageID 0xBD790A03
+int32 0x1070C664 4
+int32 0xBE3CE72D 15

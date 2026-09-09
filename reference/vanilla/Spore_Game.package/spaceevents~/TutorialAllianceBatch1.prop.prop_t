@@ -1,0 +1,7 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Tutorial Alliance Batch1"
+key missionConversation mission_tutorial_alliance_batch1
+float missionGenericRewardMoney 200000
+bool missionIsTutorial true
+key missionTrackBadgeID diplomat-2
+key missionType trackbadge

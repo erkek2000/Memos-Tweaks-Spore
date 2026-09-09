@@ -1,0 +1,48 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Place Embassy"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 1000
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0xff2ba023) "Embassy"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x5134bcba) "Places an embassy on another alien race's planet. Increases your relationship with this empire over time."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_main_placeembassy.png
+int32 spaceToolInitialAmmoCount 99
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxRange 300
+key spaceToolPanelKey SocialConsumablePanel
+float spaceToolRechargeRate 10
+key spaceToolStrategy placeObject
+key spaceToolType special
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+bool toolDeselectsOnPlanetExit true
+bool toolDoActionPostEffect true
+key toolHitGroundEffectID SG_colonytool_place_embassy
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID SG_colonytool_place_embassy
+int32 toolMeaningOfLifeRewardCount 0
+key toolMuzzleEffectID 0x448D5F72
+bool toolOnlyOnNPCColonies true
+key toolPlacedModelKey SG_colonytool_embassy
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0x23D7D504
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 150
+int32s toolTargetFlags
+	hash(world)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

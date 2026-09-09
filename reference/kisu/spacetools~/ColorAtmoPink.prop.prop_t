@@ -1,0 +1,56 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "color atmo pink"
+key inventoryItemArtifactModel SG_pickup_terrainBrush
+float inventoryItemArtifactNormalScale 3
+float inventoryItemArtifactPlumpScale 3
+float spaceToolAutoFireRate -1
+int32 spaceToolBuyCost 30
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0x637c64ae) "Sky Pinkinator"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xab570e07) "Changes the atmosphere color of the planet to pink."
+end
+float spaceToolDetectableRange 1000
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 1
+bool spaceToolHide true
+uint32s spaceToolImageColors
+	0xffff80ff
+end
+key spaceToolImageID ufotools~!0x31E8CD4B.png
+int32 spaceToolMaxDiscoveredAmmo 1
+float spaceToolMaxRange -1
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey ColorPanel
+uint32 spaceToolPanelPosition 4
+float spaceToolRechargeRate 1
+key spaceToolStrategy DefaultProjectile
+key spaceToolType sculpting
+int32 spaceToolUseCost 0
+int32 toolAtmosphereColorIndex 15
+key toolDiscoverableRarity Common
+key toolHitCombatantEffectID 0xD29FF4D7
+key toolHitGroundEffectID 0xD29FF4D7
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID 0xD29FF4D7
+key toolMuzzleEffectID 0x7523D01D
+bool toolPassThroughAll false
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0x08B6C783
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileLobAngle -80
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 2
+float toolRelationshipDelta -0.5
+int32s toolTargetFlags
+	hash(world)
+	hash(air)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+bool toolUseOnActivate false

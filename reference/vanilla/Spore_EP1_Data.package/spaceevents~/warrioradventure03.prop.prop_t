@@ -1,0 +1,9 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Warrior Adventure 03"
+key missionAdventureID Battle
+key missionConversation mission_warrior_03
+float missionGenericRewardMoney 30000
+float missionGenericRewardRelation 3
+bool missionIsAdventure true
+bool missionIsTutorial false
+key missionType Adventure

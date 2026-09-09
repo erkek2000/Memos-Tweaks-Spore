@@ -1,0 +1,14 @@
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x7a05a6a1) "Books of Science"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x6abc9020) "~blank text~"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+float spaceTradingBaseCost 10000000
+float spaceTradingCostMultiplierScientist 2
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xfc63cce7) "Books of Science"
+end
+int32 spaceTradingRareGroupID 24
+key spaceTradingType group

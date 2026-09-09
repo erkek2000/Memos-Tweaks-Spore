@@ -1,0 +1,15 @@
+key parent AbilityTemplates!CreatureSuperPower
+uint32s creatureAbilityAnimationIDs
+	0x06006972
+end
+texts creatureAbilityDescription
+	(consequence!0x00010023) "SuperPower_Herbivore (PLACEHOLDER)"
+end
+float creatureAbilityDuration 30
+texts creatureAbilityName
+	(consequence!0x00010022) "SuperPower_Herbivore (PLACEHOLDER)"
+end
+float creatureAbilityRange 25
+float creatureAbilityRefresh 300
+int32 creatureAbilityType 50
+key verbIconImageID 0x98E25639

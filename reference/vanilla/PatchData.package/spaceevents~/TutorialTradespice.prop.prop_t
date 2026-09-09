@@ -1,0 +1,11 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Tutorial Trade Spice"
+float missionAccidentProneRewardMoney 5000
+key missionConversation mission_tutorial_trade_spice
+float missionGenericRewardMoney 5000
+float missionGenerousRewardMoney 5000
+bool missionIsTutorial true
+float missionStingyRewardMoney 5000
+key missionTradeItemType spice
+key missionTradeKind sell
+key missionType trade

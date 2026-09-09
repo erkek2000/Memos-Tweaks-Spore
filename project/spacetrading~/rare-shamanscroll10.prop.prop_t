@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_10
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x6c3d2519) "Scroll of Harmony Vol.10"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x372a3758) "Some of our seers say that all answers are to be found at the center of the galaxy, but the Grox will not permit anyone to approach."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sharman_10.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierShaman 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x538703cf) "Scrolls of Harmony"
+end
+int32 spaceTradingRareGroupID 23
+key spaceTradingType rare

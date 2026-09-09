@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_09
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xc931b6f6) "Scrolls of Faith Book 9"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x43b8722f) "The God That Will Come is a false deity.  If this god exists at all, it is a demon bent on perverting Spode's worship.  Whenever you encounter his followers, you should know you have encountered an enemy!"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_zealot_09.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierZealot 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x0b31b1c2) "Scrolls of Faith"
+end
+int32 spaceTradingRareGroupID 25
+key spaceTradingType rare

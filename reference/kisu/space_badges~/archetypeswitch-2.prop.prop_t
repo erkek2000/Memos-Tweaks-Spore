@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0x31609d34) "You need ~badge_left~ more personality changes. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0x67009c45) "You've switched ~badge_progress~ times."
+end
+uint32 badgeEffectID 0x80413cea
+texts badgeGroup
+	(spacegame_badges!0x75d4018d) "Split Personality"
+end
+texts badgeHintAction
+	(spacegame_badges!0x05f8c76b) "Change personality ~badge_needed~ times to earn the Split Personality 2 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_archetypeswitch_00.png
+texts badgeName
+	(spacegame_badges!0x05f8c5c9) "Split Personality 2"
+end
+int32 badgePointValue 10
+key badgeReplacesBadge archetypeswitch-1
+int32 badgeReqArchetypeSwitches 2
+keys badgeRequirementList
+	badgeReqArchetypeSwitches
+end
+texts badgeUnlockString
+	(spacegame_badges!0x05f8c57a) "You've earned the Split Personality 2 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_archetypeswitch_02.png

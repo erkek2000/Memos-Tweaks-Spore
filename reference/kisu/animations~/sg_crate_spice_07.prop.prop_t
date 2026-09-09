@@ -1,0 +1,8 @@
+key parent models!DefaultTemplate.prop
+bboxs modelBoundingBox
+	(-0.614123, -0.614573, -0) (0.634231, 0.615185, 1.389835)
+end
+float modelBoundingRadius 1.646919
+key modelMeshLOD0 sg_crate_spice_07.rw4
+key modelMeshLOD1 sg_crate_spice_07.rw4
+float modelScale 2

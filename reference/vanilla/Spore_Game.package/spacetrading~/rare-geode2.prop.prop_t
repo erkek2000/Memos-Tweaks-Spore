@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_geodes_02
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_geode_02
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xb41c2c9b) "A Green Geode"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x1d043af2) "Some think that the 'Green Geode''  gets its green color from fragments of jade or emeralds which reflect the light from the sun.  Others think it turns green because of mold.  But I say, ''Who cares?''.  It isn't worth any less than all of the other geod"
+end
+key spaceToolImageID ufotools~!spg_cargopas_geodes.png
+key spaceToolThumbnailID spg_badges~!sg_rare_geode_02.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 22500
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af452) "Rare Geodes"
+end
+int32 spaceTradingRareGroupID 4
+key spaceTradingType rare

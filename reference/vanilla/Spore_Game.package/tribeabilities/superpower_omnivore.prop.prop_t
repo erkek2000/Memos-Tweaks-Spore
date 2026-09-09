@@ -1,0 +1,18 @@
+key parent TribeAbilityTemplates!tribesuperpower
+float EffectiveDist 100
+float NumFish 7
+uint32s creatureAbilityAnimationIDs
+	0x06006752
+end
+texts creatureAbilityDescription
+	(consequence!0x0001002a) "SuperPower_Omnivore (PLACEHOLDER)"
+end
+texts creatureAbilityName
+	(consequence!0x00010029) "SuperPower_Omnivore (PLACEHOLDER)"
+end
+float creatureAbilityRefresh 300
+int32 creatureAbilityType 54
+float searchRadius 300
+key verbIconImageID 0x5F49756A
+float 0x191DCAD8 45
+float 0xED219018 15

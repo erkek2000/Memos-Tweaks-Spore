@@ -1,0 +1,24 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Religious Anti-Tank Turret"
+float spaceToolAutoFireRate 0.1
+key spaceToolContext planet
+float spaceToolDamageArea 2
+texts spaceToolDescription
+	(spacegame_tools!0x5446f467) "Anti-Tank Turret"
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+float spaceToolMaxDamage 20
+float spaceToolMaxRange 100
+float spaceToolMinDamage 20
+key spaceToolStrategy DefaultBeam
+key spaceToolType weapon
+key spaceToolWeaponSubType Beam
+key toolBeamEffectID civ_turret_bullets
+bool toolDestroysFloraAndFauna false
+key toolHitCombatantEffectID 0x6CEECE8E
+bool toolHitOrientsToTerrain true
+key toolHitPlayerEffectID 0x6CEECE8E
+bool toolIsHoming true
+key toolMuzzleEffectID 0x8F241A1F
+bool toolPassThroughAll true

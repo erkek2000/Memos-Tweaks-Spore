@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0x558da0a0) "You need to expand to ~badge_left~ more Solar Systems. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0x93da64b0) "You've expanded to ~badge_progress~ Solar Systems."
+end
+uint32 badgeEffectID 0xf4214812
+int32 badgeEmpiresize 15
+texts badgeGroup
+	(spacegame_badges!0xdf6e0fa0) "Empire"
+end
+texts badgeHintAction
+	(spacegame_badges!0xbc19359b) "Expand to ~badge_needed~ Solar Systems to earn the Empire 4 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_empire_00.png
+texts badgeName
+	(spacegame_badges!0x0594b63e) "Empire 4"
+end
+int32 badgePointValue 8
+key badgeReplacesBadge empire-3
+keys badgeRequirementList
+	badgeempiresize
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0594c7dd) "You've earned the Empire 4 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_empire_04.png

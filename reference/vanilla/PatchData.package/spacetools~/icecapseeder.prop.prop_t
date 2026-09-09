@@ -1,0 +1,55 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Atmosphere Freezer"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 12650
+key spaceToolContext planet
+float spaceToolDamageArea 70
+texts spaceToolDescription
+	(spacegame_tools!0x3a437b21) "Atmosphere Freezer"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x9d67c0a0) "Place on the planet to lower both temperature & atmosphere level."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_terraformatm_icecapseeder.png
+int32 spaceToolInitialAmmoCount 1
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxDamage 100
+int32 spaceToolMaxDiscoveredAmmo 3
+float spaceToolMinDamage 100
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey AtmosphericConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy DefaultProjectile
+key spaceToolType terraforming
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+key toolDiscoverableRarity Uncommon
+float toolHitAirAtmosphereVelocity -0.75
+float toolHitAirTemperatureVelocity -0.75
+float toolHitAirWaterVelocity 0
+float toolHitCombatantAtmosphereVelocity -0.75
+key toolHitCombatantEffectID SG_ufo_icecapseeder_hitCombatant
+float toolHitCombatantTemperatureVelocity -0.75
+float toolHitCombatantWaterVelocity 0
+float toolHitGroundAtmosphereVelocity -0.75
+key toolHitGroundEffectID SG_ufo_icecapseeder_hitGround
+float toolHitGroundTemperatureVelocity -0.75
+float toolHitGroundWaterVelocity 0
+float toolHitWaterAtmosphereVelocity -0.75
+key toolHitWaterEffectID SG_ufo_icecapseeder_hitWater
+float toolHitWaterTemperatureVelocity -0.75
+float toolHitWaterWaterVelocity 0
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+key toolMuzzleEffectID SG_ufo_icecapseeder_muzzle
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID SG_ufo_icecapseeder_projectile
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 25
+uint32 toolTerraformingIconKey 0x44bb4dba

@@ -1,0 +1,27 @@
+int32 badgeAestheticTools 20
+texts badgeCardDescription
+	(spacegame_badges!0xff47c2e7) "You need to use ~badge_left~ more Planet Sculpting or Color Tools. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0x027214ba) "You've used ~badge_progress~ Planet Sculpting or Coloring Tools."
+end
+uint32 badgeEffectID 0x91e233ec
+texts badgeGroup
+	(spacegame_badges!0xf61e761a) "Planet Artiste"
+end
+texts badgeHintAction
+	(spacegame_badges!0xd213d652) "Use ~badge_needed~ Planet Sculpting or Coloring Tools to earn the Planet Artiste 3 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_planetpicasso_00.png
+texts badgeName
+	(spacegame_badges!0x0594b8d7) "Planet Artiste 3"
+end
+int32 badgePointValue 6
+key badgeReplacesBadge planetpicasso-2
+keys badgeRequirementList
+	badgeAestheticTools
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0594c8b8) "You've earned the Planet Artiste 3 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_planetpicasso_03.png

@@ -1,0 +1,6 @@
+key parent CreatureGame!CreatureGameTuning.prop
+float creatureFleeDistance 45
+float creatureFleeWatchTime 5
+float creatureScaleMultiplier 2.5
+float 0xBD82FAE8 1
+float 0xE6F2FCE8 0

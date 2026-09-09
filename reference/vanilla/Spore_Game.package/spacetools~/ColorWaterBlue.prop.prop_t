@@ -1,0 +1,56 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "color water blue"
+key inventoryItemArtifactModel SG_pickup_terrainBrush
+float inventoryItemArtifactNormalScale 3
+float inventoryItemArtifactPlumpScale 3
+float spaceToolAutoFireRate -1
+int32 spaceToolBuyCost 30
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0x04868768) "Deep Blue Sea"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x75dcc909) "Changes the water color of the planet to blue."
+end
+float spaceToolDetectableRange 1000
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 1
+bool spaceToolHide true
+uint32s spaceToolImageColors
+	0xff0000ff
+end
+key spaceToolImageID ufotools~!0x31E8CD4B.png
+int32 spaceToolMaxDiscoveredAmmo 1
+float spaceToolMaxRange -1
+int32 spaceToolMinDiscoveredAmmo 1
+key spaceToolPanelKey ColorPanel
+uint32 spaceToolPanelPosition 16
+float spaceToolRechargeRate 30
+key spaceToolStrategy DefaultProjectile
+key spaceToolType sculpting
+int32 spaceToolUseCost 0
+bool toolDeselectsAfterUse true
+key toolDiscoverableRarity Common
+key toolHitCombatantEffectID 0x348469DA
+key toolHitGroundEffectID 0x348469DA
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID 0x4DA901C0
+key toolMuzzleEffectID 0x89238367
+bool toolPassThroughAll false
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0x9AFD1BAD
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 15
+float toolRelationshipDelta -0.5
+int32s toolTargetFlags
+	hash(world)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+bool toolUseOnActivate false
+int32 toolWaterColorIndex 11

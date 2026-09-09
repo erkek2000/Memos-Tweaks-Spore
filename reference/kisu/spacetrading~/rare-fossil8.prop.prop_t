@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_fossils_08
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_fossil_08
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xfc1c155b) "Fossilized Candy Corn"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x3c41c8b2) "Just kidding! We all know that candy corn is already fossilized. Oh this particular artifact? I don't know, it's an old arrowhead or something."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_fossils_08.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af454) "Rare Fossils"
+end
+int32 spaceTradingRareGroupID 2
+key spaceTradingType rare

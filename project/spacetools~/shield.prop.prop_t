@@ -1,0 +1,22 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Shield"
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0xdab0ae3f) "Shield"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xfae06456) "Protects your ship from damage for a short period."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 20
+key spaceToolImageID ufotools~!spg_combat_sheild.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+key spaceToolPanelKey CombatAbilityPanel
+float spaceToolRechargeRate 180
+key spaceToolStrategy DefaultToolStrategy
+key spaceToolType weapon
+bool toolDeselectsAfterUse true
+bool toolUseOnActivate true

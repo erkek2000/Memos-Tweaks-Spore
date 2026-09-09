@@ -1,0 +1,25 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Drop Cargo"
+float spaceToolAutoFireRate -1
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0xf5cff647) "Drop Cargo"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xd46d8b5e) "Eject items from your cargo bay onto a planet. Hold to drop creatures gently."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_cargopas_dropcargo.png
+float spaceToolMaxRange 200
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolStrategy dropcargo
+key spaceToolType special
+int32 spaceToolUseCost 0
+key toolBeamEffectID SG_ufo_drop_cargo_beam
+bool toolBeamPassThrough true
+bool toolHitOrientsToTerrain false
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+key toolMuzzleEffectID SG_ufo_drop_cargo_Muzzle

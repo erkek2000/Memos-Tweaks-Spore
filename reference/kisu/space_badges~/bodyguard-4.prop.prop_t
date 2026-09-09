@@ -1,0 +1,26 @@
+texts badgeCardDescription
+	(spacegame_badges!0x99065da6) "You need to defend ~badge_left~ more friends. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0x6eb98b17) "You've defended ~badge_progress~ friends from an attack."
+end
+int32 badgeFriendsDefended 10
+texts badgeGroup
+	(spacegame_badges!0x04d1cab7) "Body Guard"
+end
+texts badgeHintAction
+	(spacegame_badges!0x85d7955e) "Defend ~badge_needed~ friends to earn the Body Guard 4 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_soulbase_01.png
+texts badgeName
+	(spacegame_badges!0x0594b639) "Body Guard 4"
+end
+int32 badgePointValue 8
+key badgeReplacesBadge bodyguard-3
+keys badgeRequirementList
+	badgeFriendsDefended
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0594c7d8) "You've earned the Body Guard 4 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_soulbase_05.png

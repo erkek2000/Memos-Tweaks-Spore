@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0x23b952a0) "You need to complete ~badge_left~ more Delivery Missions. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0x2ab167b1) "You've completed ~badge_progress~ Delivery Missions."
+end
+uint32 badgeEffectID 0x8bee3c56
+texts badgeGroup
+	(spacegame_badges!0x71ec2c91) "Gopher"
+end
+texts badgeHintAction
+	(spacegame_badges!0xaf4d229a) "Complete ~badge_needed~ Delivery Missions to earn the Gopher 2 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_gopher_00.png
+texts badgeName
+	(spacegame_badges!0x0487c61c) "Gopher 2"
+end
+int32 badgePointValue 4
+key badgeReplacesBadge gopher-1
+int32 badgeReqFetchMissionsComplete 3
+keys badgeRequirementList
+	badgeReqFetchMissionsComplete
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0487c541) "You've earned the Gopher 2 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_gopher_02.png

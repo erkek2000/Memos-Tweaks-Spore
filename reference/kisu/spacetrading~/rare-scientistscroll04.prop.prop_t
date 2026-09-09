@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_04
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xcf8f5f04) "Book of Science Pt. 4"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x022b1ce5) "Anything else is a guess.  You might be good at guessing-  but one wrong guess, at any time, can doom your species."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_scientist_04.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierScientist 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x72edfab0) "Books of Science"
+end
+int32 spaceTradingRareGroupID 24
+key spaceTradingType rare

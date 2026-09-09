@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_gem_06
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_gem_06
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x4a6de698) "Lapis Lazuli"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xab12e959) "This beatuiful blue artifact is known as Lapis Lazuli.  Creatures have toiled vigorously and tirelessly throughout the galaxy to mine this semi-precious stone for over 6500 years.  You came along and just found one just lying there."
+end
+key spaceToolImageID ufotools~!spg_cargopas_gems.png
+key spaceToolThumbnailID spg_badges~!sg_rare_gem_06.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 50000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af456) "Rare Jewels"
+end
+int32 spaceTradingRareGroupID 0
+key spaceTradingType rare

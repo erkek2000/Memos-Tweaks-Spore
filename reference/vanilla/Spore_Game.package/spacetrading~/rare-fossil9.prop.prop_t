@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_fossils_09
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_fossil_09
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x9de0bcac) "Mr. Fluffers"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x7d58d64d) "This extremely rare artifact is further proof that ancient civilizations domesticated cats as pets for their homes. This particular artifact was found with a little bell and collar nearby which read ''Mr. Fluffers''.  Actually also nearby were the remains"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_fossils_09.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af454) "Rare Fossils"
+end
+int32 spaceTradingRareGroupID 2
+key spaceTradingType rare

@@ -1,0 +1,23 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "TutorialFlight101"
+float missionAccidentProneRewardMoney 0
+float missionAccidentProneRewardRelation 4
+key missionConversation mission_tutorial_flight_101
+float missionGenericRewardMoney 0
+float missionGenericRewardRelation 4
+keys missionGenericRewardUnlock
+end
+int32 missionGenericRewardUnlockCount 1
+float missionGenerousRewardMoney 0
+float missionGenerousRewardRelation 4
+bool missionIsTutorial true
+key missionPickTargetPlanet HomePlanet
+float missionStingyRewardMoney 0
+float missionStingyRewardRelation 4
+keys missionSubMissions
+	TutorialFlight101_VisitCities
+	TutorialFlight101_Scan
+	tutorialflight101_fetchanimal
+	TutorialFlight101_EradicateAnimals
+end
+key missionType flight101

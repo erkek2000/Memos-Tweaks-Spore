@@ -1,0 +1,17 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Health Store 4"
+int32 spaceToolBuyCost 2000
+key spaceToolContext passive
+texts spaceToolDescription
+	(spacegame_tools!0x49bbd1ac) "Large Health"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x852c73ae) "Increase your spaceship's health capacity."
+end
+key spaceToolImageID ufotools~!0xD9F3949D.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxRange 4
+key spaceToolType other
+key spaceToolUpgradeFile healthupgrade3.prop

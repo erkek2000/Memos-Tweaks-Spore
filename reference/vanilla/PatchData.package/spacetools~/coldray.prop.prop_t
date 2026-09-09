@@ -1,0 +1,58 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Cold Ray"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 200
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+texts spaceToolDescription
+	(spacegame_tools!0x4f0badd2) "Refrigeration Ray"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x8641e41b) "Use on a planet to lower the temperature."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.5
+key spaceToolImageID ufotools~!spg_terraformatm_coldray.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxRange 500
+key spaceToolPanelKey AtmosphericAbilityPanel
+key spaceToolStrategy DefaultBeam
+key spaceToolType terraforming
+int32 spaceToolUseCost 0
+key toolBeamEffectID SG_ufo_coldray_beam
+float toolHitAirAtmosphereVelocity 0
+float toolHitAirTemperatureVelocity -0.01
+float toolHitAirWaterVelocity 0
+float toolHitCombatantAtmosphereVelocity 0
+key toolHitCombatantEffectID SG_ufo_coldray_hit_combatant
+float toolHitCombatantTemperatureVelocity -0.01
+float toolHitCombatantWaterVelocity 0
+float toolHitGroundAtmosphereVelocity 0
+key toolHitGroundEffectID SG_ufo_coldray_hit_ground
+float toolHitGroundTemperatureVelocity -0.01
+float toolHitGroundWaterVelocity 0
+bool toolHitOrientsToTerrain true
+float toolHitWaterAtmosphereVelocity 0
+key toolHitWaterEffectID SG_ufo_coldray_hit_ground
+float toolHitWaterTemperatureVelocity -0.01
+float toolHitWaterWaterVelocity 0
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+	hash(air)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+uint32 toolTerraformingIconKey 0x44bb4dbb

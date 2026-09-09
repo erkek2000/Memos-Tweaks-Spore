@@ -1,0 +1,17 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Balance"
+float missionAccidentProneRewardMoney 65000
+float missionAccidentProneRewardRelation 3
+key missionConversation mission_balance
+float missionGenericRewardMoney 65000
+float missionGenericRewardRelation 3
+float missionGenerousRewardMoney 65000
+float missionGenerousRewardRelation 3
+bool missionGiveOnAcceptAnimals false
+bool missionGiveOnAcceptPlants false
+int32 missionNumOfRowsRequired 1
+float missionRangeMax 15
+float missionRangeMin 0
+float missionStingyRewardMoney 65000
+float missionStingyRewardRelation 3
+key missionType balance

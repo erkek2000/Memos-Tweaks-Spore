@@ -1,0 +1,15 @@
+float DistanceQuitGame 200
+float DistanceStartGame 150
+bool HighlightUIButtons true
+int32 LengthGame 8
+int32 LightDurationRound1 1500
+int32 LightDurationRound10 600
+int32 LightDurationRound2 1100
+int32 LightDurationRound3 900
+int32 LightDurationRound4 800
+int32 LightDurationRound5 700
+int32 LightDurationRound6 650
+int32 LightDurationRound7 600
+int32 LightDurationRound8 600
+int32 LightDurationRound9 600
+int32 NoteWaitTime 2000

@@ -1,0 +1,46 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Eradicate"
+int32 spaceToolAmmoUsedPerShot 1
+float spaceToolAutoFireRate -1
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 5
+texts spaceToolDescription
+	(spacegame_tools!0xcc7cdde2) "Species Eradicate"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x8efb418b) "Eradicate an entire species of creature to make way for something new."
+end
+float spaceToolDetectableRange 2000
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_main_eradicate.png
+int32 spaceToolInitialAmmoCount 3
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxRange 150
+key spaceToolPanelKey SocialConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy DefaultProjectile
+key spaceToolType special
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+key toolHitCombatantEffectID 0x36444361
+key toolHitGroundEffectID 0x36444361
+key toolHitWaterEffectID 0x36444361
+bool toolIsHoming true
+key toolMuzzleEffectID 0xB0E32003
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0xAD981B21
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileSpeed 50
+float toolProjectileTimeOut 5
+int32s toolTargetFlags
+	hash(animal)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x385928de) "Targeting capability of this weapon is limited to creatures."
+end

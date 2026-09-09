@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_04
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x76281e14) "Scroll of Order IV"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x90631315) "Because every sentient being matters, we provide every citizen with a voice.  Each is allowed to express opinions and participate in government as they see fit."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_diplomat_04.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierDiplomat 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x4b3edd60) "Scrolls of Order"
+end
+int32 spaceTradingRareGroupID 21
+key spaceTradingType rare

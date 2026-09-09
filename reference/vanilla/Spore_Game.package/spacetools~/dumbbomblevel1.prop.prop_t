@@ -1,0 +1,56 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Dumb Bomb"
+float spaceToolAutoFireRate 1
+int32 spaceToolBuyCost 100
+key spaceToolContext planet
+float spaceToolDamageArea 12
+texts spaceToolDescription
+	(spacegame_tools!0xe27e0c2f) "Mini Bomb"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x2e4a83a6) "A weak bomb, capable of damaging vehicles and buildings."
+end
+float spaceToolDetectableRange 25
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.5
+key spaceToolImageID ufotools~!spg_combat_dumbbomb1.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 300
+float spaceToolMaxRange 150
+float spaceToolMinDamage 300
+key spaceToolPanelKey CombatAbilityPanel
+float spaceToolRechargeRate 1
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+int32 spaceToolUseCost 0
+bool toolCanPlayerLockOn false
+key toolHitCombatantEffectID 0xEA918CC2
+key toolHitGroundEffectID 0xEA918CC2
+key toolHitWaterEffectID 0xEA918CC2
+bool toolIsHoming false
+key toolMuzzleEffectID 0xA2929413
+bool toolPassThroughAll false
+key toolProjectileEffectID 0x16C50CBC
+float toolProjectileExplosionExpansionRate 100
+float toolProjectileLobAngle 60
+float toolProjectileSpeed 35
+float toolProjectileTimeOut 20
+float toolRelationshipDelta -0.5
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+	hash(air)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x061ab566) "You must choose a valid ground target to fire this weapon."
+end

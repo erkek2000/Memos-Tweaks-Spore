@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_02
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x512191d2) "Book of Science Pt. 2"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x6088a81b) "The survival of a species is about managing risk.  The more you know about the universe, and the more you know about yourself and your own capabilities, the better you can calculate the risk to yourself."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_scientist_02.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierScientist 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x7b99f95e) "Books of Science"
+end
+int32 spaceTradingRareGroupID 24
+key spaceTradingType rare

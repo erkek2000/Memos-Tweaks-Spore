@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_relics_08
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_relic_08
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x64801906) "Sporehenge"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xb493dd1f) "Sporehenge's origins are shrouded in mystery, but it is a well known fact that walking, oozing or flying under the taller of the two arches opens a portal to at least 6 other dimensions."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_relics_08.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af455) "Rare Relics"
+end
+int32 spaceTradingRareGroupID 1
+key spaceTradingType rare

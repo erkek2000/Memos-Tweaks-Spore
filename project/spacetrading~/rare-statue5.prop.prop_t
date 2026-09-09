@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_statues_05
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_statues_05
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xcbd31224) "The Stone of Pierre"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xad9d3505) "This is the sacred Stone of Pierre.... Forever guarded by the goofy looking guy sitting on top of it."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sculpture_05.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 150000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af453) "Rare Statues"
+end
+int32 spaceTradingRareGroupID 3
+key spaceTradingType rare

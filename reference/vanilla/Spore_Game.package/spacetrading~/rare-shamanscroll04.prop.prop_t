@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_04
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xac90e094) "Scroll of Harmony Vol.4"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x2471c195) "You can only answer the real questions through spiritual exercise."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sharman_04.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierShaman 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x72290ce0) "Scrolls of Harmony"
+end
+int32 spaceTradingRareGroupID 23
+key spaceTradingType rare

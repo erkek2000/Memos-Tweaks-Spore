@@ -1,0 +1,49 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Edit Creature"
+int32 spaceToolAmmoUsedPerShot 1
+float spaceToolAutoFireRate -1
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+texts spaceToolDescription
+	(spacegame_tools!0x0dc3bacb) "Creature Tweeker"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x4f4d0bc2) "Select this tool and click a creature on a planet to modify it."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_main_creatureedit.png
+int32 spaceToolInitialAmmoCount 1
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+int32 spaceToolMaxDiscoveredAmmo 0
+float spaceToolMaxRange 150
+int32 spaceToolMinDiscoveredAmmo 0
+key spaceToolPanelKey SocialConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy DefaultProjectile
+key spaceToolType special
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+key toolDiscoverableRarity Common
+key toolHitCombatantEffectID SG_ufo_creature_edit_hit_target
+key toolHitGroundEffectID SG_ufo_creature_edit_fizzle
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID SG_ufo_creature_edit_fizzle
+bool toolIsHoming true
+key toolMuzzleEffectID SG_ufo_creature_edit_muzzle
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID SG_ufo_creature_edit_beam
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileSpeed 30
+float toolProjectileTimeOut 5
+int32s toolTargetFlags
+	hash(animal)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x385928de) "Targeting capability of this weapon is limited to creatures."
+end

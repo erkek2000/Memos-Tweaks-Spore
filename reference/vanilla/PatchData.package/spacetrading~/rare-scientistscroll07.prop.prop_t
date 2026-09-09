@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_07
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xaeac66bd) "Book of Science Pt. 7"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x4eaba15c) "The universe is no place for amateurs.  Learn all you can, abolish your prejudices, and then act."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_scientist_07.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierScientist 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x8ca12643) "Books of Science"
+end
+int32 spaceTradingRareGroupID 24
+key spaceTradingType rare

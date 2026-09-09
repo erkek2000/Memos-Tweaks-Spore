@@ -1,0 +1,48 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Happy Ray"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+texts spaceToolDescription
+	(spacegame_tools!0x9baeb0b0) "Medium Happy Ray"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x6accabb8) "Increases relationship with the alien race inhabiting the planet."
+end
+float spaceToolDetectableRange 50
+bool spaceToolDisableOnHomeworld false
+float spaceToolEnergyCost 2
+key spaceToolImageID ufotools~!spg_social_happyray2.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 0
+float spaceToolMaxRange 150
+float spaceToolMinDamage 0
+key spaceToolPanelKey SocialAbilityPanel
+key spaceToolStrategy DefaultBeam
+key spaceToolType special
+key spaceToolUpgradeFile happyraylevel1.prop
+int32 spaceToolUseCost 0
+key toolBeamEffectID 0x3E10F2F5
+key toolHitCombatantEffectID 0xAD5A2B36
+key toolHitGroundEffectID 0x5C75F738
+bool toolHitOrientsToTerrain true
+key toolHitWaterEffectID 0xE0E9B205
+bool toolIsHoming true
+float toolRelationshipDelta 0.01
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

@@ -1,0 +1,7 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Change Archetype: Scientist"
+int32 missionAcceptCost 5000000
+uint32 missionChangeArchetypeNumActionsNeeded 20
+key missionChangeArchetypeTo scientist
+key missionConversation mission_change_archetype_scientist
+key missionType ChangeArchetype

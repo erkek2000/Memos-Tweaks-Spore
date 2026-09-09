@@ -1,0 +1,15 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Tutorial Find Rare"
+float missionAccidentProneRewardMoney 5000
+key missionConversation mission_tutorial_find_rare
+float missionDuration 0
+float missionGenericRewardMoney 5000
+float missionGenerousRewardMoney 5000
+bool missionIsTutorial true
+key missionPickTargetPlanet None
+float missionRangeMax 5
+float missionRangeMin 0
+float missionStingyRewardMoney 5000
+key missionType fetch
+key missionTypeOfFetch rare
+bool missionVisitCities false

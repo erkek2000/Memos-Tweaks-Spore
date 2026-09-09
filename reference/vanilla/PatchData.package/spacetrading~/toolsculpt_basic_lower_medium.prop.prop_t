@@ -1,0 +1,44 @@
+texts spaceToolDescription
+	(spacegame_tools!0x8f215d1a) "Lower Terrain (Medium)"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xd03592c3) "Use on a planet to lower the planet's surface."
+end
+key spaceToolImageID ufotools~!spg_terraformlan_lowerterrain2.png
+float spaceTradingAbundance 5
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 100000
+float spaceTradingChance 1
+float spaceTradingChanceBard 0
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 100
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 100
+float spaceTradingChancePlayerDiplomat 100
+float spaceTradingChancePlayerEcologist 100
+float spaceTradingChancePlayerKnight 100
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 100
+float spaceTradingChancePlayerTrader 100
+float spaceTradingChancePlayerWanderer 100
+float spaceTradingChancePlayerWarrior 100
+float spaceTradingChancePlayerZealot 100
+float spaceTradingChanceScientist 100
+float spaceTradingChanceShaman 100
+float spaceTradingChanceTrader 0
+float spaceTradingChanceWarrior 0
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierEcologist 0.5
+float spaceTradingCostMultiplierScientist 0.5
+float spaceTradingCostMultiplierShaman 0.5
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+key spaceTradingExchangeFor sculpt_basic_lower_medium.prop
+uint32 spaceTradingQuantityToOffer 1
+key spaceTradingRequiresBadge terrawrangler-2
+key spaceTradingRequiresBadgeOr explorer-2
+int32 spaceTradingRequiresTier 3
+int32 spaceTradingToolReofferRate 120
+key spaceTradingType upgrade

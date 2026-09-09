@@ -1,0 +1,8 @@
+# Generated package staging and local tooling output
+tools/_capstone/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.user
+*.suo

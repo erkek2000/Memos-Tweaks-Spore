@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0x5ca496a3) "You need to avert ~badge_left~ more Eco Disasters. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0x3631cc33) "You've averted ~badge_progress~ Eco Disasters."
+end
+uint32 badgeEffectID 0x4c073cd8
+texts badgeGroup
+	(spacegame_badges!0x9e20a5eb) "Eco Hero"
+end
+texts badgeHintAction
+	(spacegame_badges!0x010fc0c0) "Avert ~badge_needed~ Eco Disasters to earn the Eco Hero 2 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_ecohero_00.png
+texts badgeName
+	(spacegame_badges!0x0594b7f8) "Eco Hero 2"
+end
+int32 badgePointValue 4
+key badgeReplacesBadge ecohero-1
+int32 badgeReqEcoDisasterMissionsComplete 3
+keys badgeRequirementList
+	badgeReqEcoDisasterMissionsComplete
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0594c87a) "You've earned the Eco Hero 2 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_ecohero_02.png

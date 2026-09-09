@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_02
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x1b806348) "Tablet of Prosperity No.2"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xd84d5ee9) "We who are neither grand nor wise must settle for lesser answers.  We concern ourselves only with that which makes us happy."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_trader_02.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierTrader 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x3415b964) "Tablets of Prosperity"
+end
+int32 spaceTradingRareGroupID 27
+key spaceTradingType rare

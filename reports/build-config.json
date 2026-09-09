@@ -1,0 +1,22 @@
+﻿{
+    "RestoreShieldCooldown":  true,
+    "RestoreGeneralSpiceProduction":  true,
+    "RestoreVanillaBadgeRequirements":  true,
+    "RestoreGroxExclusiveRadius":  true,
+    "Values":  {
+                   "CoreTravelMinimum":  70,
+                   "CoreTravelMaximum":  100,
+                   "HouseCost":  25600,
+                   "SpiceProductionMultiplier":  0.0005,
+                   "ShieldCooldownSeconds":  180,
+                   "GroxSpreadRadius":  105,
+                   "EntertainmentCost":  12800,
+                   "FactoryCost":  19200,
+                   "TurretCost":  16000,
+                   "GroxExclusiveRadius":  100
+               },
+    "InstantPlanetaryDialogue":  true,
+    "RestoreGroxSpreadRadius":  true,
+    "RestoreColonyBuildingCosts":  true,
+    "RestoreCoreTravelRestriction":  true
+}

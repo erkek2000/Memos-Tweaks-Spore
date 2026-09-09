@@ -1,0 +1,31 @@
+uint32 galaxyDustEffectLerpMS 2000
+vector3s galaxyMaxZoomDustColor
+	(0.27, 0.2, 0.8)
+end
+vector2s galaxyOpacityGraph
+	(50, 0)
+	(80, 0.2)
+	(150, 0.5)
+	(200, 1)
+	(1100, 1)
+end
+float gasGiantScaleFromPlanet 1
+vector2s gasGiantScaleGraph
+	(25, 0.75)
+	(500, 1.5)
+end
+float moonScaleFromPlanet 0.4
+vector2s moonScaleGraph
+	(25, 0.35)
+	(500, 0.75)
+end
+float planetScaleFromPlanet 0.5
+vector2s planetScaleGraph
+	(25, 0.5)
+	(500, 1.5)
+end
+float starScaleFromPlanet 0
+vector2s starScaleGraph
+	(25, 0.95)
+	(500, 1.2)
+end

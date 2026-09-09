@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_09
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x13977f77) "Book of Science Pt. 9"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x5cb5ee2e) "The Grox are a machine race that guards the center of the galaxy against all life-forms.  It is not known whether their ultimate objective is to prevent us from breaking in, or to prevent something else from breaking out."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_scientist_09.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierScientist 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xb1ff976d) "Books of Science"
+end
+int32 spaceTradingRareGroupID 24
+key spaceTradingType rare

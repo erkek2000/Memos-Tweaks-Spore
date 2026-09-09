@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_03
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xaa574990) "Stone of Life 3"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xf375a931) "We have devoted ourselves to spreading life throughout the galaxy.  Every new world that we seed with life becomes not only a home for our species, but a repository of nature that can assure the survival of life even if other worlds are destroyed."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_ecologist_03.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierEcologist 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x36dc9ddc) "Stones of Life"
+end
+int32 spaceTradingRareGroupID 26
+key spaceTradingType rare

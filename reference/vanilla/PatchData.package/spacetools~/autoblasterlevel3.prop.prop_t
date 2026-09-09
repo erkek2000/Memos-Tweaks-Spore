@@ -1,0 +1,32 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Auto Blaster"
+float spaceToolDamageArea 10
+texts spaceToolDescription
+	(spacegame_tools!0xcca62f06) "Mega Auto Blaster"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x0ed9431f) "A defensive weapon that will automatically fire on enemy turrets and spaceships when attacked. Can be toggled on and off."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.75
+key spaceToolImageID ufotools~!0xE5F742F6.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 120
+float spaceToolMaxRange 100
+float spaceToolMinDamage 120
+key spaceToolPanelKey CombatAbilityPanel
+float spaceToolRechargeRate 3
+key spaceToolStrategy 0xA5D0D08F
+key spaceToolType weapon
+key spaceToolUpgradeFile autoblasterlevel2.prop
+key toolHitCombatantEffectID SG_autoblaster_hit_strong
+key toolHitGroundEffectID SG_autoblaster_hit_strong
+key toolHitWaterEffectID SG_autoblaster_hit_strong
+key toolMuzzleEffectID SG_autoblaster_muzzle
+key toolProjectileEffectID SG_autoblaster_strong
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileSpeed 75
+float toolProjectileTimeOut 1.5

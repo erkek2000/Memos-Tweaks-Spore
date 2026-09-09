@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_03
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xe7d80b69) "Scroll of Harmony Vol.3"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x10ebbf88) "Science tells us about the universe, but it doesn't tell us how to transcend the universe."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sharman_03.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierShaman 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x8f4e4d7f) "Scrolls of Harmony"
+end
+int32 spaceTradingRareGroupID 23
+key spaceTradingType rare

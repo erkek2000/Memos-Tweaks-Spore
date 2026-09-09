@@ -1,0 +1,63 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Drought Generator"
+int32 spaceToolAmmoUsedPerShot 1
+int32 spaceToolBuyCost 16000
+key spaceToolContext planet
+texts spaceToolDescription
+	(spacegame_tools!0xc1b1adb6) "Drought Generator"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x5eeb2eef) "Place on the planet to lower the atmosphere level."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_terraformatm_droughtgen.png
+int32 spaceToolInitialAmmoCount 1
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxDamage 100
+float spaceToolMaxRange 500
+float spaceToolMinDamage 100
+key spaceToolPanelKey AtmosphericConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy DefaultProjectile
+key spaceToolType terraforming
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+float toolHitAirAtmosphereVelocity -1
+float toolHitAirTemperatureVelocity 0
+float toolHitAirWaterVelocity 0
+float toolHitCombatantAtmosphereVelocity -1
+key toolHitCombatantEffectID SG_ufo_drought_generator_hitCombatant
+float toolHitCombatantTemperatureVelocity 0
+float toolHitCombatantWaterVelocity 0
+float toolHitGroundAtmosphereVelocity -1
+key toolHitGroundEffectID SG_ufo_drought_generator_hitGround
+float toolHitGroundTemperatureVelocity 0
+float toolHitGroundWaterVelocity 0
+float toolHitWaterAtmosphereVelocity -1
+key toolHitWaterEffectID SG_ufo_drought_generator_hitWater
+float toolHitWaterTemperatureVelocity 0
+float toolHitWaterWaterVelocity 0
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+key toolMuzzleEffectID SG_ufo_drought_generator_muzzle
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID SG_ufo_drought_generator_projectile
+float toolProjectileExplosionExpansionRate 5000
+bool toolProjectilePassThrough true
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 25
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+uint32 toolTerraformingIconKey 0x44bb4db9

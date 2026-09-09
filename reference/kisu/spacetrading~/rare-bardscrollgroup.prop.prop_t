@@ -1,0 +1,14 @@
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x69600b4a) "Blocks of Chance"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xb1265993) "~blank text~"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+float spaceTradingBaseCost 10000000
+float spaceTradingCostMultiplierBard 2
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xfa738126) "Blocks of Chance"
+end
+int32 spaceTradingRareGroupID 22
+key spaceTradingType group

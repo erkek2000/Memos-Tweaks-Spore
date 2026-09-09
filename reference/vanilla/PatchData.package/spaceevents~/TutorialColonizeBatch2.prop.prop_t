@@ -1,0 +1,7 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Tutorial Colonize Batch2"
+key missionConversation mission_tutorial_colonize_batch2
+float missionGenericRewardMoney 100000
+bool missionIsTutorial true
+key missionTrackBadgeID empire-2
+key missionType trackbadge

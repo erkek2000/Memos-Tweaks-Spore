@@ -1,0 +1,7 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Change Archetype: Ecologist"
+int32 missionAcceptCost 0x00989680
+uint32 missionChangeArchetypeNumActionsNeeded 50
+key missionChangeArchetypeTo ecologist
+key missionConversation mission_change_archetype_ecologist
+key missionType ChangeArchetype

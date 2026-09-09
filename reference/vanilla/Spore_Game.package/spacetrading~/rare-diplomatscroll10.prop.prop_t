@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_10
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x35d46299) "Scroll of Order X"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xa31b88d8) "It is widely believed that the Grox are guarding some form of treasure at the center of the galaxy.  There is no evidence for this, but we cannot discount the possibility."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_diplomat_10.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierDiplomat 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x2c9cd44f) "Scrolls of Order"
+end
+int32 spaceTradingRareGroupID 21
+key spaceTradingType rare

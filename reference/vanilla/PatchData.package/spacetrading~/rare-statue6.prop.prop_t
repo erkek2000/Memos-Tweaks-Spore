@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_statues_06
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_statues_06
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xc6e71bdd) "The Statue of One-Eyed Kippy"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x38333f7c) "Once thought to be a statue of Two Eyed Kippy, upon further inspection, this artifact was identified as a statue of one-eyed Kippy...mostly due to the apparent lack of a second eye."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_sculpture_06.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af453) "Rare Statues"
+end
+int32 spaceTradingRareGroupID 3
+key spaceTradingType rare

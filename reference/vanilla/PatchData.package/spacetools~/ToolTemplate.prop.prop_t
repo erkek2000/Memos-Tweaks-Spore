@@ -1,0 +1,43 @@
+string16 description "Default tool template"
+int32 spaceToolAmmoUsedPerShot 1
+float spaceToolAutoFireRate -1
+int32 spaceToolBuyCost 100
+float spaceToolChargeRate 0
+key spaceToolContext always
+float spaceToolDamageArea 0
+texts spaceToolDetailDescription
+	(spacegame_tools!0xe90e6027) "I need a tool description!"
+end
+float spaceToolDetectableRange 15
+bool spaceToolDisableOnHomeworld true
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0
+key spaceToolImageID animations~
+int32 spaceToolInitialAmmoCount 0
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 1
+float spaceToolMaxDamage 0
+float spaceToolMaxRange -1
+float spaceToolMinDamage 0
+float spaceToolMinRange -1
+float spaceToolRechargeRate 0
+bool spaceToolShowCollectedOrUnlockedText true
+key spaceToolStrategy DefaultToolStrategy
+key spaceToolType other
+int32 spaceToolUseCost 0
+bool spaceToolUsesAmmo false
+bool toolDeselectsAfterUse false
+bool toolDestroysFloraAndFauna false
+bool toolDoActionPostEffect false
+bool toolHitOrientsToTerrain true
+bool toolInterruptedByDamage false
+bool toolIsHoming false
+uint32 toolMinimapSlotsToggleEffect hash(None)
+bool toolOnlyOnNPCColonies false
+bool toolOnlyOnPlayerColonies false
+bool toolPicksFlora false
+key toolProjectileMotion ConstantSpeed
+float toolProjectileSpeed 0
+float toolRelationshipDelta 0

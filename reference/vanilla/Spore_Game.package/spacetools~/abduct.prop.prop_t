@@ -1,0 +1,42 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Abduct"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+float spaceToolDamageArea 5
+texts spaceToolDescription
+	(spacegame_tools!0x59c7b725) "Abduction Beam"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0xf509a6a4) "Use to Abduct plants, animals or rares and add them to your cargo bay."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_cargopas_abductcargo.png
+float spaceToolMaxRange 200
+key spaceToolPanelKey CargoAbductPanel
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolStrategy abduct
+key spaceToolType special
+int32 spaceToolUseCost 0
+key toolBeamEffectID SG_ufo_abduct_beam
+bool toolBeamPassThrough true
+key toolHitGroundEffectID SG_ufo_abduct_HitGround
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID SG_ufo_abduct_HitWater
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+key toolMuzzleEffectID SG_ufo_abduct_Muzzle
+bool toolPicksFlora true
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end

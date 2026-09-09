@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_06
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xeed7f0dc) "Tablet of Prosperity No.6"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xbb55171d) "We only concern ourselves with how to make everyone happy."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_trader_06.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierTrader 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x55333678) "Tablets of Prosperity"
+end
+int32 spaceTradingRareGroupID 27
+key spaceTradingType rare

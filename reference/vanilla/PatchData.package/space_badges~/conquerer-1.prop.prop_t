@@ -1,0 +1,26 @@
+texts badgeCardDescription
+	(spacegame_badges!0x182aef89) "You need to conquer ~badge_left~ more planets. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0xecd0ad14) "You've conquered ~badge_progress~ Planets."
+end
+uint32 badgeEffectID 0x3b02039f
+texts badgeGroup
+	(spacegame_badges!0xaa0b997c) "Conquerer"
+end
+texts badgeHintAction
+	(spacegame_badges!0xa8e504ce) "Conquer ~badge_needed~ Planets to earn the Conquerer 1 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_conqueror_00.png
+texts badgeName
+	(spacegame_badges!0x0594b645) "Conquerer 1"
+end
+int32 badgePlanetsconquered 2
+int32 badgePointValue 2
+keys badgeRequirementList
+	badgePlanetsconquered
+end
+texts badgeUnlockString
+	(spacegame_badges!0x0594c833) "You've earned the Conquerer 1 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_conqueror_01.png

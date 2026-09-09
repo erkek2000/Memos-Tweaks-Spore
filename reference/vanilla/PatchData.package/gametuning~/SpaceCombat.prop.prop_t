@@ -1,0 +1,359 @@
+float NPCLaserOffTimeSec 1
+float NPCLaserOnTimeSec 3
+floats UFOHealth201Drone
+	100
+	100
+	100
+end
+floats UFOHealthAlly
+	300
+	450
+	750
+	1200
+	1800
+	2400
+end
+floats UFOHealthBomber
+	250
+	375
+	625
+	1000
+	1500
+	2000
+end
+floats UFOHealthDefender
+	300
+	450
+	750
+	1200
+	1800
+	2400
+end
+floats UFOHealthFighter
+	50
+	75
+	125
+	200
+	300
+	400
+end
+floats UFOHealthInterceptor
+	100
+	150
+	250
+	400
+	600
+	800
+end
+floats UFOHealthPirate
+	250
+	500
+	1000
+end
+float UFOHealthPlayer 1000
+floats UFOHealthUberTurret
+	50000
+	50000
+	50000
+end
+colorRGB avatarWeaponColor (0, 1, 1)
+colorRGB enemyWeaponColor (1, 0, 0)
+colorRGB friendWeaponColor (0, 1, 0)
+vector3 grobSizeRadiusMultipliers (1, 0.75, 0.5)
+float lootBomberMoneyChance 0.5
+float lootCityMoneyChance 1
+float lootDefenderMoneyChance 0.4
+float lootInterceptorMoneyChance 0.2
+floats lootMaxCityMoneyDrop
+	60000
+	70000
+	90000
+	120000
+	160000
+	250000
+end
+floats lootMaxMoneyDrop
+	10000
+	12000
+	15000
+	20000
+	30000
+	50000
+end
+floats lootMinCityMoneyDrop
+	30000
+	35000
+	45000
+	60000
+	80000
+	150000
+end
+floats lootMinMoneyDrop
+	1000
+	1500
+	2500
+	4000
+	6000
+	8500
+end
+float lootRaiderMoneyChance 0.25
+float lootThiefMoneyChance 0.7
+colorRGB posseWeaponColor (1, 0, 1)
+int32 secondsBetweenColonySimulatorTicks 120
+float spaceBuildingCaptureMultiplier 1
+float spaceCaptureMaxBuildingFactor 0.1
+float spaceCaptureMinBuildingFactor 3
+float spaceCityAngerTime 30
+float spaceColonyObjectHealth 10000
+float spaceCombatAirRaidSirenTime 4
+floats spaceCombatBomberBackgroundDPS
+	3
+	4.5
+	7.5
+	12
+	18
+	24
+end
+float spaceCombatEnemyUFOAttackRange 400
+floats spaceCombatFighterBackgroundDPS
+	1
+	1.5
+	2.5
+	4
+	6
+	8
+end
+float spaceCombatMaxLockOnRange 500
+int32 spaceCombatReinforceCount 2
+float spaceCombatReinforceSecondTime 120
+float spaceCombatReinforceTime 60
+float spaceCombatRespawnTime 90
+floats spaceCombatTurretBackgroundDPS
+	2
+	3
+	5
+	8
+	12
+	16
+end
+float spaceCombatUberTurretBackgroundDPS 100
+int32 spaceMilitaryCaptureDecayTime 300
+float spaceMilitaryCaptureFactor 0.5
+float spaceMilitaryCaptureRemainingCityRatio 1
+float spaceMilitaryCaptureRemainingPlanetRatio 1
+int32 spacePirateMoneyPenalty 100
+float spaceStolenSpicePerSecond 0.025
+float spaceTurretNPCDamageMultiplier 0.5
+float spaceWarSurrenderThreshold 0.35
+int32s spaceshipWeaponEmpireSize
+	4
+	6
+	9
+	13
+end
+floats spaceshipWeaponRadii
+end
+floats turretHealth
+	200
+	300
+	500
+	800
+	1200
+	1600
+end
+float waitTimeSecAlliedNPCFarAirWeapon 0.5
+float waitTimeSecAlliedNPCMedAirWeapon 0.25
+float waitTimeSecInterceptorFarAirWeapon 0.5
+float waitTimeSecInterceptorMedAirWeapon 0.25
+float waitTimeSecPassiveNPCFarAirWeapon 0.5
+float waitTimeSecPassiveNPCMedAirWeapon 0.25
+float waitTimeSecRaidBomberFarAirWeapon 0.5
+float waitTimeSecRaidFighterFarAirWeapon 0.5
+float waitTimeSecRaidFighterMedAirWeapon 0.25
+float waitTimeSecStory201NPCFarAirWeapon 0.5
+float waitTimeSecStory201NPCMedAirWeapon 0.25
+float waitTimeSecUberTurretFarAirWeapon 0.5
+float waitTimeSecUberTurretMedAirWeapon 0.25
+keys weaponBomberGround
+	enemypulse1
+	enemypulse2
+	enemypulse3
+	enemypulse4
+	enemypulse5
+	enemypulse6
+end
+keys weaponBomberLongRange
+	enemycannon1
+	enemycannon2
+	enemycannon3
+	enemycannon4
+	enemycannon5
+	enemycannon6
+end
+keys weaponDefenderGround
+	enemyminipulse1
+	enemyminipulse2
+	enemyminipulse3
+	enemyminipulse4
+	enemyminipulse5
+	enemyminipulse6
+end
+keys weaponDefenderLongRange
+	defendercannon1
+	defendercannon2
+	defendercannon3
+	defendercannon4
+	defendercannon5
+	defendercannon6
+end
+keys weaponDefenderMediumRange
+	defendermissile1
+	defendermissile2
+	defendermissile3
+	defendermissile4
+	defendermissile5
+	defendermissile6
+end
+keys weaponDefenderShortRange
+	defenderlaser1
+	defenderlaser2
+	defenderlaser3
+	defenderlaser4
+	defenderlaser5
+	defenderlaser6
+end
+keys weaponInterceptorGalaxy
+	enemytorpedogalaxy1
+	enemytorpedogalaxy2
+	enemytorpedogalaxy3
+	enemytorpedogalaxy4
+	enemytorpedogalaxy5
+	enemytorpedogalaxy6
+end
+keys weaponInterceptorLongRange
+end
+keys weaponInterceptorMediumRange
+	enemymissile1
+	enemymissile2
+	enemymissile3
+	enemymissile4
+	enemymissile5
+	enemymissile6
+end
+keys weaponInterceptorShortRange
+	enemylaser1
+	enemylaser2
+	enemylaser3
+	enemylaser4
+	enemylaser5
+	enemylaser6
+end
+keys weaponInterceptorSolar
+	enemytorpedosolar1
+	enemytorpedosolar2
+	enemytorpedosolar3
+	enemytorpedosolar4
+	enemytorpedosolar5
+	enemytorpedosolar6
+end
+keys weaponPlayerGalaxy
+	torpedogalaxy1
+	torpedogalaxy2
+	torpedogalaxy3
+end
+keys weaponPlayerShortRange
+	torpedoplanet1
+	torpedoplanet2
+	torpedoplanet3
+end
+keys weaponPlayerSolar
+	torpedosolar1
+	torpedosolar2
+	torpedosolar3
+end
+keys weaponPosseGalaxy
+	allytorpedogalaxy1
+	allytorpedogalaxy2
+	allytorpedogalaxy3
+	allytorpedogalaxy4
+	allytorpedogalaxy5
+	allytorpedogalaxy6
+end
+keys weaponPosseGround
+	allyminipulse1
+	allyminipulse2
+	allyminipulse3
+	allyminipulse4
+	allyminipulse5
+	allyminipulse6
+end
+keys weaponPosseLongRange
+end
+keys weaponPosseMediumRange
+	allymissile1
+	allymissile2
+	allymissile3
+	allymissile4
+	allymissile5
+	allymissile6
+end
+keys weaponPosseShortRange
+	allylaser1
+	allylaser2
+	allylaser3
+	allylaser4
+	allylaser5
+	allylaser6
+end
+keys weaponPosseSolar
+	allytorpedosolar1
+	allytorpedosolar2
+	allytorpedosolar3
+	allytorpedosolar4
+	allytorpedosolar5
+	allytorpedosolar6
+end
+keys weaponRaiderGround
+	enemyminipulse1
+	enemyminipulse2
+	enemyminipulse3
+	enemyminipulse4
+	enemyminipulse5
+	enemyminipulse6
+end
+keys weaponRaiderLongRange
+end
+keys weaponRaiderMediumRange
+end
+keys weaponRaiderShortRange
+	enemylaser1
+	enemylaser2
+	enemylaser3
+	enemylaser4
+	enemylaser5
+	enemylaser6
+end
+keys weaponTurretDefenseMissle
+	turretdefensemissile1
+	turretdefensemissile2
+	turretdefensemissile3
+	turretdefensemissile4
+	turretdefensemissile5
+	turretdefensemissile6
+end
+keys weaponTurretFlak
+	turretflak1
+	turretflak2
+	turretflak3
+	turretflak4
+	turretflak5
+	turretflak6
+end
+keys weaponTurretLaser
+	turretlaser1
+	turretlaser2
+	turretlaser3
+	turretlaser4
+	turretlaser5
+	turretlaser6
+end

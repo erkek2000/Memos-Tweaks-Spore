@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_relics_06
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_relic_06
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x7329c1c8) "Tablet of the Tribes"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xe6b7c969) "The Tablet of the Tribes is a love letter to the leader of the Hinkle tribe.  The unnamed author of the tablet was a young female who professed a desire to wed the leader of the tribe. In order to attract his attention she swore that she would eat three r"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_relics_06.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 22500
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af455) "Rare Relics"
+end
+int32 spaceTradingRareGroupID 1
+key spaceTradingType rare

@@ -1,0 +1,13 @@
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xdd2f5826) "Rare Geodes"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xe5a1133f) "~blank text~"
+end
+key spaceToolImageID ufotools~!spg_cargopas_geodes.png
+float spaceTradingBaseCost 12000000
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af452) "Rare Geodes"
+end
+int32 spaceTradingRareGroupID 4
+key spaceTradingType group

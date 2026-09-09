@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_geodes_10
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_geode_10
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x667e3924) "A Shiny Geode"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x33b72405) "This shiny geode is bright and sparkly, bringing peace and harmony to all who behold it. Or so they think."
+end
+key spaceToolImageID ufotools~!spg_cargopas_geodes.png
+key spaceToolThumbnailID spg_badges~!sg_rare_geode_10.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 150000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af452) "Rare Geodes"
+end
+int32 spaceTradingRareGroupID 4
+key spaceTradingType rare

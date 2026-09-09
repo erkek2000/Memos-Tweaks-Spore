@@ -1,0 +1,44 @@
+texts spaceToolDescription
+	(spacegame_tools!0xc9433e6d) "Planet Scan"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x6fd8772c) "Use on a planet to scan all the plants and animals."
+end
+key spaceToolImageID ufotools~!spg_main_planetscan.png
+float spaceTradingAbundance 30
+bool spaceTradingAlliesOnly false
+float spaceTradingBaseCost 100000
+float spaceTradingChance 5
+float spaceTradingChanceBard 100
+float spaceTradingChanceDiplomat 0
+float spaceTradingChanceEcologist 0
+float spaceTradingChanceGrob 100
+float spaceTradingChancePlayerBard 100
+float spaceTradingChancePlayerDiplomat 100
+float spaceTradingChancePlayerEcologist 100
+float spaceTradingChancePlayerScientist 100
+float spaceTradingChancePlayerShaman 100
+float spaceTradingChancePlayerTrader 100
+float spaceTradingChancePlayerWanderer 100
+float spaceTradingChancePlayerWarrior 100
+float spaceTradingChancePlayerZealot 100
+float spaceTradingChanceScientist 0
+float spaceTradingChanceShaman 0
+float spaceTradingChanceTrader 100
+float spaceTradingChanceWarrior 100
+float spaceTradingChanceZealot 0
+float spaceTradingCostMultiplierBard 0.5
+float spaceTradingCostMultiplierDiplomat 1
+float spaceTradingCostMultiplierTrader 0.5
+float spaceTradingCostMultiplierUserCul 1
+float spaceTradingCostMultiplierUserEco 1
+float spaceTradingCostMultiplierUserMil 1
+float spaceTradingCostMultiplierWarrior 0.5
+key spaceTradingExchangeFor Planetscan.prop
+uint32 spaceTradingQuantityToOffer 1
+key spaceTradingRequiresBadge zoologist-5
+key spaceTradingRequiresBadgeOr ecohero-5
+int32 spaceTradingRequiresTier 5
+key spaceTradingToolClass travel
+int32 spaceTradingToolReofferRate 60
+key spaceTradingType tool

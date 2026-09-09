@@ -1,0 +1,13 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "TutorialFlight101_Scan"
+float missionAccidentProneRewardMoney 0
+float missionGenericRewardMoney 0
+float missionGenerousRewardMoney 0
+keys missionGiveOnAcceptTools
+	scan.prop
+end
+bool missionIsTutorial true
+key missionPickTargetAnimalSpecies 0xD4923304
+key missionPickTargetPlanet 0xAC595460
+float missionStingyRewardMoney 0
+key missionType scan

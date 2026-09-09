@@ -1,0 +1,16 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "ScanFetch_Fetch"
+float missionAccidentProneRewardMoney 40000
+float missionAccidentProneRewardRelation 3
+float missionDuration 0
+float missionGenericRewardMoney 40000
+float missionGenericRewardRelation 3
+float missionGenerousRewardMoney 40000
+float missionGenerousRewardRelation 3
+key missionPickTargetPlanet 0x93E59364
+float missionRangeMax 15
+float missionRangeMin 0
+float missionStingyRewardMoney 40000
+float missionStingyRewardRelation 3
+key missionType fetch
+key missionTypeOfFetch 0x736C417F

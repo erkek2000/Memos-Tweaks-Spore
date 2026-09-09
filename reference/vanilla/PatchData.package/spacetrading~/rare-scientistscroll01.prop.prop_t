@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_01
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x45e9f80f) "Book of Science Pt. 1"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x4f3c3a86) "What do you believe?  And how much are you willing to risk on that belief?~br~Would you risk your existence, and the existence of your species, on a hunch?  A whim?  The word of a prophet a thousand years dead?"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_scientist_01.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierScientist 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xd8d0c115) "Books of Science"
+end
+int32 spaceTradingRareGroupID 24
+key spaceTradingType rare

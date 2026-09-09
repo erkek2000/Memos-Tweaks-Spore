@@ -1,0 +1,42 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Scan"
+float spaceToolAutoFireRate 0.4
+int32 spaceToolBuyCost 30
+key spaceToolContext planet
+float spaceToolDamageArea 2
+texts spaceToolDescription
+	(spacegame_tools!0xf30993c7) "Scan"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x03ee3cde) "Click on plants or animals to get more information about them."
+end
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames false
+key spaceToolImageID ufotools~!spg_main_scan.png
+float spaceToolMaxRange 150
+key spaceToolPanelKey TravelAbilityPanel
+bool spaceToolShowCollectedOrUnlockedText false
+key spaceToolStrategy ScanBeam
+key spaceToolType special
+key toolBeamEffectID SG_ufo_scan_beam
+key toolHitCombatantEffectID SG_ufo_scan_HitCombatant
+key toolHitGroundEffectID SG_ufo_scan_HitGround
+bool toolHitOrientsToTerrain false
+key toolHitWaterEffectID SG_ufo_scan_HitWater
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+key toolMuzzleEffectID SG_ufo_scan_muzzle
+bool toolPassThroughAll true
+bool toolPicksFlora true
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x7df2eccf) "You must choose a valid target to use this tool."
+end

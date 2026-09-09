@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_02
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xebae7cfb) "Scrolls of Faith Book 2"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xaac4e852) "Only Spode has the answers.  Follow the Law of Spode, and all shall be clear."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_zealot_02.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierZealot 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x6d27e921) "Scrolls of Faith"
+end
+int32 spaceTradingRareGroupID 25
+key spaceTradingType rare

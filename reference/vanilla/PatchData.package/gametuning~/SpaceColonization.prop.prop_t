@@ -1,0 +1,4 @@
+int32 colonyMaxSpiceStoredPerColony 5
+float colonyTerritoryHeightOffset 2
+float colonyTerritoryRadius 250
+int32 colonyTerritorySamplePoints 100

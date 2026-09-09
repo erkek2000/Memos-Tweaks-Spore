@@ -1,0 +1,16 @@
+int32 spaceUICommMaxBlinkCount 20
+float spaceUIEmpireNodeScale 50
+float spaceUIEmpireOverlap 1
+float spaceUIEmpireRadius 10
+float spaceUIEmpireSampleDist 4
+float spaceUIStarmapFilterZoom 100
+uint32 spaceUITerraformDotColorT0 0xffff0000
+uint32 spaceUITerraformDotColorT1 0xffffaa00
+uint32 spaceUITerraformDotColorT2 0xffaaff00
+uint32 spaceUITerraformDotColorT3 0xff00ff00
+uint32 spaceUITerraformRingColorEmpty 0xffffaa00
+uint32 spaceUITerraformRingColorFull 0xff00ff00
+uint32 spaceUITerraformRingColorLocked 0xffff0000
+uint32 spaceUITerraformRingColorOff 0xffffffff
+uint32 spaceUITerraformRingColorPlants 0xffffff00
+int32 spaceUItravelTrailLength 15

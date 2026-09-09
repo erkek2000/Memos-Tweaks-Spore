@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="CustomTools">
+      <UniqueIdentifier>{3880d018-2395-4502-abfe-4b83e0817aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Internal">
+      <UniqueIdentifier>{d62ad12d-69d8-4933-8342-03043c9adc22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools">
+      <UniqueIdentifier>{27289670-4d44-4531-9650-9657e4b6342a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Random cheat thingy">
+      <UniqueIdentifier>{a899d681-405a-4a55-b131-d3c3cf573c8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\finished">
+      <UniqueIdentifier>{c28fcfcb-98fe-4b90-b866-a0193c6c38f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems">
+      <UniqueIdentifier>{0f11701f-f943-48e9-a791-f40a4f4c5a23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\AmmoForge">
+      <UniqueIdentifier>{396d6bc0-bb60-442a-84ca-37c849a5f5a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\PlanetConverter">
+      <UniqueIdentifier>{e64caab6-75f8-4014-afc3-8bf4436de490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\SpeciesEraser">
+      <UniqueIdentifier>{0a4686ec-8a22-42e4-9223-0ff0efeb8cfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\GroxColoniser">
+      <UniqueIdentifier>{84459c80-0e1b-4c94-9357-5c52138418a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Archetype">
+      <UniqueIdentifier>{7aa4355d-5b33-4465-a44c-abcedb6402f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Archetype\Detente">
+      <UniqueIdentifier>{e8d05fd0-5877-463c-a0a8-2015d3b6206c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\IUpdatables">
+      <UniqueIdentifier>{25f0c6b1-2c25-48ce-b079-a7f45a4aa2b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Archetype\ReturnPortal">
+      <UniqueIdentifier>{59c8dbc0-e6f1-4fe0-8693-0f1c6c98f3aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Starkiller">
+      <UniqueIdentifier>{9268ab1e-f63d-4c53-bbbf-62878fec4224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems\Research">
+      <UniqueIdentifier>{d241c43e-b67e-4938-9a38-8c50dbbec416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems\Research\WinProcs">
+      <UniqueIdentifier>{1ae17577-f236-4cdc-893b-c9785d8bbc99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\NPC">
+      <UniqueIdentifier>{b2504013-c5ee-4f92-b703-18b0f2c9c3da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\NPC\ShieldkillerBeam">
+      <UniqueIdentifier>{54cdd978-1270-4ebb-a94c-b554cc1be0cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\NPC\TransportProjectile">
+      <UniqueIdentifier>{64d4a529-ccb8-46b8-842d-ce825b0c88c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems\ArchetypeWeapons">
+      <UniqueIdentifier>{97af0bfa-f70c-4a23-832e-dbda8212ff1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\General Types">
+      <UniqueIdentifier>{c007bb10-4b50-4c39-9bbf-8fa4f3848af9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems\Status effects">
+      <UniqueIdentifier>{645c2c5f-24e6-42e8-bb5f-fb108e4cc526}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Systems\Status effects\IStatusEffects">
+      <UniqueIdentifier>{9517c795-ccb1-4a9a-b28f-6c2751fceba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Archetype\ChargeTools">
+      <UniqueIdentifier>{edd4cef3-6129-4a45-8cc3-b856ce326fb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomTools\Tools\Planet De-Buster">
+      <UniqueIdentifier>{3aad31cb-0dd4-4b2b-9f1c-b4995659759a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="vehicletest.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnVehicle.h">
+      <Filter>CustomTools\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ToSol.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeSpecies.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="MySystem.h">
+      <Filter>CustomTools\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="infinitecolonies.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="StaffofDeath.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="SetPlanetType.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="PlanetDebuster.h">
+      <Filter>CustomTools\Tools\Planet De-Buster</Filter>
+    </ClInclude>
+    <ClInclude Include="ContactHomeworld.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomTool.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="WanderingPortal.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="LifeBurst.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="BerserkerRage.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="SpiceDye.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="IntergalacticDrive.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="RegalShield.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="Capacitor.h">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClInclude>
+    <ClInclude Include="AmmoCreator.h">
+      <Filter>CustomTools\Tools\AmmoForge</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvertPlanet.h">
+      <Filter>CustomTools\Tools\PlanetConverter</Filter>
+    </ClInclude>
+    <ClInclude Include="Detente.h">
+      <Filter>CustomTools\Tools\Archetype\Detente</Filter>
+    </ClInclude>
+    <ClInclude Include="EraseSpecies.h">
+      <Filter>CustomTools\Tools\SpeciesEraser</Filter>
+    </ClInclude>
+    <ClInclude Include="GroxColony.h">
+      <Filter>CustomTools\Tools\GroxColoniser</Filter>
+    </ClInclude>
+    <ClInclude Include="ReturnPortal.h">
+      <Filter>CustomTools\Tools\Archetype\ReturnPortal</Filter>
+    </ClInclude>
+    <ClInclude Include="StarKiller.h">
+      <Filter>CustomTools\Tools\Starkiller</Filter>
+    </ClInclude>
+    <ClInclude Include="cSSArchetypeToolManager.h">
+      <Filter>CustomTools\IUpdatables</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupModStrategies.h">
+      <Filter>CustomTools</Filter>
+    </ClInclude>
+    <ClInclude Include="ToggleSSDebug.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="ShieldkillerBeam.h">
+      <Filter>CustomTools\Tools\NPC\ShieldkillerBeam</Filter>
+    </ClInclude>
+    <ClInclude Include="TransportProjectile.h">
+      <Filter>CustomTools\Tools\NPC\TransportProjectile</Filter>
+    </ClInclude>
+    <ClInclude Include="cResearchButtonWinProc.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="cResearchWinProc.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="ResearchPointCaptionWinProc.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenResearchMenu.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="CloseResearchMenu.h">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClInclude>
+    <ClInclude Include="cSSResearchManager.h">
+      <Filter>CustomTools\Systems\Research</Filter>
+    </ClInclude>
+    <ClInclude Include="GetResearchData.h">
+      <Filter>CustomTools\Systems\Research</Filter>
+    </ClInclude>
+    <ClInclude Include="cSSArchetypeWeaponSystem.h">
+      <Filter>CustomTools\Systems\ArchetypeWeapons</Filter>
+    </ClInclude>
+    <ClInclude Include="DamageMultiplierProjectile.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="GoToHome.h">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClInclude>
+    <ClInclude Include="DelayedBeamWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="PoisonProjectileWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="cSSStatusEffectManager.h">
+      <Filter>CustomTools\Systems\Status effects</Filter>
+    </ClInclude>
+    <ClInclude Include="IStatusEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="cPoisonEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="cStunEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="cShieldEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="GiveSelfStatusTool.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="PoisonLaserWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="StrengthIncreasingLaser.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="cChargeEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="cInstantDamageEffect.h">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="FlamethrowerWeapon.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+    <ClInclude Include="TerraLaser.h">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>CustomTools</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Internal</Filter>
+    </ClCompile>
+    <ClCompile Include="vehicletest.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnVehicle.cpp">
+      <Filter>CustomTools\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToSol.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeSpecies.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="MySystem.cpp">
+      <Filter>CustomTools\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="infinitecolonies.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="StaffofDeath.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="SetPlanetType.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="PlanetDebuster.cpp">
+      <Filter>CustomTools\Tools\Planet De-Buster</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactHomeworld.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomTool.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="WanderingPortal.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="LifeBurst.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="BerserkerRage.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="SpiceDye.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="IntergalacticDrive.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="RegalShield.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="Capacitor.cpp">
+      <Filter>CustomTools\Tools\finished</Filter>
+    </ClCompile>
+    <ClCompile Include="AmmoCreator.cpp">
+      <Filter>CustomTools\Tools\AmmoForge</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertPlanet.cpp">
+      <Filter>CustomTools\Tools\PlanetConverter</Filter>
+    </ClCompile>
+    <ClCompile Include="Detente.cpp">
+      <Filter>CustomTools\Tools\Archetype\Detente</Filter>
+    </ClCompile>
+    <ClCompile Include="EraseSpecies.cpp">
+      <Filter>CustomTools\Tools\SpeciesEraser</Filter>
+    </ClCompile>
+    <ClCompile Include="GroxColony.cpp">
+      <Filter>CustomTools\Tools\GroxColoniser</Filter>
+    </ClCompile>
+    <ClCompile Include="ReturnPortal.cpp">
+      <Filter>CustomTools\Tools\Archetype\ReturnPortal</Filter>
+    </ClCompile>
+    <ClCompile Include="Starkiller.cpp">
+      <Filter>CustomTools\Tools\Starkiller</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSArchetypeToolManager.cpp">
+      <Filter>CustomTools\IUpdatables</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupModStrategies.cpp">
+      <Filter>CustomTools</Filter>
+    </ClCompile>
+    <ClCompile Include="ToggleSSDebug.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="ShieldkillerBeam.cpp">
+      <Filter>CustomTools\Tools\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="ShieldkillerBeam.cpp">
+      <Filter>CustomTools\Tools\NPC\ShieldkillerBeam</Filter>
+    </ClCompile>
+    <ClCompile Include="TransportProjectile.cpp">
+      <Filter>CustomTools\Tools\NPC\TransportProjectile</Filter>
+    </ClCompile>
+    <ClCompile Include="cResearchButtonWinProc.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="cResearchWinProc.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="ResearchPointCaptionWinProc.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenResearchMenu.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="CloseResearchMenu.cpp">
+      <Filter>CustomTools\Systems\Research\WinProcs</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSResearchManager.cpp">
+      <Filter>CustomTools\Systems\Research</Filter>
+    </ClCompile>
+    <ClCompile Include="GetResearchData.cpp">
+      <Filter>CustomTools\Systems\Research</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSArchetypeWeaponSystem.cpp">
+      <Filter>CustomTools\Systems\ArchetypeWeapons</Filter>
+    </ClCompile>
+    <ClCompile Include="DamageMultiplierProjectile.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="GoToHome.cpp">
+      <Filter>CustomTools\Random cheat thingy</Filter>
+    </ClCompile>
+    <ClCompile Include="DelayedBeamWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="PoisonProjectileWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="cSSStatusEffectManager.cpp">
+      <Filter>CustomTools\Systems\Status effects</Filter>
+    </ClCompile>
+    <ClCompile Include="IStatusEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cPoisonEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cStunEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cShieldEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="GiveSelfStatusTool.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="PoisonLaserWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="StrengthIncreasingLaser.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="cChargeEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="cInstantDamageEffect.cpp">
+      <Filter>CustomTools\Systems\Status effects\IStatusEffects</Filter>
+    </ClCompile>
+    <ClCompile Include="FlamethrowerWeapon.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+    <ClCompile Include="TerraLaser.cpp">
+      <Filter>CustomTools\Tools\General Types</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SdkPathConfig.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>Internal</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

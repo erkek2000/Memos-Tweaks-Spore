@@ -1,0 +1,61 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Cold Cloud Ray"
+float spaceToolAutoFireRate 0.1
+int32 spaceToolBuyCost 500
+key spaceToolContext planet
+float spaceToolDamageArea 0.5
+texts spaceToolDescription
+	(spacegame_tools!0xebdd0e97) "Air Conditioning"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x0734b94e) "Use on a planet to lower its temperature and raise its atmosphere level."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnSaveGames true
+float spaceToolEnergyCost 0.5
+key spaceToolImageID ufotools~!spg_terraformatm_coldcloudvac.png
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+float spaceToolMaxDamage 0
+float spaceToolMaxRange 500
+float spaceToolMinDamage 0
+key spaceToolPanelKey AtmosphericAbilityPanel
+key spaceToolStrategy DefaultBeam
+key spaceToolType terraforming
+int32 spaceToolUseCost 0
+key toolBeamEffectID SG_ufo_coldray_beam
+float toolHitAirAtmosphereVelocity 0.0075
+float toolHitAirTemperatureVelocity -0.0075
+float toolHitAirWaterVelocity 0
+float toolHitCombatantAtmosphereVelocity 0.0075
+key toolHitCombatantEffectID SG_ufo_coldray_hit_combatant
+float toolHitCombatantTemperatureVelocity -0.0075
+float toolHitCombatantWaterVelocity 0
+float toolHitGroundAtmosphereVelocity 0.0075
+key toolHitGroundEffectID SG_ufo_coldray_hit_ground
+float toolHitGroundTemperatureVelocity -0.0075
+float toolHitGroundWaterVelocity 0
+bool toolHitOrientsToTerrain true
+float toolHitWaterAtmosphereVelocity 0.0075
+key toolHitWaterEffectID SG_ufo_coldray_hit_ground
+float toolHitWaterTemperatureVelocity -0.0075
+float toolHitWaterWaterVelocity 0
+uint32 toolMinimapSlotsToggleEffect hash(slots)
+key toolMuzzleEffectID SG_ufo_cloudray_muzzleEffect
+int32s toolTargetFlags
+	hash(animal)
+	hash(citizen)
+	hash(ufo)
+	hash(vehicle)
+	hash(turret)
+	hash(city)
+	hash(building)
+	hash(world)
+	hash(colonyobject)
+	hash(air)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0xfdd8cc2a) "You must choose a valid ground target to use this tool."
+end
+uint32 toolTerraformingIconKey 0x44bb4db4

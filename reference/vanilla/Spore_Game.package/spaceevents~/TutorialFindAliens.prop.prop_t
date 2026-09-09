@@ -1,0 +1,10 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Tutorial Find Aliens"
+float missionAccidentProneRewardMoney 5000
+key missionConversation mission_tutorial_find_aliens
+float missionGenericRewardMoney 5000
+float missionGenerousRewardMoney 5000
+bool missionIsTutorial true
+int32 missionNumAliensToFind 1
+float missionStingyRewardMoney 5000
+key missionType findaliens

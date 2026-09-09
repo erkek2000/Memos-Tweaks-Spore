@@ -1,0 +1,27 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Fetch Civ Citizen"
+float missionAccidentProneRewardMoney 20000
+float missionAccidentProneRewardRelation 3
+keys missionAccidentProneRewardTool
+end
+key missionConversation mission_fetch_civ_citizen
+float missionDuration 180
+float missionGenericRewardMoney 20000
+float missionGenericRewardRelation 3
+keys missionGenericRewardTool
+end
+float missionGenerousRewardMoney 20000
+float missionGenerousRewardRelation 3
+keys missionGenerousRewardTool
+end
+bool missionHidePlanetName false
+bool missionHideStarName true
+float missionRangeMax 15
+float missionRangeMin 0
+float missionStingyRewardMoney 20000
+float missionStingyRewardRelation 3
+keys missionStingyRewardTool
+end
+bool missionTimerStartsOnFirstEntry true
+key missionType fetch
+key missionTypeOfFetch CivCitizen

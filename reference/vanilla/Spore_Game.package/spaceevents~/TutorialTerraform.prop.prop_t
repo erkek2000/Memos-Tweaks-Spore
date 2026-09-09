@@ -1,0 +1,19 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "Tutorial Terraform"
+float missionAccidentProneRewardMoney 10000
+bool missionCanAbort false
+key missionConversation mission_tutorial_terraform
+float missionGenericRewardMoney 10000
+float missionGenerousRewardMoney 10000
+bool missionGiveOnAcceptAnimals true
+bool missionGiveOnAcceptPlants true
+keys missionGiveOnAcceptTools
+	atmospheregenerator
+end
+int32 missionGiveOnAcceptToolsCost 1000
+bool missionIsTutorial true
+key missionPickTargetPlanet 0x779436FF
+float missionStingyRewardMoney 10000
+int32 missionTerraformStartScore 0
+int32 missionTerraformTargetScore 1
+key missionType terraform

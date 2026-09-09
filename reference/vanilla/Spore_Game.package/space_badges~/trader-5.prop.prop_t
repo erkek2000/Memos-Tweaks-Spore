@@ -1,0 +1,27 @@
+texts badgeCardDescription
+	(spacegame_badges!0xbd37f0ad) "You need to establish ~badge_left~ more Trade Routes. ~badge_count~/~badge_needed~"
+end
+texts badgeDescriptionString
+	(spacegame_badges!0x9d229328) "You've established ~badge_progress~ Trade Routes."
+end
+uint32 badgeEffectID 0x0f22d720
+texts badgeGroup
+	(spacegame_badges!0x48019ee8) "Trader"
+end
+texts badgeHintAction
+	(spacegame_badges!0xf0d6515e) "Establish ~badge_needed~ Trade Routes to earn the Trader 5 badge.~badge_unlocks~"
+end
+key badgeLockedImageID spg_badges~!spg_trader_00.png
+texts badgeName
+	(spacegame_badges!0x0594b7f1) "Trader 5"
+end
+int32 badgePointValue 10
+key badgeReplacesBadge trader-4
+keys badgeRequirementList
+	badgetraderoutes
+end
+int32 badgeTraderoutes 40
+texts badgeUnlockString
+	(spacegame_badges!0x0594c841) "You've earned the Trader 5 badge."
+end
+key badgeUnlockedImageID spg_badges~!spg_trader_05.png

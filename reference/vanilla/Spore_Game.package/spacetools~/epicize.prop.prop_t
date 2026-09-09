@@ -1,0 +1,45 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Epicize"
+int32 spaceToolAmmoUsedPerShot 1
+float spaceToolAutoFireRate -1
+int32 spaceToolBuyCost 0
+key spaceToolContext planet
+float spaceToolDamageArea 5
+texts spaceToolDescription
+	(spacegame_tools!0xd2936cb9) "Supersizer"
+end
+texts spaceToolDetailDescription
+	(spacegame_tools!0x7472d9f8) "Enlarges a creature to epic proportions."
+end
+bool spaceToolDisableOn201Ruins true
+bool spaceToolDisableOnHomeworld false
+bool spaceToolDisableOnSaveGames true
+key spaceToolImageID ufotools~!spg_main_epicize.png
+int32 spaceToolInitialAmmoCount 3
+texts spaceToolLockedDescription
+	(spacegame_tools!0xa0bb7099) "Requires ~commodity_requirements~"
+end
+int32 spaceToolMaxAmmoCount 99
+float spaceToolMaxRange 150
+key spaceToolPanelKey SocialConsumablePanel
+float spaceToolRechargeRate 5
+key spaceToolStrategy DefaultProjectile
+key spaceToolType special
+bool spaceToolUsesAmmo true
+bool toolDeselectsAfterUse true
+key toolHitCombatantEffectID 0x982257EE
+key toolHitGroundEffectID 0x7F9DD897
+key toolHitWaterEffectID 0x7F9DD897
+bool toolIsHoming true
+key toolMuzzleEffectID 0x448D5F72
+bool toolPreventsPlanetExit true
+key toolProjectileEffectID 0x23D7D504
+float toolProjectileExplosionExpansionRate 5000
+float toolProjectileSpeed 50
+float toolProjectileTimeOut 5
+int32s toolTargetFlags
+	hash(animal)
+end
+texts toolTargetFlagsFailMessage
+	(spacegame_tools!0x385928de) "Targeting capability of this weapon is limited to creatures."
+end

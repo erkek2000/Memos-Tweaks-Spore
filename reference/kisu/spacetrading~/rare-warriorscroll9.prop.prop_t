@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_09
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xecc37a59) "Stone of Force Vol.9"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x2d960d98) "The Grox are the greatest military challenge on our horizon.   The Grox are a race of machine warriors, armed with powerful weapons unknown to us.  They have established a security zone surrounding the center of the galaxy, and our intelligence has been u"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_warrior_10.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierWarrior 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xf323f00f) "Stones of Force"
+end
+int32 spaceTradingRareGroupID 20
+key spaceTradingType rare

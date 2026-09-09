@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_lifescrolls_09
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0xb74ec287) "Scroll of Order IX"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0xc1c8159e) "The Grox are a machine race that have blockaded the center of the galaxy.  They are extremely dangerous.  We have not managed to establish a working relationship with them."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_diplomat_09.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 45000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierDiplomat 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0xacb067dd) "Scrolls of Order"
+end
+int32 spaceTradingRareGroupID 21
+key spaceTradingType rare

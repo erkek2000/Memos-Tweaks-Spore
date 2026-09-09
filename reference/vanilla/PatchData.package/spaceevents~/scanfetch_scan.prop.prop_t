@@ -1,0 +1,10 @@
+key parent spaceevents~!MissionTemplate.prop
+string16 description "ScanFetch_Scan"
+float missionAccidentProneRewardMoney 0
+key missionExportTargetPlanetTo 0x93E59364
+float missionGenericRewardMoney 0
+float missionGenerousRewardMoney 0
+float missionRangeMax 15
+float missionRangeMin 0
+float missionStingyRewardMoney 0
+key missionType scan

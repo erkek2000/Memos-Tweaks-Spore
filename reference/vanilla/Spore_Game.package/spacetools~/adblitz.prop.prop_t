@@ -1,0 +1,24 @@
+key parent spacetools~!ToolTemplate.prop
+string16 description "Ad Blitz"
+key spaceToolContext planet
+float spaceToolDamageArea 100
+float spaceToolDetectableRange 2000
+float spaceToolMaxDamage 100
+float spaceToolMinDamage 100
+float spaceToolRechargeRate 300
+key spaceToolStrategy DefaultProjectile
+key spaceToolType weapon
+key toolHitCombatantEffectID civ_adblitz_explosion
+key toolHitGroundEffectID civ_adblitz_explosion
+key toolHitWaterEffectID civ_adblitz_explosion
+bool toolIsHoming true
+bool toolPassThroughAll true
+float toolProjectileAcceleration 30
+key toolProjectileEffectID civ_adblitz_projectile
+float toolProjectileExplosionExpansionRate 50
+key toolProjectileMotion cruise
+float toolProjectileSpeed 150
+float toolProjectileTimeOut 120
+key toolProjectileType 0x543F8E29
+float toolRelationshipDelta -5
+key toolTargetEffectID 0x7D2BF7A3

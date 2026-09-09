@@ -1,0 +1,22 @@
+key inventoryItemArtifactModel sg_grob_07
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect 0x0BBD41EE
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x25ab7f04) "Stone of Life 7"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x86663ce5) "The Grox are known to have destroyed several sentient races."
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_ecologist_07.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.001
+float spaceTradingCostMultiplierEcologist 2
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x01345ab0) "Stones of Life"
+end
+int32 spaceTradingRareGroupID 26
+key spaceTradingType rare

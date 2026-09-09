@@ -1,0 +1,21 @@
+key inventoryItemArtifactModel sg_rare_fossils_10
+float inventoryItemArtifactNormalScale 1
+float inventoryItemArtifactPlumpScale 1
+key inventoryItemExtraEffect sg_rares_decal_fossil_10
+texts spaceToolDescription
+	(SpaceGame_Commodities!0x2708eb76) "Fossilized Remains of a Big Scary Thing"
+end
+texts spaceToolDetailDescription
+	(SpaceGame_Commodities!0x9c3202af) "Actually, we assume that it was a big, scary thing. I mean, the head itself is huge, so one would assume that the rest of it was pretty big. Can you imagine if it had this great, huge head and a wee, tiny body? That would be hilarious! The other creatures"
+end
+key spaceToolImageID ufotools~!spg_cargopas_relics.png
+key spaceToolThumbnailID spg_badges~!sg_rare_fossils_10.png
+float spaceTradingAbundance 1
+float spaceTradingBaseCost 100000
+float spaceTradingChance 0.003
+int32 spaceTradingRareCount 10
+texts spaceTradingRareGroup
+	(SpaceGame_Commodities!0x043af454) "Rare Fossils"
+end
+int32 spaceTradingRareGroupID 2
+key spaceTradingType rare

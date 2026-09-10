@@ -29,8 +29,16 @@
     <RuntimeEnforceCargoStackLimit Condition="'$(RuntimeEnforceCargoStackLimit)'==''">1</RuntimeEnforceCargoStackLimit>
     <RuntimeBuildingShortcuts Condition="'$(RuntimeBuildingShortcuts)'==''">1</RuntimeBuildingShortcuts>
     <RuntimeSpaceHotbarShortcuts Condition="'$(RuntimeSpaceHotbarShortcuts)'==''">1</RuntimeSpaceHotbarShortcuts>
+    <RuntimeColonyPatternButtons Condition="'$(RuntimeColonyPatternButtons)'==''">1</RuntimeColonyPatternButtons>
+    <RuntimeFastDialogueOpening Condition="'$(RuntimeFastDialogueOpening)'==''">1</RuntimeFastDialogueOpening>
+    <RuntimeCropCircleUplift Condition="'$(RuntimeCropCircleUplift)'==''">1</RuntimeCropCircleUplift>
+    <RuntimeHouseCost Condition="'$(RuntimeHouseCost)'==''">25600</RuntimeHouseCost>
+    <RuntimeEntertainmentCost Condition="'$(RuntimeEntertainmentCost)'==''">12800</RuntimeEntertainmentCost>
+    <RuntimeFactoryCost Condition="'$(RuntimeFactoryCost)'==''">19200</RuntimeFactoryCost>
+    <RuntimeTurretCost Condition="'$(RuntimeTurretCost)'==''">16000</RuntimeTurretCost>
     <RuntimeCargoStackLimit Condition="'$(RuntimeCargoStackLimit)'==''">999</RuntimeCargoStackLimit>
-    <SporeSdkPath>$(ProjectDir)..\..\Tools\Spore-ModAPI-SDK\</SporeSdkPath>
+    <RuntimeCropCircleUpliftIntervalSeconds Condition="'$(RuntimeCropCircleUpliftIntervalSeconds)'==''">1200</RuntimeCropCircleUpliftIntervalSeconds>
+    <SporeSdkPath>$(ProjectDir)..\..\..\Tools\Spore-ModAPI-SDK\</SporeSdkPath>
     <IncludePath>$(SporeSdkPath)Spore ModAPI;$(SporeSdkPath)EASTL-3.02.01\test\packages\EABase\include\Common;$(SporeSdkPath)EASTL-3.02.01\test\packages\EAAssert\include;$(SporeSdkPath)EASTL-3.02.01\test\packages\EAStdC\include;$(SporeSdkPath)EASTL-3.02.01\include;$(SporeSdkPath)Detours\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SporeSdkPath)Detours\lib.X86;$(SporeSdkPath)lib\Release;$(SporeSdkPath)dll\Release;$(LibraryPath)</LibraryPath>
     <TargetName>ERKEK2000_QoL_Runtime</TargetName>
@@ -44,11 +52,13 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;EXECUTABLE_TYPE=SPORE_STEAM;PATCHED_SPORE=1;ERKEK_PREVENT_BIO_DISASTERS=$(RuntimePreventBioDisasters);ERKEK_CLOSE_WITH_ESCAPE=$(RuntimeCloseWithEscape);ERKEK_CLOSE_WITH_TAB=$(RuntimeCloseWithTab);ERKEK_COLLECT_GALAXY_SPICE=$(RuntimeCollectGalaxySpice);ERKEK_ENFORCE_CARGO_STACK_LIMIT=$(RuntimeEnforceCargoStackLimit);ERKEK_BUILDING_SHORTCUTS=$(RuntimeBuildingShortcuts);ERKEK_SPACE_HOTBAR_SHORTCUTS=$(RuntimeSpaceHotbarShortcuts);ERKEK_CARGO_STACK_LIMIT=$(RuntimeCargoStackLimit);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;EXECUTABLE_TYPE=SPORE_STEAM;PATCHED_SPORE=1;ERKEK_PREVENT_BIO_DISASTERS=$(RuntimePreventBioDisasters);ERKEK_CLOSE_WITH_ESCAPE=$(RuntimeCloseWithEscape);ERKEK_CLOSE_WITH_TAB=$(RuntimeCloseWithTab);ERKEK_FAST_DIALOGUE_OPENING=$(RuntimeFastDialogueOpening);ERKEK_COLLECT_GALAXY_SPICE=$(RuntimeCollectGalaxySpice);ERKEK_ENFORCE_CARGO_STACK_LIMIT=$(RuntimeEnforceCargoStackLimit);ERKEK_BUILDING_SHORTCUTS=$(RuntimeBuildingShortcuts);ERKEK_SPACE_HOTBAR_SHORTCUTS=$(RuntimeSpaceHotbarShortcuts);ERKEK_COLONY_PATTERN_BUTTONS=$(RuntimeColonyPatternButtons);ERKEK_CROP_CIRCLE_UPLIFT=$(RuntimeCropCircleUplift);ERKEK_HOUSE_COST=$(RuntimeHouseCost);ERKEK_ENTERTAINMENT_COST=$(RuntimeEntertainmentCost);ERKEK_FACTORY_COST=$(RuntimeFactoryCost);ERKEK_TURRET_COST=$(RuntimeTurretCost);ERKEK_CARGO_STACK_LIMIT=$(RuntimeCargoStackLimit);ERKEK_CROP_CIRCLE_UPLIFT_INTERVAL_SECONDS=$(RuntimeCropCircleUpliftIntervalSeconds);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>detours.lib;SporeModAPIBase.lib;SporeModAPI.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -57,6 +67,8 @@
   <ItemGroup>
     <ClInclude Include="BuildingKeyboardShortcuts.h" />
     <ClInclude Include="CargoStackLimit.h" />
+    <ClInclude Include="ColonyPattern.h" />
+    <ClInclude Include="CropCircleUplift.h" />
     <ClInclude Include="CommKeyboardShortcuts.h" />
     <ClInclude Include="GalaxySpiceCollector.h" />
     <ClInclude Include="SpaceHotbarKeyboardShortcuts.h" />
@@ -66,6 +78,8 @@
   <ItemGroup>
     <ClCompile Include="BuildingKeyboardShortcuts.cpp" />
     <ClCompile Include="CargoStackLimit.cpp" />
+    <ClCompile Include="ColonyPattern.cpp" />
+    <ClCompile Include="CropCircleUplift.cpp" />
     <ClCompile Include="CommKeyboardShortcuts.cpp" />
     <ClCompile Include="GalaxySpiceCollector.cpp" />
     <ClCompile Include="SpaceHotbarKeyboardShortcuts.cpp" />

@@ -13,9 +13,7 @@
 	Reduced Turret cost from 16K to 10K
 	Reduced Shield cooldown from 3min to 2min
 
-
-## POSSIBLY HARD TO IMPLEMENT FEATURES
-
+- Randomized spice in the starting planet instead of always red.
 - Auto build button: if not selected, selects random buildings for the colony. And builds in a saved city/colony pattern.
 - Building with shortcut buttons:
 	- 1 for house

@@ -1,5 +1,5 @@
 param(
-    [string]$ToolDirectory = (Join-Path $PSScriptRoot '..\Tools\SporeModderFX'),
+    [string]$ToolDirectory = (Join-Path $PSScriptRoot '..\..\Tools\SporeModderFX'),
     [string]$ConfigurationFile = (Join-Path $PSScriptRoot 'config.psd1')
 )
 $ErrorActionPreference = 'Stop'
@@ -10,7 +10,7 @@ $reports = Join-Path $PSScriptRoot 'reports'
 $package = Join-Path $dist 'ERKEK2000_QoL_Runtime.package'
 $smfx = Join-Path $ToolDirectory 'smfx.exe'
 $jar = Join-Path $ToolDirectory 'SporeModderFX.jar'
-$kisu = Join-Path $PSScriptRoot '..\KisuTweaks-1.5\KisuTweaks-1.5\KisuTweaks.package'
+$kisu = Join-Path $PSScriptRoot '..\..\KisuTweaks-1.5\KisuTweaks-1.5\KisuTweaks.package'
 $commReference = Join-Path $PSScriptRoot 'reference\vanilla\PatchData-CommScreen-3.spui'
 $kisuReference = Join-Path $PSScriptRoot 'reference\kisu'
 $ConfigurationFile = (Resolve-Path -LiteralPath $ConfigurationFile).Path
@@ -24,19 +24,28 @@ $knownOptions = @(
     'RestoreTerrestrialRingChance',
     'RestoreCoreTravelRestriction',
     'RestoreGeneralSpiceProduction',
+    'RestoreVanillaHomeworldSpiceProduction',
     'RestoreVanillaMaximumTradeRoutes',
     'RestoreVanillaMaximumSpiceBought',
     'RestoreVanillaColonySpiceStorage',
+    'RestoreVanillaSpiceStorageCooldown',
+    'RestoreVanillaHappinessBoosterCooldown',
+    'RestoreVanillaLoyaltyBoosterCooldown',
+    'RestoreVanillaUberTurretCooldown',
+    'RestoreVanillaEmbassyCooldown',
     'RestoreColonyBuildingCosts',
     'RestoreShieldCooldown',
     'InstantPlanetaryDialogue',
     'PreventBioDisastersWithBioProtector',
     'CloseDialogueWithEscape',
     'CloseDialogueWithTab',
+    'FastDialogueOpening',
     'CollectSpiceAtGalaxyStars',
     'EnforceCargoStackLimit',
     'BuildingKeyboardShortcuts',
     'SpaceHotbarKeyboardShortcuts',
+    'ColonyPatternButtons',
+    'CropCircleUplift',
     'Values'
 )
 foreach ($option in $knownOptions | Where-Object { $_ -ne 'Values' }) {
@@ -46,11 +55,15 @@ foreach ($option in $knownOptions | Where-Object { $_ -ne 'Values' }) {
 }
 $knownValues = @(
     'GroxExclusiveRadius', 'GroxSpreadRadius', 'CoreTravelMinimum',
-    'CoreTravelMaximum', 'SpiceProductionMultiplier', 'HouseCost',
+    'CoreTravelMaximum', 'SpiceProductionMultiplier',
+    'HomeworldSpiceProductionMultiplier', 'HouseCost',
     'EntertainmentCost', 'FactoryCost', 'TurretCost', 'ShieldCooldownSeconds',
     'CargoStackLimit', 'GroxEmpireSize', 'TerrestrialMoonChance',
     'TerrestrialRingChance', 'MaximumTradeRoutes', 'MaximumSpiceBought',
-    'ColonySpiceStorage'
+    'ColonySpiceStorage', 'SpiceStorageCooldownSeconds',
+    'HappinessBoosterCooldownSeconds', 'LoyaltyBoosterCooldownSeconds',
+    'UberTurretCooldownSeconds', 'EmbassyCooldownSeconds',
+    'CropCircleUpliftIntervalSeconds'
 )
 if ($config.Values -isnot [hashtable]) { throw "Configuration option 'Values' must be a hashtable." }
 $unknownValues = @($config.Values.Keys | Where-Object { $_ -notin $knownValues })
@@ -86,6 +99,10 @@ if ([int]$config.Values.MaximumSpiceBought -ne [double]$config.Values.MaximumSpi
 if ([int]$config.Values.ColonySpiceStorage -ne [double]$config.Values.ColonySpiceStorage -or
         [int]$config.Values.ColonySpiceStorage -lt 1) {
     throw 'ColonySpiceStorage must be a positive whole number.'
+}
+if ([int]$config.Values.CropCircleUpliftIntervalSeconds -ne [double]$config.Values.CropCircleUpliftIntervalSeconds -or
+        [int]$config.Values.CropCircleUpliftIntervalSeconds -lt 1) {
+    throw 'CropCircleUpliftIntervalSeconds must be a positive whole number.'
 }
 foreach ($chanceName in @('TerrestrialMoonChance', 'TerrestrialRingChance')) {
     if ([double]$config.Values[$chanceName] -gt 1) {
@@ -148,6 +165,9 @@ $economy = Join-Path $project 'gametuning~\SpaceEconomy.prop.prop_t'
 Set-PropertyLine $economy 'spaceEconomySpiceProductionMultiplier' $(if ($config.RestoreGeneralSpiceProduction) {
     "float spaceEconomySpiceProductionMultiplier $($config.Values.SpiceProductionMultiplier)"
 } else { 'float spaceEconomySpiceProductionMultiplier 0.00075' })
+Set-PropertyLine $economy 'spaceEconomySpiceHomeworldMultiplier' $(if ($config.RestoreVanillaHomeworldSpiceProduction) {
+    "float spaceEconomySpiceHomeworldMultiplier $($config.Values.HomeworldSpiceProductionMultiplier)"
+} else { 'float spaceEconomySpiceHomeworldMultiplier 0.25' })
 Set-PropertyLine $economy 'tradeRouteMaxNumber' $(if ($config.RestoreVanillaMaximumTradeRoutes) {
     "int32 tradeRouteMaxNumber $($config.Values.MaximumTradeRoutes)"
 } else { 'int32 tradeRouteMaxNumber 10' })
@@ -179,6 +199,23 @@ $shield = Join-Path $project 'spacetools~\shield.prop.prop_t'
 Set-PropertyLine $shield 'spaceToolRechargeRate' $(if ($config.RestoreShieldCooldown) {
     "float spaceToolRechargeRate $($config.Values.ShieldCooldownSeconds)"
 } else { 'float spaceToolRechargeRate 120' })
+
+$spiceStorageTool = Join-Path $project 'spacetools~\placespicestorage.prop.prop_t'
+Set-PropertyLine $spiceStorageTool 'spaceToolRechargeRate' $(if ($config.RestoreVanillaSpiceStorageCooldown) {
+    "float spaceToolRechargeRate $($config.Values.SpiceStorageCooldownSeconds)"
+} else { 'float spaceToolRechargeRate 10' })
+
+$colonyToolCooldowns = @(
+    @('placehappinessbooster', 'RestoreVanillaHappinessBoosterCooldown', 'HappinessBoosterCooldownSeconds'),
+    @('placeloyaltybooster', 'RestoreVanillaLoyaltyBoosterCooldown', 'LoyaltyBoosterCooldownSeconds'),
+    @('placeuberturret', 'RestoreVanillaUberTurretCooldown', 'UberTurretCooldownSeconds'),
+    @('placeembassy', 'RestoreVanillaEmbassyCooldown', 'EmbassyCooldownSeconds')
+)
+foreach ($tool in $colonyToolCooldowns) {
+    $toolPath = Join-Path $project "spacetools~\$($tool[0]).prop.prop_t"
+    $cooldown = if ($config[$tool[1]]) { $config.Values[$tool[2]] } else { 10 }
+    Set-PropertyLine $toolPath 'spaceToolRechargeRate' "float spaceToolRechargeRate $cooldown"
+}
 
 $enabledFlags = @($knownOptions | Where-Object { $_ -ne 'Values' -and $config[$_] }) -join ','
 if (!$enabledFlags) { $enabledFlags = 'none' }

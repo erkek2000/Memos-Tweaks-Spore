@@ -2,6 +2,8 @@
 #include "BuildingKeyboardShortcuts.h"
 #include "CommKeyboardShortcuts.h"
 #include "CargoStackLimit.h"
+#include "ColonyPattern.h"
+#include "CropCircleUplift.h"
 #include "GalaxySpiceCollector.h"
 #include "SpaceHotbarKeyboardShortcuts.h"
 
@@ -33,7 +35,7 @@ member_detour(PreventBioDisasterWithProtector, Simulator::cMissionManager,
     {
         if (missionID == id("biospherecollapse") && HasBioProtector(sourcePlanet))
         {
-            SporeDebugPrint("ERKEK2000 QoL Runtime: prevented eco-disaster on Bio Protector planet.");
+            App::ConsolePrintF("ERKEK2000 QoL Runtime: prevented eco-disaster on Bio Protector planet.");
             return nullptr;
         }
 
@@ -49,7 +51,7 @@ void Initialize()
 #if ERKEK_SPACE_HOTBAR_SHORTCUTS
     ERKEK2000QoL::InstallSpaceHotbarKeyboardShortcuts();
 #endif
-#if ERKEK_CLOSE_WITH_ESCAPE || ERKEK_CLOSE_WITH_TAB
+#if ERKEK_CLOSE_WITH_ESCAPE || ERKEK_CLOSE_WITH_TAB || ERKEK_FAST_DIALOGUE_OPENING
     ERKEK2000QoL::InstallCommKeyboardShortcuts();
 #endif
 #if ERKEK_COLLECT_GALAXY_SPICE
@@ -58,10 +60,22 @@ void Initialize()
 #if ERKEK_ENFORCE_CARGO_STACK_LIMIT
     ERKEK2000QoL::InstallCargoStackLimit();
 #endif
+#if ERKEK_COLONY_PATTERN_BUTTONS
+    ERKEK2000QoL::InstallColonyPatternButtons();
+#endif
+#if ERKEK_CROP_CIRCLE_UPLIFT
+    ERKEK2000QoL::InstallCropCircleUplift();
+#endif
 }
 
 void Dispose()
 {
+#if ERKEK_CROP_CIRCLE_UPLIFT
+    ERKEK2000QoL::RemoveCropCircleUplift();
+#endif
+#if ERKEK_COLONY_PATTERN_BUTTONS
+    ERKEK2000QoL::RemoveColonyPatternButtons();
+#endif
 #if ERKEK_SPACE_HOTBAR_SHORTCUTS
     ERKEK2000QoL::RemoveSpaceHotbarKeyboardShortcuts();
 #endif
@@ -71,7 +85,7 @@ void Dispose()
 #if ERKEK_COLLECT_GALAXY_SPICE
     ERKEK2000QoL::RemoveGalaxySpiceCollector();
 #endif
-#if ERKEK_CLOSE_WITH_ESCAPE || ERKEK_CLOSE_WITH_TAB
+#if ERKEK_CLOSE_WITH_ESCAPE || ERKEK_CLOSE_WITH_TAB || ERKEK_FAST_DIALOGUE_OPENING
     ERKEK2000QoL::RemoveCommKeyboardShortcuts();
 #endif
 #if ERKEK_BUILDING_SHORTCUTS
@@ -84,6 +98,12 @@ void AttachDetours()
 #if ERKEK_PREVENT_BIO_DISASTERS
     PreventBioDisasterWithProtector::attach(
         GetAddress(Simulator::cMissionManager, CreateMission));
+#endif
+#if ERKEK_CROP_CIRCLE_UPLIFT
+    ERKEK2000QoL::AttachCropCircleUpliftDetour();
+#endif
+#if ERKEK_FAST_DIALOGUE_OPENING
+    ERKEK2000QoL::AttachDialogueSpeedDetour();
 #endif
 }
 

@@ -1,27 +1,21 @@
 # Features on hold for discussion
 
-The features below remain unimplemented in Runtime 0.4.0. Bio Protector
+The features below remain unimplemented in Runtime 0.5.6. Bio Protector
 immunity, dialogue closing, galaxy-map spice collection, live cargo-limit
-enforcement, colony building shortcuts, and native Space hotbar keyboard use
-were moved out of this list and implemented in the DLL.
+enforcement, colony building shortcuts, native Space hotbar keyboard use, and
+saved colony pattern controls, and slow non-stacking Crop Circle uplift were moved out of this list and implemented in
+the DLL.
 "Likely DLL" is a technical assessment, not proof that every possible
 package-only solution has been exhausted.
-
-## Crop circles slowly uplift a civilization
-
-The vanilla tool uses `spaceToolStrategy cropcircles`; the inspected tool data
-does not expose a simple monolith/uplift-speed parameter. Substituting the
-monolith tool would change the tool's behavior and appearance rather than add
-the requested effect. Likely needs tool logic and saved progress/timers.
-Clarify "90% slower": 10% of monolith progress rate (ten times the time), or
-90% extra duration. Also define repeat-use stacking and eligible stages.
 
 ## Runtime configuration and inherited Kisu feature toggles
 
 The inherited 0.3.0 package system implements build-time switches for every
 package-side ERKEK-specific change.
 Live reload, an in-game settings screen, and exhaustive toggles for every
-inherited Kisu feature remain deferred. White spice and cargo upgrades span
+inherited Kisu feature remain deferred. Homeworld spice production and all five
+colony-tool cooldown reductions now have checked package-side toggles. White
+spice and cargo upgrades span
 assets, tools, lists, and trading, so disabling them safely needs dependency
 rules and decisions for already-owned items. A configuration file also cannot
 make an old galaxy forget initialized or generated state.

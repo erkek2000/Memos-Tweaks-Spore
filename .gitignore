@@ -2,6 +2,7 @@
 runtime/obj/
 dist/*.pdb
 dist/*.lib
+dist/*.map
 
 # Local reverse-engineering dependency cache
 tools/_capstone/

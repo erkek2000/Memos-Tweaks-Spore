@@ -3,6 +3,7 @@
 
 #include <Spore\App\IMessageManager.h>
 #include <Spore\Simulator.h>
+#include <Spore\Simulator\SubSystem\GameModeManager.h>
 #include <Spore\Simulator\cSimulatorSpaceGame.h>
 
 namespace
@@ -11,7 +12,7 @@ namespace
 
     void UpdateCargoStackLimit()
     {
-        if (!Simulator::IsSpaceGame())
+        if (!Simulator::IsSpaceGame() || Simulator::IsLoadingGameMode())
         {
             return;
         }
@@ -24,7 +25,7 @@ namespace
             inventory->mMaxItemCountPerItem != ERKEK_CARGO_STACK_LIMIT)
         {
             inventory->SetMaxCargoAmount(ERKEK_CARGO_STACK_LIMIT);
-            SporeDebugPrint("ERKEK2000 QoL Runtime: cargo stack limit set to %d.",
+            App::ConsolePrintF("ERKEK2000 QoL Runtime: cargo stack limit set to %d.",
                 ERKEK_CARGO_STACK_LIMIT);
         }
     }

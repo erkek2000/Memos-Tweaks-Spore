@@ -97,6 +97,8 @@ class VerifyPackage {
         var economyChanges = new ArrayList<String>();
         if (enabled.contains("RestoreGeneralSpiceProduction"))
             economyChanges.add("spaceEconomySpiceProductionMultiplier");
+        if (enabled.contains("RestoreVanillaHomeworldSpiceProduction"))
+            economyChanges.add("spaceEconomySpiceHomeworldMultiplier");
         if (enabled.contains("RestoreVanillaMaximumTradeRoutes"))
             economyChanges.add("tradeRouteMaxNumber");
         if (enabled.contains("RestoreVanillaMaximumSpiceBought"))
@@ -118,6 +120,16 @@ class VerifyPackage {
                 solarChanges.toArray(new String[0]));
         if (enabled.contains("RestoreShieldCooldown")) changes.put(
                 key("spacetools~", "shield"), new String[]{"spaceToolRechargeRate"});
+        if (enabled.contains("RestoreVanillaSpiceStorageCooldown")) changes.put(
+                key("spacetools~", "placespicestorage"), new String[]{"spaceToolRechargeRate"});
+        if (enabled.contains("RestoreVanillaHappinessBoosterCooldown")) changes.put(
+                key("spacetools~", "placehappinessbooster"), new String[]{"spaceToolRechargeRate"});
+        if (enabled.contains("RestoreVanillaLoyaltyBoosterCooldown")) changes.put(
+                key("spacetools~", "placeloyaltybooster"), new String[]{"spaceToolRechargeRate"});
+        if (enabled.contains("RestoreVanillaUberTurretCooldown")) changes.put(
+                key("spacetools~", "placeuberturret"), new String[]{"spaceToolRechargeRate"});
+        if (enabled.contains("RestoreVanillaEmbassyCooldown")) changes.put(
+                key("spacetools~", "placeembassy"), new String[]{"spaceToolRechargeRate"});
         // Compare against the reference properties decoded from vanilla PatchData
         // by InspectPackages.java, using the same installed SMFX property parser.
         Path configuredProject = Path.of(args[5]);

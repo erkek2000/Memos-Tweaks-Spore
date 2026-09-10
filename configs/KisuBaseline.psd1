@@ -8,25 +8,35 @@
     RestoreTerrestrialRingChance    = $false
     RestoreCoreTravelRestriction    = $false
     RestoreGeneralSpiceProduction   = $false
+    RestoreVanillaHomeworldSpiceProduction = $false
     RestoreVanillaMaximumTradeRoutes = $false
     RestoreVanillaMaximumSpiceBought = $false
     RestoreVanillaColonySpiceStorage = $false
+    RestoreVanillaSpiceStorageCooldown = $false
+    RestoreVanillaHappinessBoosterCooldown = $false
+    RestoreVanillaLoyaltyBoosterCooldown = $false
+    RestoreVanillaUberTurretCooldown = $false
+    RestoreVanillaEmbassyCooldown = $false
     RestoreColonyBuildingCosts      = $false
     RestoreShieldCooldown           = $false
     InstantPlanetaryDialogue        = $false
     PreventBioDisastersWithBioProtector = $false
     CloseDialogueWithEscape             = $false
     CloseDialogueWithTab                = $false
+    FastDialogueOpening                 = $false
     CollectSpiceAtGalaxyStars           = $false
     EnforceCargoStackLimit              = $false
     BuildingKeyboardShortcuts           = $false
     SpaceHotbarKeyboardShortcuts        = $false
+    ColonyPatternButtons                = $false
+    CropCircleUplift                    = $false
     Values = @{
         GroxExclusiveRadius       = 100.0
         GroxSpreadRadius          = 105.0
         CoreTravelMinimum         = 70.0
         CoreTravelMaximum         = 100.0
         SpiceProductionMultiplier = 0.0005
+        HomeworldSpiceProductionMultiplier = 0.025
         HouseCost                 = 25600.0
         EntertainmentCost         = 12800.0
         FactoryCost               = 19200.0
@@ -39,5 +49,11 @@
         MaximumTradeRoutes        = 5
         MaximumSpiceBought        = 200
         ColonySpiceStorage        = 5
+        SpiceStorageCooldownSeconds = 30.0
+        HappinessBoosterCooldownSeconds = 30.0
+        LoyaltyBoosterCooldownSeconds = 30.0
+        UberTurretCooldownSeconds = 30.0
+        EmbassyCooldownSeconds = 30.0
+        CropCircleUpliftIntervalSeconds = 1200
     }
 }

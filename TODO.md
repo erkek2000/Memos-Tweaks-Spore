@@ -1,6 +1,12 @@
 # Runtime TODO and decisions deferred during autonomous work
 
-Updated 2026-09-09.
+Updated 2026-09-10.
+
+## Unsafe features
+
+- Do not re-enable the generated `CommScreen-3.spui` package override. It
+  reproduced a loading-screen crash even in the package-only control. Runtime
+  dialogue speed instead changes only the already-created native Glide effects.
 
 ## Needs in-game validation
 
@@ -34,9 +40,6 @@ Updated 2026-09-09.
 - Auto build: define how a saved city pattern is selected, what happens when a
   slot cannot accept the saved building, and whether purchases may leave the
   colony with negative funds.
-- Crop circles: currently interpret "90% slower" as 10% of monolith progress,
-  but do not ship that assumption until a safe persisted progress mechanism is
-  identified.
 - System valuation: count all settled planets in the system, use undiscounted
   player construction costs, retain normal trade negotiation, and replace only
   its valuation baseline. These are provisional defaults pending a verified

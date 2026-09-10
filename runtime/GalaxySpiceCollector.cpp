@@ -5,6 +5,7 @@
 
 #include <Spore\App\IMessageManager.h>
 #include <Spore\Simulator.h>
+#include <Spore\Simulator\SubSystem\GameModeManager.h>
 #include <Spore\Simulator\cSimulatorPlayerUFO.h>
 #include <Spore\Simulator\cSimulatorSpaceGame.h>
 #include <Spore\Simulator\SubSystem\SpaceTrading.h>
@@ -92,7 +93,7 @@ namespace
 
     void UpdateGalaxySpiceCollector()
     {
-        if (!Simulator::IsSpaceGame() ||
+        if (!Simulator::IsSpaceGame() || Simulator::IsLoadingGameMode() ||
             Simulator::GetCurrentContext() != Simulator::SpaceContext::Galaxy)
         {
             sLastCollectedStar = Simulator::StarID(0xFFFFFFFFu);
@@ -138,7 +139,7 @@ namespace
 
         if (totalCollected > 0)
         {
-            SporeDebugPrint("ERKEK2000 QoL Runtime: collected %d spice at galaxy-map star.",
+            App::ConsolePrintF("ERKEK2000 QoL Runtime: collected %d spice at galaxy-map star.",
                 totalCollected);
         }
     }

@@ -139,12 +139,155 @@ whole number selected before rebuilding.
 Runtime 0.4.0 adds the `SpaceHotbarKeyboardShortcuts` DLL switch. It is enabled
 in the release and disabled in the Kisu-baseline preset.
 
+Runtime 0.4.1 adds `RestoreVanillaHomeworldSpiceProduction` with
+`Values.HomeworldSpiceProductionMultiplier`, and
+`RestoreVanillaSpiceStorageCooldown` with `Values.SpiceStorageCooldownSeconds`.
+They retain Kisu's 0.25 homeworld multiplier and 10-second tool cooldown by
+default; enabling them uses vanilla defaults of 0.025 and 30 seconds. The
+custom-value build verifies that both configured values reach the package.
+
+Runtime 0.4.2 adds independently configurable vanilla cooldown restoration for
+the Happiness Booster, Loyalty Booster, Uber Turret, and Embassy. Their four
+switches retain Kisu's 10-second values by default; their four numeric values
+default to the verified vanilla recharge time of 30 seconds.
+
+Runtime 0.5.0 adds an in-session colony pattern copier and two apply actions.
+The three buttons appear only in the active Space colony planner. A copied
+pattern includes buildings, turrets, civic decorations, empty slots, model,
+scale, and layout-relative orientation. Applying replaces matching slots in the
+current colony or every loaded player colony on the current planet. Empty saved
+slots remove their target contents for free; occupied saved slots are processed
+in building, decoration, then turret order and are skipped when their full
+construction cost is no longer affordable. The balance cannot become negative.
+The apply hover text reports the required amount in green or red and warns that
+construction stops when funds run out. A partial application displays a visible
+`Build incomplete: funds ran out.` warning. `ColonyPatternButtons` controls the
+DLL feature at build time and defaults on in the release.
+
+Preset application is intentionally blocked on a homeworld. Its city templates
+use layouts that are not safely interchangeable with ordinary colonies; the
+feature displays a warning instead of altering the homeworld or risking a
+community-editor crash.
+
+Runtime 0.5.8 fixes the apply crash. `CaptureLayout` never validated nouns, so
+the city hall (which derives from `cBuilding`) was captured as an ordinary
+building; applying then destroyed the hall and corrupted the city. Copying now
+records the city hall, and any other unsupported noun, as a new
+`PatternKind::Protected`, and apply never creates or removes a protected slot or
+a target city hall (with a defensive guard in `RemoveExisting` as well). New
+files round-trip the protected slot; files written before the fix still contain
+the hall as a building and are rejected by the strict loader, so the pattern
+must be copied again.
+
+Runtime 0.5.9 fixes pasted orientation and hardens the apply path after a
+fresh crash symbolization. The 20:59:29 apply-all crash faulted in
+`CreatePatternObject` reading `pattern.nounID` from a wild pointer - the same
+signature as the hall crash - so the remaining manual destruction of objects
+the feature cannot recreate was closed symmetrically: apply never destroys a
+target object unless its noun is one the capture step recreates, and
+`RemoveExisting` enforces the same rule. Orientations are captured and
+restored against `PlanetModel.GetOrientation` (the planet surface frame at each
+slot) instead of the layout quaternion, and apply re-asserts position, scale,
+and orientation after the game's own `AddBuilding`/`SetObject` calls. The
+all-colonies action only targets colonies on the same planet as the open
+planner colony (a distance guard against the planner colony's position; the
+first attempt used `PlanetModel.ToSurface` and crashed in-game) and
+processes the open planner colony last. The pattern format version is bumped
+to 2. Copying reports its counts, and every copy/apply appends crash-safe
+diagnostic lines to `colony-copy.log`/`colony-apply.log`.
+
+Runtime 0.5.10 responds to the first in-game tests of 0.5.9. `FastDialogueOpening`
+is disabled by default: the 22:02:52 report faults inside the game's effect code
+called from `MakeCommOpeningInstant` when it walked the communication panel's
+window-procedure list, so the cosmetic opening speed-up is compiled out of the
+standard build (the code remains, now guarded with a best-effort `__try` walk,
+for an experimental `FastDialogueOpening = $true` build). Applying a pattern no
+longer destroys and recreates a target object that already has the same noun:
+the first such replacement - an ornament at decoration slot 4 - crashed in
+`GameNounManager::CreateInstance` (22:07:12), so matching slots are updated in
+place and the destroy/create path is used only when the noun must change.
+
+Runtime 0.5.11 re-enables the instant communication opening with per-call fault
+guards. `MakePanelInstant` now wraps the window-procedure walk, the
+`IGlideEffect` cast, `SetTime`, `SetOffset`, and `Revalidate` in individual
+`__try/__except` blocks, so a call that faults in a transient screen state is
+skipped rather than crashing the game, and the whole attempt retries for up to
+three seconds after a screen becomes active. Successful applications and faults
+are recorded in `%APPDATA%\Spore\ERKEK2000_QoL\comm-open.log`.
+`FastDialogueOpening` defaults to `$true` again.
+
+Runtime 0.5.12 corrects the effect calls. The March2017 Ghidra type database
+shows the game's `IGlideEffect` vtable is seven entries (`0x10 ToWinProc`,
+`0x14 GetOffset`, `0x18 SetOffset`) and `IBiStateEffect` places `SetTime` at
+`0x18`, but the SDK models `IGlideEffect` as deriving from `IBiStateEffect`, so
+MSVC emitted `SetTime` at `0x18` (the game's `SetOffset` - the original null
+read) and `SetOffset` at `0x40` (past the vtable - the four logged faults).
+`SetTime` now goes through the `IBiStateEffect` interface and `SetOffset`
+through `IGlideEffectGameLayout`, a mirror of the game's real IGlideEffect
+vtable; both compile to `call [eax+18h]` in their own vtable.
+
+Runtime 0.5.1 persists the latest copied pattern at
+`%APPDATA%\Spore\ERKEK2000_QoL\colony-pattern.bin`. Copying atomically replaces
+that file, and later launches load it before the planner is opened, so the
+apply buttons are immediately available across restarts and different saved
+galaxies. The binary format is versioned and checksummed; strict slot, object,
+cost, scale, and finite-number checks cause corrupt or incompatible files to
+be ignored rather than instantiated.
+
+Runtime 0.5.2 changes the custom UI lifecycle after two 0.5.1 loading-screen
+crashes. Planner windows are no longer children of the main UI from startup;
+they are created lazily only while `mpCommunityEditor` is active and disposed
+when it closes. The crash evidence and reverse-engineering rationale are kept
+in `REVERSE_ENGINEERING.md`.
+
+Runtime 0.5.6 adds `CropCircleUplift`. A successful Crop Circle ground or
+water hit on an eligible non-homeworld queues one persistent uplift step;
+repeat hits for that planet are ignored. Each step uses the configured
+`Values.CropCircleUpliftIntervalSeconds` (1200 by default, ten times the
+native Monolith mean interval). Creature planets become Tribe after one step,
+Tribe planets become Civilization after one further step, and Civilization
+planets receive an Empire through `cStarManager::GetEmpireForStar()` before
+native Empire-level planet data is generated. Progress lives
+outside saves at `%APPDATA%\Spore\ERKEK2000_QoL\crop-circle-uplift.bin` and is
+validated by magic, version, exact size, count limit, and checksum. Monolith
+logic and all homeworlds are deliberately untouched.
+
+Runtime 0.5.6 also adds `FastDialogueOpening`. The previous package-generated
+`CommScreen-3.spui` override is still omitted because it crashed even without
+the DLL. Instead, the runtime detours the native communication-event display
+and updates the two existing `IGlideEffect` instances on the native panel
+windows to zero time and zero offset. The original screen remains the sole UI
+owner; this changes only its opening animation.
+
+Runtime 0.5.3 follows a third, equivalent crash in 0.5.2. The earlier fix left
+four custom procedures attached to the root UI during stage loading. Colony
+pattern, colony-building, Space-hotbar, and communication UI handlers now use
+Space-game update guards, attach only after Space stage becomes active, and
+detach outside it. Colony-pattern handlers attach only to their own buttons,
+not the root window. This is a static lifecycle fix pending the in-game
+regression test in `TESTING.md`.
+
+Runtime 0.5.4 follows a fourth, identical crash in 0.5.3, whose minidump
+symbolizes to `UTFWin::Window::AddWinProc` calling a stale procedure through the
+window's procedure list (`UTFWin::Window::func64`) while the game rebuilds the
+UI tree at the end of a planet load. Every Space-only procedure now attaches
+exactly once, only when `IsSpaceGame()` is true and `IsLoadingGameMode()` is
+false, and is never detached during the session; no `RemoveWinProc` is ever
+called outside DLL dispose, and the main window is never cached across frames.
+The colony-pattern controller is kept alive for the session and the planner
+buttons are created strictly while the planner is open. `App::ConsolePrintF`
+replaces `SporeDebugPrint` (a Release no-op) so attach events reach
+`spore_log.txt`. A crash-isolation build with all UI features compiled out is
+kept in `dist/variants/NoUI-0.5.4/` for the A/B test documented in
+`TESTING.md`.
+
 The configuration generates a package before launch; it is not a runtime file.
 The build validates option names and types, stages changes in a temporary
 directory, verifies the configured compiled resources, and only then replaces
 the release package. This configuration covers every package-side
-ERKEK-specific delta. The Bio Protector immunity is implemented separately by
-the runtime DLL; other runtime-only requests remain listed in `ON-HOLD.md`.
+ERKEK-specific delta. Bio Protector immunity and colony pattern controls are
+implemented separately by the runtime DLL; other runtime-only requests remain
+listed in `ON-HOLD.md`.
 
 The remaining items from the specification's "POSSIBLY HARD TO IMPLEMENT
 FEATURES" section are accounted for in

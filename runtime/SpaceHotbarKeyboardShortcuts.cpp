@@ -2,6 +2,9 @@
 #include "SpaceHotbarKeyboardShortcuts.h"
 
 #include <Spore\Simulator\cSimulatorSpaceGame.h>
+#include <Spore\Simulator\SubSystem\GameModeManager.h>
+#include <Spore\App\IMessageManager.h>
+#include <Spore\Simulator.h>
 #include <Spore\UI\SpaceToolPanelUI.h>
 #include <Spore\UTFWin\IWinProc.h>
 #include <Spore\UTFWin\IWindowManager.h>
@@ -86,34 +89,51 @@ namespace
     };
 
     IWinProcPtr sSpaceHotbarKeyboardProc;
-    IWindowPtr sMainWindow;
+    UTFWin::IWindow* sAttachedWindow = nullptr;
+    eastl::intrusive_ptr<App::UpdateMessageListener> sUpdateListener;
+
+    void UpdateSpaceHotbarKeyboardProc()
+    {
+        // Same lifecycle rule as the other Space-only procedures: never touch
+        // the UI tree while a stage is loading or outside Space.
+        if (!Simulator::IsSpaceGame() || Simulator::IsLoadingGameMode())
+        {
+            return;
+        }
+
+        UTFWin::IWindow* mainWindow = WindowManager.GetMainWindow();
+        if (mainWindow == nullptr)
+        {
+            return;
+        }
+
+        if (sSpaceHotbarKeyboardProc == nullptr)
+        {
+            sSpaceHotbarKeyboardProc = new SpaceHotbarKeyboardProc();
+        }
+
+        if (sAttachedWindow != mainWindow)
+        {
+            mainWindow->AddWinProc(sSpaceHotbarKeyboardProc.get());
+            sAttachedWindow = mainWindow;
+            App::ConsolePrintF("ERKEK2000 QoL Runtime: space hotbar proc attached.");
+        }
+    }
 }
 
 void ERKEK2000QoL::InstallSpaceHotbarKeyboardShortcuts()
 {
-    if (sSpaceHotbarKeyboardProc != nullptr)
-    {
-        return;
-    }
-
-    UTFWin::IWindow* mainWindow = WindowManager.GetMainWindow();
-    if (mainWindow == nullptr)
-    {
-        SporeDebugPrint("ERKEK2000 QoL Runtime: main UI unavailable; Space hotbar shortcuts not installed.");
-        return;
-    }
-
-    sMainWindow = mainWindow;
-    sSpaceHotbarKeyboardProc = new SpaceHotbarKeyboardProc();
-    mainWindow->AddWinProc(sSpaceHotbarKeyboardProc.get());
+    if (sUpdateListener == nullptr)
+        sUpdateListener = App::AddUpdateFunction(UpdateSpaceHotbarKeyboardProc);
 }
 
 void ERKEK2000QoL::RemoveSpaceHotbarKeyboardShortcuts()
 {
-    if (sMainWindow != nullptr && sSpaceHotbarKeyboardProc != nullptr)
+    if (sUpdateListener != nullptr)
     {
-        sMainWindow->RemoveWinProc(sSpaceHotbarKeyboardProc.get());
+        App::RemoveUpdateFunction(sUpdateListener);
+        sUpdateListener = nullptr;
     }
     sSpaceHotbarKeyboardProc = nullptr;
-    sMainWindow = nullptr;
+    sAttachedWindow = nullptr;
 }

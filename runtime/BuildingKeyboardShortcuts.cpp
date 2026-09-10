@@ -2,7 +2,10 @@
 #include "BuildingKeyboardShortcuts.h"
 
 #include <Spore\Palettes\PalettePageUI.h>
+#include <Spore\App\IMessageManager.h>
+#include <Spore\Simulator.h>
 #include <Spore\Simulator\cSimulatorSpaceGame.h>
+#include <Spore\Simulator\SubSystem\GameModeManager.h>
 #include <Spore\UTFWin\IWinProc.h>
 #include <Spore\UTFWin\IWindowManager.h>
 
@@ -121,34 +124,59 @@ namespace
     };
 
     IWinProcPtr sBuildingKeyboardProc;
-    IWindowPtr sMainWindow;
+    UTFWin::IWindow* sAttachedWindow = nullptr;
+    eastl::intrusive_ptr<App::UpdateMessageListener> sUpdateListener;
+
+    void UpdateBuildingKeyboardProc()
+    {
+        // Never touch the UI tree while a stage is loading or outside Space.
+        // The main window and its procedure list are only stable once the
+        // Space game is fully entered; attaching during a transition is what
+        // crashed 0.5.1 through 0.5.3.
+        if (!Simulator::IsSpaceGame() || Simulator::IsLoadingGameMode())
+        {
+            return;
+        }
+
+        UTFWin::IWindow* mainWindow = WindowManager.GetMainWindow();
+        if (mainWindow == nullptr)
+        {
+            return;
+        }
+
+        if (sBuildingKeyboardProc == nullptr)
+        {
+            sBuildingKeyboardProc = new BuildingKeyboardProc();
+        }
+
+        // Attach once per live main-window identity. The procedure is kept
+        // alive for the whole session and is never removed again: the game
+        // does not own it, and RemoveWinProc during a UI transition is the
+        // corruption vector this avoids.
+        if (sAttachedWindow != mainWindow)
+        {
+            mainWindow->AddWinProc(sBuildingKeyboardProc.get());
+            sAttachedWindow = mainWindow;
+            App::ConsolePrintF("ERKEK2000 QoL Runtime: building shortcut proc attached.");
+        }
+    }
 }
 
 void ERKEK2000QoL::InstallBuildingKeyboardShortcuts()
 {
-    if (sBuildingKeyboardProc != nullptr)
-    {
-        return;
-    }
-
-    UTFWin::IWindow* mainWindow = WindowManager.GetMainWindow();
-    if (mainWindow == nullptr)
-    {
-        SporeDebugPrint("ERKEK2000 QoL Runtime: main UI unavailable; building shortcuts not installed.");
-        return;
-    }
-
-    sMainWindow = mainWindow;
-    sBuildingKeyboardProc = new BuildingKeyboardProc();
-    mainWindow->AddWinProc(sBuildingKeyboardProc.get());
+    if (sUpdateListener == nullptr)
+        sUpdateListener = App::AddUpdateFunction(UpdateBuildingKeyboardProc);
 }
 
 void ERKEK2000QoL::RemoveBuildingKeyboardShortcuts()
 {
-    if (sMainWindow != nullptr && sBuildingKeyboardProc != nullptr)
+    if (sUpdateListener != nullptr)
     {
-        sMainWindow->RemoveWinProc(sBuildingKeyboardProc.get());
+        App::RemoveUpdateFunction(sUpdateListener);
+        sUpdateListener = nullptr;
     }
+    // The game tears the UI down during shutdown and never owned the
+    // procedure. Do not call RemoveWinProc on exit.
     sBuildingKeyboardProc = nullptr;
-    sMainWindow = nullptr;
+    sAttachedWindow = nullptr;
 }

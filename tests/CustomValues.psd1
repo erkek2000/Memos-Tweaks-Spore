@@ -8,25 +8,35 @@
     RestoreTerrestrialRingChance    = $true
     RestoreCoreTravelRestriction    = $true
     RestoreGeneralSpiceProduction   = $true
+    RestoreVanillaHomeworldSpiceProduction = $true
     RestoreVanillaMaximumTradeRoutes = $true
     RestoreVanillaMaximumSpiceBought = $true
     RestoreVanillaColonySpiceStorage = $true
+    RestoreVanillaSpiceStorageCooldown = $true
+    RestoreVanillaHappinessBoosterCooldown = $true
+    RestoreVanillaLoyaltyBoosterCooldown = $true
+    RestoreVanillaUberTurretCooldown = $true
+    RestoreVanillaEmbassyCooldown = $true
     RestoreColonyBuildingCosts      = $true
     RestoreShieldCooldown           = $true
     InstantPlanetaryDialogue        = $true
     PreventBioDisastersWithBioProtector = $true
     CloseDialogueWithEscape             = $true
     CloseDialogueWithTab                = $true
+    FastDialogueOpening                 = $true
     CollectSpiceAtGalaxyStars           = $true
     EnforceCargoStackLimit              = $true
     BuildingKeyboardShortcuts           = $true
     SpaceHotbarKeyboardShortcuts        = $true
+    ColonyPatternButtons                = $true
+    CropCircleUplift                    = $true
     Values = @{
         GroxExclusiveRadius       = 90.0
         GroxSpreadRadius          = 110.0
         CoreTravelMinimum         = 60.0
         CoreTravelMaximum         = 95.0
         SpiceProductionMultiplier = 0.0006
+        HomeworldSpiceProductionMultiplier = 0.04
         HouseCost                 = 24000.0
         EntertainmentCost         = 12000.0
         FactoryCost               = 18000.0
@@ -39,5 +49,11 @@
         MaximumTradeRoutes        = 7
         MaximumSpiceBought        = 432
         ColonySpiceStorage        = 9
+        SpiceStorageCooldownSeconds = 24.0
+        HappinessBoosterCooldownSeconds = 21.0
+        LoyaltyBoosterCooldownSeconds = 22.0
+        UberTurretCooldownSeconds = 23.0
+        EmbassyCooldownSeconds = 25.0
+        CropCircleUpliftIntervalSeconds = 123
     }
 }

@@ -1,13 +1,17 @@
 ﻿
 
-Hash : DB55BF4C73630CAFC2D61C2E127D3C0F27CCE51DA45BD9B18809AA27D771F4A9
-Path : C:\Users\nambu\Modding Projects\Spore\ERKEK2000-qol-dll\dist\ERKEK2000_QoL_Runtime.package
+Hash : D157DA5453CF35EC9B21CD0767F9C99BF8216B1A64394F4E4543134A8D552249
+Path : C:\Users\nambu\Modding Projects\Spore\Memos-Tweaks-Spore\Memos-Tweaks-Spore\dist\ERKEK2000_QoL_Runtime.package
 
-Hash : FB99A22128D96C11702CCD872A0F91A8BD39B3BC52C420454C815ED906BD60FE
-Path : C:\Users\nambu\Modding Projects\Spore\ERKEK2000-qol-dll\dist\ERKEK2000_QoL_Runtime.dll
+Hash : AC48F668DAB0338DC3F5458FB61BB944850FC2BB47AB89A209E6F29305A455FD
+Path : C:\Users\nambu\Modding Projects\Spore\Memos-Tweaks-Spore\Memos-Tweaks-Spore\dist\ERKEK2000_QoL_Runtime.dll
 
-Hash : 4957EFC40FFB16E14A29E19F50013F3588EC32F75D04E6E84A4ABD32FBBB7C72
-Path : C:\Users\nambu\Modding Projects\Spore\ERKEK2000-qol-dll\dist\ERKEK2000_QoL_Runtime.sporemod
+Hash : A064FA992603747CE5F1A1E2E4157FD07E1AD92682B2A99D54574D3FEEC252CA
+Path : C:\Users\nambu\Modding Projects\Spore\Memos-Tweaks-Spore\Memos-Tweaks-Spore\dist\ERKEK2000_QoL_Runtime.sporemod
+
+Hash : 2F57761BEB48A5D0B59BADD22A514DDAAE78BCF24E0288A1EE319737AFDB5BA3
+Path : C:\Users\nambu\Modding 
+       Projects\Spore\Memos-Tweaks-Spore\Memos-Tweaks-Spore\dist\ERKEK2000_QoL_Runtime_PackageOnly.sporemod
 
 
 

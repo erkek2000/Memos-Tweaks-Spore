@@ -83,9 +83,25 @@ live in-game settings.
   [IMPLEMENTED.md](IMPLEMENTED.md) and Kisu's original changelog at
   `../KisuTweaks-1.5/KisuTweaks-1.5/README.md`.
 
-The requested system-purchase pricing changes are not implemented; they remain
-listed in [ON-HOLD.md](ON-HOLD.md). See [IMPLEMENTED.md](IMPLEMENTED.md) for
-exact resource-level changes and feature safety/compatibility notes.
+See [IMPLEMENTED.md](IMPLEMENTED.md) for exact resource-level changes and
+feature safety/compatibility notes.
+
+## Planned features
+
+- **System-purchase valuation based on spice and colonies:** after the
+  required trading threshold, system price should gain 500,000 per red-spice
+  planet, 750,000 per yellow, 1M per blue, 2M per cyan, 3M per pink, 5M per
+  purple, and 10M per white, plus half the player construction cost of each
+  building. This is not implemented yet; its trading threshold, planet scope,
+  building/turret treatment, discounts, and purchase-UI support still need to
+  be defined.
+- **Broader runtime configuration:** an in-game settings screen, live reload,
+  and safe switches for every inherited Kisu feature are not implemented.
+  Existing configuration applies only while rebuilding, and only to the
+  supported package and DLL options listed above.
+
+See [ON-HOLD.md](ON-HOLD.md) for the technical notes and open design questions
+behind these planned features.
 
 ## Files to use
 

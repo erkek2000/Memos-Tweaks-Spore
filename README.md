@@ -9,6 +9,84 @@ local Kisu package using **SporeModder FX 2.2.27**. Kisu is the author of the
 inherited overhaul, assets, extra tools, and white spice. This project applies
 the differences requested in [mod-features.md](mod-features.md).
 
+## Features
+
+The standard build includes the following features. Options marked
+**configurable** are selected in `config.psd1` when rebuilding; they are not
+live in-game settings.
+
+### QoL and Space-stage gameplay
+
+- **Bio Protector immunity:** a planet with a Bio Protector cannot receive a
+  new eco-disaster. Existing active disasters are not removed.
+- **Communication controls:** **ESC** and **TAB** activate the visible,
+  enabled native Goodbye button, without bypassing trade or mission
+  confirmations.
+- **Instant planetary dialogue opening:** the native communication screen is
+  retained, while its two opening glide effects are made instant. This is
+  fault-guarded and retried during the first three seconds after the screen
+  appears.
+- **Galaxy-map spice collection:** arriving at a player-owned colony system
+  transfers spice from all of its colonies into available cargo space. It
+  respects the cargo-stack limit and leaves overflow stored on its planet.
+- **999 cargo stacks:** the Kisu cargo limit and five cargo upgrades are kept;
+  the DLL also reapplies the configured limit to live Space-stage inventories,
+  allowing old saves with a persisted 99 limit to be repaired without editing
+  save files. **Configurable** (default: 999).
+- **Colony-planner shortcuts:** while the Space colony planner is active,
+  unmodified **1**, **2**, **3**, and **4** select House, Entertainment,
+  Factory, and Turret respectively. They select the normal palette item; they
+  do not buy or place it.
+- **Space tool hotbar shortcuts:** unmodified **1** through **9**, plus **0**
+  when the native panel has a tenth slot, select the matching visible tool in
+  the active native Space-tool tab. The planner shortcuts take priority.
+- **Colony pattern tools:** the Space colony planner adds **Copy colony
+  pattern**, **Apply saved pattern**, and **Apply to all colonies**. Patterns
+  capture buildings, turrets, civic decorations, empty slots, scale, and
+  planet-relative orientation. Application respects available Sporebucks,
+  reports the full cost and partial builds, never makes the balance negative,
+  skips protected/special nouns such as city halls, and never applies to a
+  homeworld. Apply-all affects player colonies on the current planet only.
+  Patterns persist across sessions and galaxies in a validated, checksummed
+  file under `%APPDATA%\\Spore\\ERKEK2000_QoL`; copy/apply diagnostic logs are
+  written there as well.
+- **Crop Circle uplift:** the first successful ground or water hit on an
+  eligible non-homeworld queues one persistent 20-minute uplift step. Creature
+  advances to Tribe, Tribe to Civilization, and Civilization to a native
+  Empire on a third step. Repeat hits do not accelerate it, and Monolith
+  behavior is unchanged. Progress survives restarts.
+
+### Balance, galaxy generation, and tools
+
+- **Vanilla badge requirements:** restores all five tiers of the 22 badge
+  families that Kisu changed, while retaining the Captain badge's extra cargo
+  reward.
+- **Restored Grox and core distances:** the Grox-exclusive radius is 100 pc,
+  Grox star spread is 105, and the core travel-restriction band is 70–100 pc.
+  The smaller Kisu Grox empire size remains by default. **Configurable.**
+- **Restored general spice production:** removes Kisu's 50% general production
+  boost (0.0005 multiplier). The separate Kisu homeworld multiplier remains
+  0.25 by default. **Configurable.**
+- **Restored Space colony costs:** House 25,600; Entertainment 12,800;
+  Factory 19,200; Turret 16,000. **Configurable.**
+- **Restored Shield recharge:** 180 seconds. **Configurable.**
+- **Optional vanilla restorations:** trade-route limit (5), spice bought per
+  transaction (200), colony spice storage (5), homeworld spice production
+  (0.025), and 30-second recharge times for Spice Storage, Happiness Booster,
+  Loyalty Booster, Uber Turret, and Embassy. The default build retains Kisu's
+  higher values for these settings.
+- **Inherited Kisu overhaul:** white spice and its assets; altered starting
+  homeworld spice; faster transitions; camera/FOV and ship adjustments;
+  increased moon/ring chances; disaster-frequency tuning; trade bundles;
+  consequence powers; archetype changes; additional sculpting tools; and
+  earlier-stage tweaks. The complete retained baseline is documented in
+  [IMPLEMENTED.md](IMPLEMENTED.md) and Kisu's original changelog at
+  `../KisuTweaks-1.5/KisuTweaks-1.5/README.md`.
+
+The requested system-purchase pricing changes are not implemented; they remain
+listed in [ON-HOLD.md](ON-HOLD.md). See [IMPLEMENTED.md](IMPLEMENTED.md) for
+exact resource-level changes and feature safety/compatibility notes.
+
 ## Files to use
 
 - `dist/ERKEK2000_QoL_Runtime.sporemod`: installable package containing both

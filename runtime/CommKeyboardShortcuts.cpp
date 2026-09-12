@@ -3,10 +3,7 @@
 
 #include <Spore\Simulator\SubSystem\CommManager.h>
 #include <Spore\Simulator\SubSystem\GameModeManager.h>
-#include <Spore\App\IMessageManager.h>
 #include <Spore\Simulator.h>
-#include <Spore\UTFWin\IWinProc.h>
-#include <Spore\UTFWin\IWindowManager.h>
 #include <Spore\UTFWin\GlideEffect.h>
 
 #include <cstdio>
@@ -15,63 +12,6 @@
 
 namespace
 {
-    class CommKeyboardProc final : public UTFWin::DefaultWinProc<UTFWin::kEventFlagBasicInput>
-    {
-    public:
-        int GetPriority() const override
-        {
-            // Run before ordinary UI procedures so TAB does not also change focus.
-            return 1000;
-        }
-
-        bool HandleUIMessage(UTFWin::IWindow*, const UTFWin::Message& message) override
-        {
-            if (!message.IsType(UTFWin::kMsgKeyDown) &&
-                !message.IsType(UTFWin::kMsgKeyDown2))
-            {
-                return false;
-            }
-
-            const bool closeKey =
-                (ERKEK_CLOSE_WITH_ESCAPE && message.Key.vkey == VK_ESCAPE) ||
-                (ERKEK_CLOSE_WITH_TAB && message.Key.vkey == VK_TAB);
-            if (!closeKey)
-            {
-                return false;
-            }
-
-            Simulator::cCommManager* manager = Simulator::cCommManager::Get();
-            if (manager == nullptr || !manager->IsCommScreenActive())
-            {
-                return false;
-            }
-
-            UTFWin::IButton* exitButton = manager->GetCommButton(Simulator::kBtnExit);
-            UTFWin::IWindow* exitWindow = exitButton == nullptr ? nullptr : exitButton->ToWindow();
-            if (exitWindow == nullptr)
-            {
-                return false;
-            }
-
-            const UTFWin::WindowFlags flags = exitWindow->GetFlags();
-            if ((flags & UTFWin::kWinFlagVisible) == 0 ||
-                (flags & UTFWin::kWinFlagEnabled) == 0)
-            {
-                // Submenus can hide or disable Goodbye. Do not bypass their own
-                // cancellation/confirmation flow.
-                return false;
-            }
-
-            UTFWin::Message click{};
-            click.source = exitWindow;
-            click.eventType = UTFWin::kMsgButtonClick;
-            WindowManager.SendMsg(exitWindow, exitWindow, click, true);
-            return true;
-        }
-    };
-
-    IWinProcPtr sCommKeyboardProc;
-    UTFWin::IWindow* sAttachedWindow = nullptr;
     eastl::intrusive_ptr<App::UpdateMessageListener> sUpdateListener;
 
 #if ERKEK_FAST_DIALOGUE_OPENING
@@ -271,7 +211,7 @@ namespace
     }
 #endif
 
-    void UpdateCommKeyboardProc()
+    void UpdateCommOpening()
     {
         // Same lifecycle rule as the other Space-only procedures: never touch
         // the UI tree while a stage is loading or outside Space.
@@ -286,24 +226,6 @@ namespace
         // replacement SPUI resource, which was the source of the 0.5.5 crash.
         MakeCommOpeningInstant();
 #endif
-
-        UTFWin::IWindow* mainWindow = WindowManager.GetMainWindow();
-        if (mainWindow == nullptr)
-        {
-            return;
-        }
-
-        if (sCommKeyboardProc == nullptr)
-        {
-            sCommKeyboardProc = new CommKeyboardProc();
-        }
-
-        if (sAttachedWindow != mainWindow)
-        {
-            mainWindow->AddWinProc(sCommKeyboardProc.get());
-            sAttachedWindow = mainWindow;
-            App::ConsolePrintF("ERKEK2000 QoL Runtime: comm shortcut proc attached.");
-        }
     }
 }
 
@@ -318,21 +240,19 @@ member_detour(InstantCommOpening, Simulator::cCommManager, void(Simulator::cComm
 };
 #endif
 
-void ERKEK2000QoL::InstallCommKeyboardShortcuts()
+void ERKEK2000QoL::InstallFastDialogueOpening()
 {
     if (sUpdateListener == nullptr)
-        sUpdateListener = App::AddUpdateFunction(UpdateCommKeyboardProc);
+        sUpdateListener = App::AddUpdateFunction(UpdateCommOpening);
 }
 
-void ERKEK2000QoL::RemoveCommKeyboardShortcuts()
+void ERKEK2000QoL::RemoveFastDialogueOpening()
 {
     if (sUpdateListener != nullptr)
     {
         App::RemoveUpdateFunction(sUpdateListener);
         sUpdateListener = nullptr;
     }
-    sCommKeyboardProc = nullptr;
-    sAttachedWindow = nullptr;
 }
 
 void ERKEK2000QoL::AttachDialogueSpeedDetour()

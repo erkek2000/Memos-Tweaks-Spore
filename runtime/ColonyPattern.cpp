@@ -16,6 +16,8 @@
 #include <Spore\Simulator\SubSystem\SpacePlayerData.h>
 #include <Spore\App\ICheatManager.h>
 #include <Spore\App\IMessageManager.h>
+#include <Spore\Palettes\PaletteItem.h>
+#include <Spore\Palettes\PalettePageUI.h>
 #include <Spore\UTFWin\IButton.h>
 #include <Spore\UTFWin\IWinProc.h>
 #include <Spore\UTFWin\IWindowManager.h>
@@ -386,11 +388,9 @@ namespace
         return object != nullptr && object->GetNounID() == Simulator::cBuildingCityHall::NOUN_ID;
     }
 
-    // Objects the apply step may destroy or replace: exactly the nouns the
-    // capture step can recreate. Anything else occupying a target slot (the
-    // city hall, scenario buildings, special colony structures) is left in
-    // place and the slot is skipped. Destroying such an object through this
-    // manual path corrupts the city, which is what the 0.5.8 hall crash did.
+    // The apply step may only update these supported nouns in place. Anything
+    // else occupying a target slot (city halls, scenario buildings, special
+    // colony structures) is left untouched.
     bool IsSafelyReplaceable(Simulator::cGameData* object)
     {
         if (object == nullptr || IsCityHallObject(object)) return false;
@@ -522,17 +522,36 @@ namespace
         return result;
     }
 
-    int64_t PatternCost()
+    bool HasMatchingTopology(const Simulator::cCity* city);
+
+    int64_t PatternLayoutCost(const Simulator::cCommunityLayout& layout,
+        const std::vector<PatternSlot>& pattern)
     {
         int64_t total = 0;
-        const auto add = [&total](const std::vector<PatternSlot>& slots)
+        if (layout.mSlots.size() != pattern.size()) return total;
+
+        for (size_t index = 0; index < pattern.size(); ++index)
         {
-            for (const PatternSlot& slot : slots) total += slot.cost;
-        };
-        add(sPattern.buildings);
-        add(sPattern.decorations);
-        add(sPattern.turrets);
+            const PatternSlot& source = pattern[index];
+            if (source.kind == PatternKind::Protected || source.kind == PatternKind::Empty)
+                continue;
+
+            Simulator::cGameData* existing = layout.mSlots[index].mpObject.get();
+            if (existing == nullptr || (!IsCityHallObject(existing) &&
+                IsSafelyReplaceable(existing) && existing->GetNounID() == source.nounID))
+            {
+                total += source.cost;
+            }
+        }
         return total;
+    }
+
+    int64_t PatternCostForCity(const Simulator::cCity* city)
+    {
+        if (!HasMatchingTopology(city)) return 0;
+        return PatternLayoutCost(city->mBuildingsLayout, sPattern.buildings) +
+            PatternLayoutCost(city->mDecorationsLayout, sPattern.decorations) +
+            PatternLayoutCost(city->mTurretsLayout, sPattern.turrets);
     }
 
     bool HasMatchingTopology(const Simulator::cCity* city)
@@ -543,59 +562,8 @@ namespace
             city->mTurretsLayout.mSlots.size() == sPattern.turrets.size();
     }
 
-    template <typename T, typename TObject>
-    void EraseObject(T& container, TObject* object)
-    {
-        for (auto iterator = container.begin(); iterator != container.end(); ++iterator)
-        {
-            if (iterator->get() == object)
-            {
-                container.erase(iterator);
-                return;
-            }
-        }
-    }
-
-    void RemoveExisting(Simulator::cCity* city, Simulator::cLayoutSlot& slot)
-    {
-        Simulator::cGameData* existing = slot.mpObject.get();
-        if (existing == nullptr) return;
-        // Defensive: the city hall must never be destroyed through this path.
-        if (IsCityHallObject(existing)) return;
-        // Defensive: only nouns the capture step can recreate are ever
-        // destroyed; the caller checks this as well.
-        if (!IsSafelyReplaceable(existing)) return;
-
-        {
-            char line[128];
-            _snprintf_s(line, _countof(line), _TRUNCATE,
-                "destroy noun %08X object %08X",
-                existing->GetNounID(),
-                static_cast<unsigned>(reinterpret_cast<uintptr_t>(existing)));
-            WriteDiagnosticLine(L"colony-apply.log", line);
-        }
-
-        slot.RemoveObject(existing);
-        if (Simulator::cBuilding* building = object_cast<Simulator::cBuilding>(existing))
-        {
-            city->RemoveBuilding(building);
-        }
-        else if (Simulator::cTurret* turret = object_cast<Simulator::cTurret>(existing))
-        {
-            EraseObject(city->mTurrets, turret);
-        }
-        else if (Simulator::cOrnament* ornament = object_cast<Simulator::cOrnament>(existing))
-        {
-            EraseObject(city->mCivicObjects, ornament);
-        }
-        GameNounManager.DestroyInstance(existing);
-    }
-
-    // Updates an existing slot object so that it matches the pattern without
-    // destroying and recreating it. Destroying an object and immediately
-    // creating the same noun crashes the game's noun factory (observed at the
-    // first ornament replacement in colony-apply.log), so a target slot that
-    // already holds the same noun is edited in place.
+    // Updates an existing slot object in place when its noun already matches
+    // the saved pattern. Objects are never removed or replaced in a live city.
     void UpdateExistingObject(Simulator::cGameData* object, Simulator::cLayoutSlot& slot,
         Simulator::cCommunityLayout& layout, const PatternSlot& pattern)
     {
@@ -651,8 +619,12 @@ namespace
         return object;
     }
 
+    // Returns the number of actual building/turret creations. Updating an
+    // already occupied slot is deliberately excluded: it changes a model but
+    // is not a new colony improvement and must not award badge progress.
     bool ApplyLayout(Simulator::cCity* city, Simulator::cCommunityLayout& layout,
-        const std::vector<PatternSlot>& pattern, int& money, bool& ranOut)
+        const std::vector<PatternSlot>& pattern, int& money, bool& ranOut,
+        int& createdColonyImprovements)
     {
         if (layout.mSlots.size() != pattern.size()) return false;
 
@@ -683,21 +655,23 @@ namespace
 
             if (source.kind == PatternKind::Empty)
             {
-                RemoveExisting(city, target);
-                continue;
-            }
-            if (money < source.cost)
-            {
-                ranOut = true;
+                // Never demolish a live colony object from this editor tool.
+                // The editor may still hold selection/placement references to
+                // an occupied slot, and the RemoveObject/RemoveBuilding/
+                // DestroyInstance sequence crashed on a partially built city.
                 continue;
             }
 
-            // A target slot that already holds the same noun is edited in
-            // place. Destroying an object and immediately creating the same
-            // noun crashes the game's noun factory, so the destroy/create
-            // path below is only used when the noun must change.
+            // Matching nouns are restyled in place. Existing objects with a
+            // different noun are preserved below rather than removed from the
+            // live editor.
             if (existing != nullptr && existing->GetNounID() == source.nounID)
             {
+                if (money < source.cost)
+                {
+                    ranOut = true;
+                    continue;
+                }
                 UpdateExistingObject(existing, target, layout, source);
                 {
                     char line[192];
@@ -710,11 +684,27 @@ namespace
                 continue;
             }
 
-            // A city's objects share owner/political bookkeeping. Creating a
-            // replacement first and then destroying the old slot object lets
-            // DestroyInstance invalidate the new object too. Clear the old
-            // object before creating its replacement.
-            RemoveExisting(city, target);
+            // Replacing an occupied slot requires removing the live object
+            // from its layout, city container, and noun manager. The editor
+            // can still own a reference to that building/turret/ornament, so
+            // this path is unsafe while pasting into a colony. Preserve it
+            // unchanged and continue applying the pattern to empty slots.
+            if (existing != nullptr)
+            {
+                char line[160];
+                _snprintf_s(line, _countof(line), _TRUNCATE,
+                    "keep occupied slot %u noun %08X (pattern noun %08X)",
+                    static_cast<unsigned>(index), existing->GetNounID(), source.nounID);
+                WriteDiagnosticLine(L"colony-apply.log", line);
+                continue;
+            }
+
+            if (money < source.cost)
+            {
+                ranOut = true;
+                continue;
+            }
+
             Simulator::cGameData* replacement = CreatePatternObject(city, source);
             if (replacement == nullptr)
             {
@@ -764,18 +754,114 @@ namespace
                 WriteDiagnosticLine(L"colony-apply.log", line);
             }
             money -= source.cost;
+            if (source.kind == PatternKind::Building || source.kind == PatternKind::Turret)
+                ++createdColonyImprovements;
         }
         return true;
     }
 
-    bool ApplyToCity(Simulator::cCity* city, int& money, bool& ranOut)
+    bool ApplyToCity(Simulator::cCity* city, int& money, bool& ranOut,
+        int& createdColonyImprovements)
     {
         if (!HasMatchingTopology(city)) return false;
-        const bool buildings = ApplyLayout(city, city->mBuildingsLayout, sPattern.buildings, money, ranOut);
-        const bool decorations = ApplyLayout(city, city->mDecorationsLayout, sPattern.decorations, money, ranOut);
-        const bool turrets = ApplyLayout(city, city->mTurretsLayout, sPattern.turrets, money, ranOut);
-        Simulator::cCity::ProcessBuildingUpdate(city);
+        const bool buildings = ApplyLayout(city, city->mBuildingsLayout, sPattern.buildings, money, ranOut,
+            createdColonyImprovements);
+        const bool decorations = ApplyLayout(city, city->mDecorationsLayout, sPattern.decorations, money, ranOut,
+            createdColonyImprovements);
+        const bool turrets = ApplyLayout(city, city->mTurretsLayout, sPattern.turrets, money, ranOut,
+            createdColonyImprovements);
+        // ProcessBuildingUpdate drives the open community-editor UI. Calling
+        // it for an off-screen city is unsafe and was the remaining all-city
+        // crash path; those cities are reconciled by the normal model update.
+        if (IsActivelyEditedPlayerCity(city))
+            Simulator::cCity::ProcessBuildingUpdate(city);
         return buildings && decorations && turrets;
+    }
+
+    bool HasSelectedCityBuilding()
+    {
+        Simulator::cSimulatorSpaceGame* game = Simulator::cSimulatorSpaceGame::Get();
+        return game != nullptr && game->mpCommunityEditor != 0 && game->mpSelectedBuilding != 0;
+    }
+
+    bool IsUsablePaletteWindow(UTFWin::IWindow* window)
+    {
+        for (UTFWin::IWindow* current = window; current != nullptr; current = current->GetParent())
+        {
+            const UTFWin::WindowFlags flags = current->GetFlags();
+            if ((flags & UTFWin::kWinFlagVisible) == 0 ||
+                (flags & UTFWin::kWinFlagEnabled) == 0)
+                return false;
+        }
+        return true;
+    }
+
+    void FindPaletteItems(UTFWin::IWindow* window, Palettes::PaletteItem::ItemType itemType,
+        std::vector<Palettes::StandardItemUI*>& matches)
+    {
+        if (window == nullptr) return;
+        for (UTFWin::IWinProc* procedure : window->procedures())
+        {
+            Palettes::PalettePageUI* page = object_cast<Palettes::PalettePageUI>(procedure);
+            if (page == nullptr) continue;
+            for (const StandardItemUIPtr& itemUI : page->mStandardItems)
+            {
+                if (itemUI != nullptr && itemUI->mpItem != nullptr &&
+                    itemUI->mpItem->mTypeID == itemType &&
+                    IsUsablePaletteWindow(itemUI->mpWindow.get()))
+                    matches.push_back(itemUI.get());
+            }
+        }
+        for (UTFWin::IWindow* child : window->children())
+            FindPaletteItems(child, itemType, matches);
+    }
+
+    // A manual palette click normally establishes mpSelectedBuilding. Pasting
+    // cannot rely on the player having made that click, so select one random
+    // eligible Sporepedia entry from the open planner palette instead. The
+    // item type preserves the slot category (building versus turret).
+    bool SelectRandomPaletteItem(Palettes::PaletteItem::ItemType itemType)
+    {
+        std::vector<Palettes::StandardItemUI*> matches;
+        FindPaletteItems(WindowManager.GetMainWindow(), itemType, matches);
+        if (matches.empty()) return false;
+
+        const size_t index = static_cast<size_t>(GetTickCount64()) % matches.size();
+        UTFWin::IWindow* itemWindow = matches[index]->mpWindow.get();
+        UTFWin::Message click{};
+        click.source = itemWindow;
+        click.eventType = UTFWin::kMsgButtonClick;
+        WindowManager.SendMsg(itemWindow, itemWindow, click, true);
+        return HasSelectedCityBuilding();
+    }
+
+    bool EnsureSelectedCityItem()
+    {
+        if (HasSelectedCityBuilding()) return true;
+        for (const PatternSlot& slot : sPattern.buildings)
+        {
+            if (slot.kind == PatternKind::Building)
+                return SelectRandomPaletteItem(Palettes::PaletteItem::kItemCityBuilding);
+        }
+        for (const PatternSlot& slot : sPattern.turrets)
+        {
+            if (slot.kind == PatternKind::Turret)
+                return SelectRandomPaletteItem(Palettes::PaletteItem::kItemCityTurret);
+        }
+        return false;
+    }
+
+    void AwardColonyImprovementProgress(int improvements)
+    {
+        if (improvements <= 0) return;
+        Simulator::cSimulatorSpaceGame* game = Simulator::cSimulatorSpaceGame::Get();
+        if (game == nullptr || game->mpBadgeManager == nullptr) return;
+
+        // Count each newly pasted building or turret toward the requested
+        // Colonist badge progress. Existing-object updates and decorations do
+        // not create a new colony improvement.
+        game->mpBadgeManager->AddToBadgeProgress(
+            Simulator::BadgeManagerEvent::ReqPlanetsColonized, improvements);
     }
 
     void SetAllCaptionColors(UTFWin::IButton* button, Math::Color color)
@@ -935,6 +1021,15 @@ namespace
                 Math::Color(240, 150, 60, 255), 8000);
             return;
         }
+        // The game factory dereferences the active palette selection. If the
+        // player has not selected one, make a matching random selection from
+        // the visible, unlocked Sporepedia palette before any city is changed.
+        if (!EnsureSelectedCityItem())
+        {
+            ShowStatus(u"No compatible unlocked Sporepedia building is available for this pattern.",
+                Math::Color(240, 150, 60, 255), 8000);
+            return;
+        }
         Simulator::cEmpire* empire = Simulator::GetPlayerEmpire();
         if (empire == nullptr)
         {
@@ -976,6 +1071,7 @@ namespace
         int money = std::max(0, empire->mEmpireMoney);
         bool ranOut = false;
         bool topologyFailure = false;
+        int createdColonyImprovements = 0;
         {
             char line[192];
             _snprintf_s(line, _countof(line), _TRUNCATE,
@@ -997,7 +1093,7 @@ namespace
                 static_cast<unsigned>(city->mDecorationsLayout.mSlots.size()),
                 static_cast<unsigned>(city->mTurretsLayout.mSlots.size()), money);
             WriteDiagnosticLine(L"colony-apply.log", line);
-            if (!ApplyToCity(city, money, ranOut)) topologyFailure = true;
+            if (!ApplyToCity(city, money, ranOut, createdColonyImprovements)) topologyFailure = true;
             char done[128];
             _snprintf_s(done, _countof(done), _TRUNCATE,
                 "apply city %08X done money=%d",
@@ -1006,6 +1102,7 @@ namespace
         }
         empire->mEmpireMoney = money;
         GameNounManager.UpdateModels();
+        AwardColonyImprovementProgress(createdColonyImprovements);
 
         if (ranOut)
             ShowStatus(u"Build incomplete: funds ran out.", Math::Color(240, 75, 75, 255), 8000);
@@ -1023,9 +1120,16 @@ namespace
             return;
         }
 
-        int64_t cost = PatternCost();
+        int64_t cost = 0;
         if (sHoveredButton == kApplyAllButtonID)
-            cost *= static_cast<int64_t>(GetPlayerColonies().size());
+        {
+            for (Simulator::cCity* city : GetPlayerColonies())
+                cost += PatternCostForCity(city);
+        }
+        else
+        {
+            cost = PatternCostForCity(FindEditedCity());
+        }
         Simulator::cEmpire* empire = Simulator::GetPlayerEmpire();
         const bool affordable = empire != nullptr && cost <= empire->mEmpireMoney;
 

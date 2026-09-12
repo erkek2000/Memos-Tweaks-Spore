@@ -1,4 +1,6 @@
-﻿Packing project ...
+﻿Eyl 12, 2026 12:41:03 ÖS java.util.prefs.WindowsPreferences <init>
+WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0xffffffff80000001. Windows RegCreateKeyEx(...) returned error code 5.
+Packing project ...
 |                                                                                                    |
 
 |======>                                                                                               |   00:00

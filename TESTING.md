@@ -1,5 +1,19 @@
 # Verification and play-test checklist
 
+The compact validation checklist is in [`TODO.md`](TODO.md). Use the detailed
+procedures in this file when testing a release build.
+
+## Starting-homeworld spice test
+
+Start several disposable new games and confirm each newly generated homeworld
+receives a valid spice selected from the game's space-trading spice list. The
+native red result should be replaced when another eligible spice exists, and
+the color shown in Space view must agree with the assigned spice. Then load an
+existing save whose homeworld already has a spice assigned and verify the
+runtime leaves both its spice key and displayed color unchanged. The hook is
+limited to an unassigned homeworld during native spice assignment; include an
+existing save with an empty spice key in the test if available.
+
 ## Runtime Bio Protector test
 
 Static compilation verifies the detour signature against the public ModAPI SDK,
@@ -47,7 +61,8 @@ setter, but this behavior is not considered proven until these checks pass.
 
 ## Colony building shortcut test
 
-Open the planner for an owned Space-stage colony. Verify **1** selects House,
+Open the planner for an owned Space-stage colony. Confirm the central keyboard
+hook is reported as attached in the game console. Verify **1** selects House,
 **2** Entertainment, **3** Factory, and **4** Turret exactly as clicking the
 corresponding visible palette item, including the normal saved-design and
 placement flow. Test a disabled or unavailable item and confirm the shortcut
@@ -56,7 +71,8 @@ game behavior. Also verify Ctrl/Alt/Shift plus a number is not consumed.
 
 ## Space hotbar keyboard test
 
-Outside the colony planner, open every Space tool tab in turn and press the
+Confirm the central keyboard hook is reported as attached. Outside the colony
+planner, open every Space tool tab in turn and press the
 number printed for each visible slot. Verify the corresponding tool or cargo
 item follows exactly the same selection/use path as clicking it, including
 disabled, unavailable, depleted, and recharging slots. Test **1** through
@@ -83,9 +99,12 @@ are not compatible with regular colony templates.
 Hover each apply button. Verify the displayed required Sporebucks matches one
 colony or all colonies respectively, is green when the current balance covers
 it, is red otherwise, and always includes the warning that construction runs
-only until funds run out. Apply to a differently arranged colony and verify its
-existing structures are replaced, empty saved slots are cleared, orientations
-follow the target colony, and exactly the shown construction amount is charged.
+only until funds run out. Apply to a partially occupied colony while a palette
+building remains selected. Confirm there is no crash: same-noun structures are
+updated in place, empty target slots can be filled, and an occupied slot whose
+noun differs from the saved pattern remains unchanged. Saved empty slots must
+not demolish target buildings, turrets, or decorations. Confirm orientations
+follow the target colony and the shown cost excludes preserved mismatched slots.
 
 Repeat with too little money. Confirm affordable slots build in order,
 unaffordable occupied slots remain unchanged, the balance never becomes
@@ -96,6 +115,13 @@ colonies persist without missing or duplicated objects. Also cancel a planner
 session once and document whether direct pattern changes follow the game's
 normal cancel behavior; do not use this build on the main galaxy until that is
 confirmed.
+
+Clear the current palette selection and apply again. The tool should choose an
+enabled, visible Sporepedia entry compatible with the saved layout's building
+or turret category; it must stop cleanly with a status message when no
+compatible entry is available. Confirm newly created buildings and turrets
+advance the Colonist badge count once each, while in-place updates and
+decorations add no progress.
 
 After copying, confirm
 `%APPDATA%\Spore\ERKEK2000_QoL\colony-pattern.bin` exists. Close Spore fully,
@@ -132,11 +158,12 @@ reported. Copying must not crash, and moving the mouse over the apply buttons
 after a copy must not crash (both were fixed in 0.5.9/0.5.10).
 
 Apply the pattern to a colony that already has buildings and ornaments in the
-same slots and confirm the equipment is replaced without a crash; the apply log
-must show `update slot N noun ...` lines for same-noun slots instead of
-destroy/create pairs. Confirm the pasted buildings, turrets, and decorations are
-upright and face the target colony's direction (not sideways), including when
-pasting into the same colony. Confirm that a target colony holding a special
+same slots. Same-noun objects should be updated in place, with `update slot N
+noun ...` lines in the apply log; no occupied object should be removed or
+replaced. Confirm mismatched occupied objects remain intact. Confirm the pasted
+buildings, turrets, and decorations are upright and face the target colony's
+direction (not sideways), including when pasting into the same colony. Confirm
+that a target colony holding a special
 structure (Bio Protector or any object whose slot the pattern does not
 recreate) keeps that structure: its slot must be left unchanged.
 
@@ -233,12 +260,12 @@ galaxy is a valid regression test; creating a separate galaxy is not required.
 Built using the installed SporeModder FX packer, then reopened the result with
 SMFX's DBPF parser. `tools/VerifyPackage.java` checks the actual compiled data:
 
-- 477 original Kisu resource IDs become 368 IDs in this build.
+- All 477 original Kisu resource IDs are retained in this build.
 - No duplicate IDs and no unexpected additions/removals.
-- 110 tiered badge overrides omitted so vanilla supplies those resources.
-- Nine restored properties across five resources match the decoded vanilla
-  PatchData values. All other fields in those resources match Kisu.
-- 361 remaining resources are byte-identical to Kisu, including the Captain's
+- All 110 Kisu tiered badge overrides retained.
+- Configured restored properties match the staged source and the decoded
+  vanilla PatchData values. All other fields in those resources match Kisu.
+- 471 inherited resources are byte-identical to Kisu, including the Captain's
   cargo reward, the GA package priority signature, model, PNGs, and localization.
 - One editor-only name dictionary is regenerated by SMFX.
 
@@ -246,8 +273,8 @@ See `reports/verification.txt` and `reports/SHA256.txt` for the build output.
 The ZIP installer was reopened separately: it contains exactly the compiled
 package, x86 runtime DLL, and a valid Galactic Adventures `ModInfo.xml`. The
 embedded package and DLL SHA-256 values match the standalone files. The DLL
-imports `SporeModAPI.dll` and the SDK's `CreateMission` address. These are
-static checks, not gameplay tests.
+imports `SporeModAPI.dll` and the SDK's `CreateMission` and
+`AssignPlanetSpice` addresses. These are static checks, not gameplay tests.
 
 The package foundation from version 0.3.0 additionally tests configuration at
 the compiled-package level.

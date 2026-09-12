@@ -1,4 +1,4 @@
-<mod displayName="ERKEK2000 QoL Runtime 0.5.12" unique="ERKEK2000QoLRuntime" description="Runtime ERKEK2000 QoL: instant native dialogue opening, persistent reusable colony patterns, slow non-stacking Crop Circle uplift, Space hotbar keys, Bio Protector immunity, dialogue and building shortcuts, galaxy-map spice pickup, and cargo-limit repair." installerSystemVersion="1.0.1.1" hasCustomInstaller="true" dllsBuild="2.5.20">
+<mod displayName="ERKEK2000 QoL Runtime 0.5.13" unique="ERKEK2000QoLRuntime" description="New-game homeworld spice randomization; central-input ESC/TAB, colony building and Space hotbar shortcuts; crash-safe occupied-city pattern apply; Kisu badge tweaks; Bio Protector immunity; Crop Circle uplift; spice pickup; cargo repair." installerSystemVersion="1.0.1.1" hasCustomInstaller="true" dllsBuild="2.5.20">
     <prerequisite game="GalacticAdventures">ERKEK2000_QoL_Runtime.package</prerequisite>
     <prerequisite>ERKEK2000_QoL_Runtime.dll</prerequisite>
 </mod>

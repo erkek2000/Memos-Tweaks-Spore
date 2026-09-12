@@ -65,24 +65,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="BuildingKeyboardShortcuts.h" />
     <ClInclude Include="CargoStackLimit.h" />
     <ClInclude Include="ColonyPattern.h" />
     <ClInclude Include="CropCircleUplift.h" />
     <ClInclude Include="CommKeyboardShortcuts.h" />
     <ClInclude Include="GalaxySpiceCollector.h" />
-    <ClInclude Include="SpaceHotbarKeyboardShortcuts.h" />
+    <ClInclude Include="KeyboardShortcuts.h" />
+    <ClInclude Include="StartingHomeworldSpice.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BuildingKeyboardShortcuts.cpp" />
     <ClCompile Include="CargoStackLimit.cpp" />
     <ClCompile Include="ColonyPattern.cpp" />
     <ClCompile Include="CropCircleUplift.cpp" />
     <ClCompile Include="CommKeyboardShortcuts.cpp" />
     <ClCompile Include="GalaxySpiceCollector.cpp" />
-    <ClCompile Include="SpaceHotbarKeyboardShortcuts.cpp" />
+    <ClCompile Include="KeyboardShortcuts.cpp" />
+    <ClCompile Include="StartingHomeworldSpice.cpp" />
     <ClCompile Include="dllmain.cpp">
       <PrecompiledHeader></PrecompiledHeader>
     </ClCompile>

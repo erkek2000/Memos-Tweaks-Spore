@@ -21,6 +21,25 @@ planner internals are not exposed by the public ModAPI SDK.
   named constructor was found in the March2017 import. This address must not be
   called or patched in the Steam build.
 
+## Starting-homeworld spice assignment
+
+The SDK exposes `cSpaceTrading::AssignPlanetSpice(cPlanetRecord*, bool)` and
+documents that it chooses from `cSpaceTrading::mSpices`, writing the selected
+key to `cPlanetRecord::mSpiceGen`. `mSpiceGen.instanceID == 0` means the record
+has no spice assignment. The runtime detour calls the native assignment first,
+then, only for an unassigned homeworld on a non-forced assignment, chooses a
+random entry from the same spice list while excluding the native result when
+alternatives exist. It updates the generated `cPlanet` spice color from the
+selected trading object's `spaceEconomySpiceColor` property (`0x058CBB75`).
+
+This is a generation-path proxy for “new game”; the SDK exposes no dedicated
+new-game callback for this choice. It relies on an existing save's homeworld
+already having `mSpiceGen` populated. An existing save with an empty spice key
+could still enter the detour, so the test in `TODO.md` must include that edge
+case if such a save can be found. Existing assigned homeworlds bypass the
+randomization. No in-game result has yet confirmed the timing or displayed
+color.
+
 ## Community editor findings
 
 Verified from the current SDK headers:
@@ -262,12 +281,33 @@ dist linker map (`base 0x73330000`):
   the same noun. Twelve earlier creates on empty slots in that run succeeded.
   Fix (0.5.10): a target slot that already holds the same noun is updated in
   place (definition, model key, scale, position, orientation, model-changed
-  flag); destroy/create is used only when the noun must change. The apply log
-  now prints `update slot N noun ...` for those slots.
+  flag); the earlier implementation destroyed/recreated only when the noun
+  differed. The apply log now prints `update slot N noun ...` for same-noun
+  slots.
 
 The apply log from that run also shows the 0.5.9 orientation path working:
 `create slot` lines carry the per-slot surface frame, and the copy log's frame
 values match the compiled `PlanetModel.GetOrientation` path.
+
+## Partially occupied colony paste crash (2026-09-12)
+
+The latest in-game reproduction copied a city, left a building selected in the
+planner, then applied the new pattern to a partially occupied city. The
+`colony-apply.log` shows the active city and several successful same-noun
+in-place updates, then ends at `destroy noun 018EA2CC ...` on a later occupied
+building slot. Since the old log line was written immediately before
+`cLayoutSlot::RemoveObject`, `cCity::RemoveBuilding`, and
+`GameNounManager::DestroyInstance`, it localizes the fault to that destructive
+replacement path but does not identify which of those calls faulted.
+
+Version 0.5.13 removes that deletion path entirely. Pattern apply may update a
+same-noun object in place or create into an empty slot, but it preserves any
+occupied slot whose noun differs from the saved pattern; saved empty slots no
+longer demolish target objects. Hovered cost is computed from only the updates
+and empty-slot creations the apply path can perform. This trades full overwrite
+semantics for keeping editor-owned references valid. Validate the exact
+selected-palette/partially-built-city reproduction in a disposable galaxy; see
+`TESTING.md`.
 
 ## Supported colony object nouns
 

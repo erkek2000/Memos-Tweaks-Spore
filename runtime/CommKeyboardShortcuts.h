@@ -2,7 +2,7 @@
 
 namespace ERKEK2000QoL
 {
-    void InstallCommKeyboardShortcuts();
-    void RemoveCommKeyboardShortcuts();
+    void InstallFastDialogueOpening();
+    void RemoveFastDialogueOpening();
     void AttachDialogueSpeedDetour();
 }

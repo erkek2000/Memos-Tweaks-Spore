@@ -1,4 +1,5 @@
 ﻿{
+    "InstantPlanetaryDialogue":  false,
     "CloseDialogueWithEscape":  true,
     "RestoreCoreTravelRestriction":  true,
     "RestoreVanillaHappinessBoosterCooldown":  false,
@@ -7,7 +8,6 @@
     "RestoreVanillaMaximumTradeRoutes":  false,
     "PreventBioDisastersWithBioProtector":  true,
     "RestoreVanillaHomeworldSpiceProduction":  false,
-    "InstantPlanetaryDialogue":  false,
     "RestoreVanillaUberTurretCooldown":  false,
     "CropCircleUplift":  true,
     "BuildingKeyboardShortcuts":  true,
@@ -31,8 +31,8 @@
                    "HappinessBoosterCooldownSeconds":  30,
                    "EntertainmentCost":  12800,
                    "SpiceStorageCooldownSeconds":  30,
-                   "CropCircleUpliftIntervalSeconds":  1200,
                    "HomeworldSpiceProductionMultiplier":  0.025,
+                   "CropCircleUpliftIntervalSeconds":  1200,
                    "LoyaltyBoosterCooldownSeconds":  30,
                    "EmbassyCooldownSeconds":  30,
                    "CoreTravelMaximum":  100,
@@ -49,7 +49,7 @@
                    "UberTurretCooldownSeconds":  30,
                    "SpiceProductionMultiplier":  0.0005
                },
-    "RestoreVanillaBadgeRequirements":  true,
+    "RestoreVanillaBadgeRequirements":  false,
     "RestoreGeneralSpiceProduction":  true,
     "RestoreGroxSpreadRadius":  true,
     "SpaceHotbarKeyboardShortcuts":  true,

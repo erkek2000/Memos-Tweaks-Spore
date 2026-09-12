@@ -1,7 +1,9 @@
 @{
     # These switches are applied when the package is rebuilt. They are not read
     # live by Spore, and changing them does not alter an already-built package.
-    RestoreVanillaBadgeRequirements = $true
+    # Retain Kisu's modified requirements and rewards for all badge tiers.
+    # Set true only to restore vanilla badge requirements on a future build.
+    RestoreVanillaBadgeRequirements = $false
     RestoreGroxExclusiveRadius      = $true
     RestoreGroxSpreadRadius         = $true
     # Optional inherited Kisu galaxy-generation changes. These remain at

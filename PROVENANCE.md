@@ -1,11 +1,14 @@
 # Inputs and build provenance
 
 Created 2026-09-08 from the user's local feature specification and game files.
-Original Kisu mod and both feature documents were preserved.
+The feature-request scope and current decisions are consolidated in
+[`Implemented Features.md`](Implemented%20Features.md) and [`TODO.md`](TODO.md);
+the former duplicate feature, hold, issue, and implementation summaries were
+absorbed during the documentation cleanup.
 
 | Input | Location / SHA-256 |
 | --- | --- |
-| Specification | `mod-features.md` (current), with `mod-features-old.md` retained as history |
+| Specification | User's original local feature request; current coverage is indexed in `Implemented Features.md` and `TODO.md` |
 | Kisu 1.5 | `../KisuTweaks-1.5/KisuTweaks-1.5/KisuTweaks.package` |
 | Kisu package SHA-256 | `366C74E145B6938211177D90FA33F91DB79D0E8179C33E72A08349040826F6E6` |
 | SMFX 2.2.27 | `../Tools/SporeModderFX/SporeModderFX.jar` |

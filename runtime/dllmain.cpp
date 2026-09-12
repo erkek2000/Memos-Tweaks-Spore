@@ -1,11 +1,11 @@
 #include "stdafx.h"
-#include "BuildingKeyboardShortcuts.h"
 #include "CommKeyboardShortcuts.h"
 #include "CargoStackLimit.h"
 #include "ColonyPattern.h"
 #include "CropCircleUplift.h"
 #include "GalaxySpiceCollector.h"
-#include "SpaceHotbarKeyboardShortcuts.h"
+#include "KeyboardShortcuts.h"
+#include "StartingHomeworldSpice.h"
 
 namespace
 {
@@ -45,14 +45,11 @@ member_detour(PreventBioDisasterWithProtector, Simulator::cMissionManager,
 
 void Initialize()
 {
-#if ERKEK_BUILDING_SHORTCUTS
-    ERKEK2000QoL::InstallBuildingKeyboardShortcuts();
+#if ERKEK_BUILDING_SHORTCUTS || ERKEK_SPACE_HOTBAR_SHORTCUTS || ERKEK_CLOSE_WITH_ESCAPE || ERKEK_CLOSE_WITH_TAB
+    ERKEK2000QoL::InstallKeyboardShortcuts();
 #endif
-#if ERKEK_SPACE_HOTBAR_SHORTCUTS
-    ERKEK2000QoL::InstallSpaceHotbarKeyboardShortcuts();
-#endif
-#if ERKEK_CLOSE_WITH_ESCAPE || ERKEK_CLOSE_WITH_TAB || ERKEK_FAST_DIALOGUE_OPENING
-    ERKEK2000QoL::InstallCommKeyboardShortcuts();
+#if ERKEK_FAST_DIALOGUE_OPENING
+    ERKEK2000QoL::InstallFastDialogueOpening();
 #endif
 #if ERKEK_COLLECT_GALAXY_SPICE
     ERKEK2000QoL::InstallGalaxySpiceCollector();
@@ -76,8 +73,8 @@ void Dispose()
 #if ERKEK_COLONY_PATTERN_BUTTONS
     ERKEK2000QoL::RemoveColonyPatternButtons();
 #endif
-#if ERKEK_SPACE_HOTBAR_SHORTCUTS
-    ERKEK2000QoL::RemoveSpaceHotbarKeyboardShortcuts();
+#if ERKEK_BUILDING_SHORTCUTS || ERKEK_SPACE_HOTBAR_SHORTCUTS || ERKEK_CLOSE_WITH_ESCAPE || ERKEK_CLOSE_WITH_TAB
+    ERKEK2000QoL::RemoveKeyboardShortcuts();
 #endif
 #if ERKEK_ENFORCE_CARGO_STACK_LIMIT
     ERKEK2000QoL::RemoveCargoStackLimit();
@@ -85,16 +82,14 @@ void Dispose()
 #if ERKEK_COLLECT_GALAXY_SPICE
     ERKEK2000QoL::RemoveGalaxySpiceCollector();
 #endif
-#if ERKEK_CLOSE_WITH_ESCAPE || ERKEK_CLOSE_WITH_TAB || ERKEK_FAST_DIALOGUE_OPENING
-    ERKEK2000QoL::RemoveCommKeyboardShortcuts();
-#endif
-#if ERKEK_BUILDING_SHORTCUTS
-    ERKEK2000QoL::RemoveBuildingKeyboardShortcuts();
+#if ERKEK_FAST_DIALOGUE_OPENING
+    ERKEK2000QoL::RemoveFastDialogueOpening();
 #endif
 }
 
 void AttachDetours()
 {
+    ERKEK2000QoL::AttachStartingHomeworldSpiceDetour();
 #if ERKEK_PREVENT_BIO_DISASTERS
     PreventBioDisasterWithProtector::attach(
         GetAddress(Simulator::cMissionManager, CreateMission));

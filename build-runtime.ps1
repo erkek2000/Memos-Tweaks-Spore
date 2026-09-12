@@ -4,6 +4,17 @@ param(
     [string]$MSBuildPath = 'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe'
 )
 $ErrorActionPreference = 'Stop'
+function Get-Sha256FileRecord([string]$Path) {
+    $sha256 = [System.Security.Cryptography.SHA256]::Create()
+    $stream = [System.IO.File]::OpenRead($Path)
+    try {
+        $hash = [System.BitConverter]::ToString($sha256.ComputeHash($stream)).Replace('-', '')
+    } finally {
+        $stream.Dispose()
+        $sha256.Dispose()
+    }
+    [pscustomobject]@{ Hash = $hash; Path = $Path }
+}
 
 # Some launchers supply both Path and PATH in the inherited environment.
 # .NET Framework MSBuild treats those case-insensitive names as duplicate
@@ -28,7 +39,11 @@ if (!(Test-Path -LiteralPath $baseLibrary) -or !(Test-Path -LiteralPath $importL
     -ConfigurationFile $ConfigurationFile
 if ($LASTEXITCODE -ne 0) { throw 'Data-package build failed.' }
 
-$runtimeConfig = Import-PowerShellDataFile -LiteralPath $ConfigurationFile
+$runtimeConfig = @{}
+Import-LocalizedData -BindingVariable runtimeConfig `
+    -BaseDirectory (Split-Path -Parent $ConfigurationFile) `
+    -FileName ([System.IO.Path]::GetFileNameWithoutExtension($ConfigurationFile)) `
+    -UICulture 'en-US'
 function ConvertTo-CompilerBoolean([bool]$Value) {
     if ($Value) { return 1 }
     return 0
@@ -36,6 +51,8 @@ function ConvertTo-CompilerBoolean([bool]$Value) {
 $preventBioDisasters = ConvertTo-CompilerBoolean $runtimeConfig.PreventBioDisastersWithBioProtector
 $closeWithEscape = ConvertTo-CompilerBoolean $runtimeConfig.CloseDialogueWithEscape
 $closeWithTab = ConvertTo-CompilerBoolean $runtimeConfig.CloseDialogueWithTab
+$closeWithSpacebar = ConvertTo-CompilerBoolean $runtimeConfig.CloseDialogueWithSpacebar
+$closeWithEnd = ConvertTo-CompilerBoolean $runtimeConfig.CloseDialogueWithEnd
 $fastDialogueOpening = ConvertTo-CompilerBoolean $runtimeConfig.FastDialogueOpening
 $collectGalaxySpice = ConvertTo-CompilerBoolean $runtimeConfig.CollectSpiceAtGalaxyStars
 $enforceCargoStackLimit = ConvertTo-CompilerBoolean $runtimeConfig.EnforceCargoStackLimit
@@ -61,6 +78,8 @@ $buildLog = Join-Path $PSScriptRoot 'reports\runtime-build.log'
     /p:RuntimePreventBioDisasters=$preventBioDisasters `
     /p:RuntimeCloseWithEscape=$closeWithEscape `
     /p:RuntimeCloseWithTab=$closeWithTab `
+    /p:RuntimeCloseWithSpacebar=$closeWithSpacebar `
+    /p:RuntimeCloseWithEnd=$closeWithEnd `
     /p:RuntimeFastDialogueOpening=$fastDialogueOpening `
     /p:RuntimeCollectGalaxySpice=$collectGalaxySpice `
     /p:RuntimeEnforceCargoStackLimit=$enforceCargoStackLimit `
@@ -125,7 +144,10 @@ try {
     } finally { $zip.Dispose() }
 } finally { $stream.Dispose() }
 
-Get-FileHash -Algorithm SHA256 -LiteralPath $package, $dll, $archive, $packageOnlyArchive |
+$hashRecords = foreach ($path in @($package, $dll, $archive, $packageOnlyArchive)) {
+    Get-Sha256FileRecord -Path $path
+}
+$hashRecords |
     Select-Object Hash, Path | Format-List | Out-String |
     Set-Content -LiteralPath (Join-Path $PSScriptRoot 'reports\SHA256.txt') -Encoding UTF8
 

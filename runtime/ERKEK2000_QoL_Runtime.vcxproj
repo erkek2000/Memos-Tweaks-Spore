@@ -25,6 +25,8 @@
     <RuntimePreventBioDisasters Condition="'$(RuntimePreventBioDisasters)'==''">1</RuntimePreventBioDisasters>
     <RuntimeCloseWithEscape Condition="'$(RuntimeCloseWithEscape)'==''">1</RuntimeCloseWithEscape>
     <RuntimeCloseWithTab Condition="'$(RuntimeCloseWithTab)'==''">1</RuntimeCloseWithTab>
+    <RuntimeCloseWithSpacebar Condition="'$(RuntimeCloseWithSpacebar)'==''">1</RuntimeCloseWithSpacebar>
+    <RuntimeCloseWithEnd Condition="'$(RuntimeCloseWithEnd)'==''">1</RuntimeCloseWithEnd>
     <RuntimeCollectGalaxySpice Condition="'$(RuntimeCollectGalaxySpice)'==''">1</RuntimeCollectGalaxySpice>
     <RuntimeEnforceCargoStackLimit Condition="'$(RuntimeEnforceCargoStackLimit)'==''">1</RuntimeEnforceCargoStackLimit>
     <RuntimeBuildingShortcuts Condition="'$(RuntimeBuildingShortcuts)'==''">1</RuntimeBuildingShortcuts>
@@ -52,7 +54,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;EXECUTABLE_TYPE=SPORE_STEAM;PATCHED_SPORE=1;ERKEK_PREVENT_BIO_DISASTERS=$(RuntimePreventBioDisasters);ERKEK_CLOSE_WITH_ESCAPE=$(RuntimeCloseWithEscape);ERKEK_CLOSE_WITH_TAB=$(RuntimeCloseWithTab);ERKEK_FAST_DIALOGUE_OPENING=$(RuntimeFastDialogueOpening);ERKEK_COLLECT_GALAXY_SPICE=$(RuntimeCollectGalaxySpice);ERKEK_ENFORCE_CARGO_STACK_LIMIT=$(RuntimeEnforceCargoStackLimit);ERKEK_BUILDING_SHORTCUTS=$(RuntimeBuildingShortcuts);ERKEK_SPACE_HOTBAR_SHORTCUTS=$(RuntimeSpaceHotbarShortcuts);ERKEK_COLONY_PATTERN_BUTTONS=$(RuntimeColonyPatternButtons);ERKEK_CROP_CIRCLE_UPLIFT=$(RuntimeCropCircleUplift);ERKEK_HOUSE_COST=$(RuntimeHouseCost);ERKEK_ENTERTAINMENT_COST=$(RuntimeEntertainmentCost);ERKEK_FACTORY_COST=$(RuntimeFactoryCost);ERKEK_TURRET_COST=$(RuntimeTurretCost);ERKEK_CARGO_STACK_LIMIT=$(RuntimeCargoStackLimit);ERKEK_CROP_CIRCLE_UPLIFT_INTERVAL_SECONDS=$(RuntimeCropCircleUpliftIntervalSeconds);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;EXECUTABLE_TYPE=SPORE_STEAM;PATCHED_SPORE=1;ERKEK_PREVENT_BIO_DISASTERS=$(RuntimePreventBioDisasters);ERKEK_CLOSE_WITH_ESCAPE=$(RuntimeCloseWithEscape);ERKEK_CLOSE_WITH_TAB=$(RuntimeCloseWithTab);ERKEK_CLOSE_WITH_SPACEBAR=$(RuntimeCloseWithSpacebar);ERKEK_CLOSE_WITH_END=$(RuntimeCloseWithEnd);ERKEK_FAST_DIALOGUE_OPENING=$(RuntimeFastDialogueOpening);ERKEK_COLLECT_GALAXY_SPICE=$(RuntimeCollectGalaxySpice);ERKEK_ENFORCE_CARGO_STACK_LIMIT=$(RuntimeEnforceCargoStackLimit);ERKEK_BUILDING_SHORTCUTS=$(RuntimeBuildingShortcuts);ERKEK_SPACE_HOTBAR_SHORTCUTS=$(RuntimeSpaceHotbarShortcuts);ERKEK_COLONY_PATTERN_BUTTONS=$(RuntimeColonyPatternButtons);ERKEK_CROP_CIRCLE_UPLIFT=$(RuntimeCropCircleUplift);ERKEK_HOUSE_COST=$(RuntimeHouseCost);ERKEK_ENTERTAINMENT_COST=$(RuntimeEntertainmentCost);ERKEK_FACTORY_COST=$(RuntimeFactoryCost);ERKEK_TURRET_COST=$(RuntimeTurretCost);ERKEK_CARGO_STACK_LIMIT=$(RuntimeCargoStackLimit);ERKEK_CROP_CIRCLE_UPLIFT_INTERVAL_SECONDS=$(RuntimeCropCircleUpliftIntervalSeconds);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

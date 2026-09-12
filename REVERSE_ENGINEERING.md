@@ -410,6 +410,36 @@ the normal update path repeats the adjustment once the screen is active in
 case a dialogue creates the panels asynchronously. This code runs only after
 Space stage loading is finished.
 
+## Native communication exit and input recovery
+
+The native Goodbye button is control `0x05E4F778` in `CommScreen-3.spui` and
+has no serialized command ID. A synthetic `kMsgButtonClick` therefore reports
+command ID 0 and did not close the dialogue in 0.5.16. Runtime 0.5.17 tried
+`cCommManager::HandleSpaceCommAction` / `HandleCivCommAction` with
+`kCnvCommExit`, but crashed before the call because the SDK's C++ layout read
+the event pointer at `manager + 0x1C`; the game's native slot is at `0x20`.
+
+Runtime 0.5.18 fixed the offset and deferred the native action until after the
+central `cGameInputManager::OnKeyDown` callback. The user's test confirmed
+that Space hid the dialogue, but movement, camera zoom, and reopening
+dialogue stayed disabled. The log then showed communication still active.
+This is evidence that the deferred action alone does not unwind the game's
+modal input state. Runtime 0.5.19 calls the original `OnKeyDown` for the same
+close key before the deferred action, allowing the native input state machine
+to process it. The user's later test on the planet's "Speak with the colony"
+dialogue still left the communication event active: `OnKeyDown` returned
+false, the deferred exit returned, and later keys reported `comm=1` while the
+Goodbye button was hidden. Runtime 0.5.20 fixed this by clearing the current
+event and resuming one CommScreen pause after one second; the user confirmed
+controls returned, but reported a one-second delay and a flashing dialogue
+button. Runtime 0.5.21 consumes the close key and checks on the first update
+after the CommScreen root becomes hidden, retrying for at most 250 ms. This
+avoids passing the close key into native input, which returned false in the
+test. In-game testing confirmed that Space closes the colony's "Speak with the
+colony" dialogue, immediately restores movement, zoom, and travel, permits
+reopening, and leaves the Speak button steady. ESC, TAB, End, and submenu
+behavior remain unverified.
+
 ## Crop Circle uplift implementation
 
 Header-verified SDK points used by Runtime 0.5.6:

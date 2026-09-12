@@ -23,6 +23,8 @@
     PreventBioDisastersWithBioProtector = $true
     CloseDialogueWithEscape             = $true
     CloseDialogueWithTab                = $true
+    CloseDialogueWithSpacebar            = $true
+    CloseDialogueWithEnd                 = $true
     FastDialogueOpening                 = $true
     CollectSpiceAtGalaxyStars           = $true
     EnforceCargoStackLimit              = $true

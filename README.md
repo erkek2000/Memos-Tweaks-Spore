@@ -21,13 +21,31 @@ runtime quality-of-life tools.
 
 ## Current build
 
-Version **0.5.13** updates keyboard shortcuts to intercept the game's central
-key-input callback rather than relying on a root-window event. ESC/TAB activate
-the visible native Goodbye action, planner **1–4** select building palette
-items, and number keys are routed to the visible native Space hotbar outside
-the planner. Colony-pattern apply also avoids removing occupied live structures:
-matching nouns can be updated, empty slots can be filled, and occupied
-mismatched slots are preserved to prevent editor-reference crashes.
+Version **0.5.13** was reported to have non-working ESC/TAB dialogue closing
+and planner 1–4 shortcuts. **0.5.14** added diagnostics and relaxed an
+over-strict UI-container enabled check. **0.5.15** added unmodified Spacebar.
+The synthetic Goodbye click in **0.5.16** still reported command ID `00000000`
+and did not close the dialogue. **0.5.17** crashed while reading the current
+event from the wrong manager offset. **0.5.18** reads the game's event slot at
+offset `0x20` and queues the exit action until the input callback returns,
+revalidating the active event and Goodbye button before dispatch. The user
+confirmed this hid the planet's "Speak with the colony" dialogue but left Space
+controls locked and prevented reopening it. **0.5.19** also passed the close
+key through Spore's native input state machine, but the user's log still showed
+the communication event active after the window disappeared. **0.5.20** fixed
+the stuck state, but waited one second and made the planet's dialogue button
+flash. **0.5.21** consumes the shortcut key and recovers as soon as the
+CommScreen root is hidden, retrying for at most 250 ms if the close transition
+spans frames. In-game testing confirmed Space closes the planet's "Speak with
+the colony" dialogue, restores movement, zoom, and travel immediately, allows
+dialogue reopening, and leaves the Speak button steady. ESC, TAB, End, and
+submenu behavior still need testing. Keyboard-hook attachment and key dispatch are logged to
+`%APPDATA%\Spore\ERKEK2000_QoL\keyboard-input.log`. Do not treat the dialogue,
+planner, or Space hotbar controls as working beyond the tested Spacebar path
+until the remaining checks in `TODO.md` pass. Colony-pattern apply avoids
+removing occupied live structures: matching nouns can be updated, empty slots
+can be filled, and occupied mismatched slots are preserved to prevent
+editor-reference crashes.
 
 The installable artifact is
 [`dist/ERKEK2000_QoL_Runtime.sporemod`](dist/ERKEK2000_QoL_Runtime.sporemod).

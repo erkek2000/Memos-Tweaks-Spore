@@ -25,12 +25,44 @@ Protector is installed is expected to continue.
 
 ## Runtime dialogue shortcut test
 
-Open ordinary planetary communication and verify ESC and TAB each activate the
-same Goodbye path as clicking the button. Repeat inside trade, mission, and
-diplomacy submenus: when Goodbye is hidden or disabled, the shortcut must not
-skip confirmation or discard state. Verify TAB no longer changes focus when it
-successfully closes communication, and that both keys retain normal behavior
-everywhere outside communication.
+Known failure in 0.5.13: the user reports ESC and TAB do not close dialogue.
+Build 0.5.14 added diagnostics and relaxed an over-strict UI-container enabled
+check. Build 0.5.15 added Spacebar. Build 0.5.16 added End and a synthetic
+button command ID, but runtime logs showed that ID is zero. The 0.5.17 crash
+dump shows an invalid AddRef when reading the current event from manager offset
+`0x1C`; the native event slot is at `0x20`. Build 0.5.18 reads that slot and
+queues the exit action until the input callback returns, then verifies the same
+event and enabled Goodbye button remain active. The user confirmed 0.5.18 hid
+the dialogue but left Space controls locked and prevented reopening. Build
+0.5.19 also sends the close key through Spore's native input state machine
+before the deferred action. The user's planet "Speak with the colony" test
+still left the same Space communication event active after the window hid;
+the log showed `native input processed=0`, `deferred comm exit action
+returned`, and later keys reporting `comm=1` with Goodbye hidden. The user
+confirmed 0.5.20 restored control, but its one-second delay made the dialogue
+button flash. Build 0.5.21 consumes the close key and recovers on the first
+update where the CommScreen root is hidden, retrying for at most 250 ms if that
+transition spans frames. It releases only the same current Space event and one
+CommScreen pause, leaving queued communication events untouched. On 2026-09-12,
+the user confirmed the Spacebar path closes the colony's "Speak with the colony"
+dialogue, immediately restores movement, zoom, and travel, permits reopening,
+and leaves the Speak button steady. ESC, TAB, End, and submenu behavior remain
+untested. The build writes attachment status and relevant key-routing results to
+`%APPDATA%\Spore\ERKEK2000_QoL\keyboard-input.log`. A log line showing the
+hook attached is not proof that the action succeeded; record the key route and
+visible result separately.
+
+For regression coverage, open the planet's "Speak with the colony" dialogue
+and press Space once. Check for `comm key ... consumed for deferred exit`, `deferred comm
+exit action returned`, and `Space communication state recovered` in the log.
+The recovery line should report `active=0` and show the CommScreen pause count
+dropping by one when a stale pause was present. Then verify ESC, TAB, and End
+also close ordinary
+communication without leaving controls locked. Repeat
+inside trade, mission, and diplomacy submenus: when Goodbye is hidden or
+disabled, no shortcut may skip confirmation or discard state. Verify TAB no
+longer changes focus when it successfully closes communication; modified
+Spacebar and all four keys must retain native behavior outside communication.
 
 ## Runtime dialogue-opening speed test
 
@@ -60,6 +92,11 @@ test in a fresh disposable galaxy. The runtime uses the game's own inventory
 setter, but this behavior is not considered proven until these checks pass.
 
 ## Colony building shortcut test
+
+Known failure in 0.5.13: the user reports planner 1–4 do nothing. In the
+current 0.5.17 build, check `keyboard-input.log` for
+`planner key ... click=... selected=...` after
+each press; no key line means the central hook is not receiving the event.
 
 Open the planner for an owned Space-stage colony. Confirm the central keyboard
 hook is reported as attached in the game console. Verify **1** selects House,
@@ -322,5 +359,5 @@ CargoStack999 package). Run Galactic Adventures through the ModAPI Launcher.
     configured value. The default release should retain 10 seconds for each.
 
 Do not spend a long playthrough on a new galaxy until the cargo test succeeds
-and the provisional Grox spread-radius choice is confirmed. The deferred
-features in `ON-HOLD.md` are not expected to work in this release.
+and the provisional Grox spread-radius choice is confirmed. All incomplete
+features and deferred decisions are tracked in [`TODO.md`](TODO.md).

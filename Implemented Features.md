@@ -54,9 +54,9 @@ configuration table below. The untouched decoded Kisu source is kept under
 | Restore Grox/core distances, general spice rate, colony building costs, and shield recharge | Implemented as package changes with build-time values. |
 | Randomize starting-planet spice | Implemented for an unassigned homeworld during native spice assignment; new-game and old-save edge cases need the checks in `TODO.md`. |
 | Copy/apply a saved colony pattern, with automatic compatible palette selection | Implemented with copy, apply-to-one, apply-to-all, persistence, cost checks, and protected slots. |
-| Use 1/2/3/4 for colony building selection | Implemented through the central game-input hook and native visible palette-item clicks; in-game check pending. |
-| Open planetary dialogue instantly and close with ESC/TAB | Implemented through the central game-input hook and native visible Goodbye action; in-game check pending. |
-| Use number keys to select Space tools | Implemented through the central game-input hook and native visible per-tab hotbar; in-game check pending. |
+| Use 1/2/3/4 for colony building selection | Handler is present; 0.5.13 was reported broken. Build 0.5.14 added diagnostics; current build 0.5.15 is not yet verified in-game. |
+| Open planetary dialogue instantly and close with ESC/TAB/Spacebar/End | In-game testing confirmed the 0.5.21 Spacebar path closes the colony's "Speak with the colony" dialogue, restores movement, zoom, and travel immediately, allows reopening, and leaves the Speak button steady. ESC, TAB, End, and submenu behavior remain unverified. |
+| Use number keys to select Space tools | Handler is present; current build has not yet been confirmed in-game. |
 | Drag and assign a custom hotbar | Not implemented; see `TODO.md`. |
 | Apply a 90%-slower civilization uplift with Crop Circles | Implemented as one non-stacking 20-minute step per successful hit sequence, persisted between launches. |
 | Configure every change before starting a save | Package and runtime settings are build-time configurable; live settings and all inherited-Kisu feature toggles are not implemented. See `TODO.md`. |
@@ -103,11 +103,28 @@ existing-save behavior still needs the in-game check listed in `TODO.md`.
 - A Bio Protector on a planet prevents creation of future `biospherecollapse`
   eco-disaster missions for that planet. A disaster already in progress is not
   cancelled.
-- **ESC** and **TAB** are intercepted by the game's central keyboard-input
-  handler, then activate the communication screen's native Goodbye button only
-  when it is visible and enabled. This avoids relying on the root UI window to
-  receive a focused key event and preserves native mission, trading, and
-  diplomacy confirmation paths when Goodbye is unavailable.
+- ESC, TAB, Spacebar, and End have handlers in the game's central keyboard-input hook, intended
+  to activate the communication screen's native Goodbye button only when it is
+  visible and enabled. Both were reported to do nothing in 0.5.13. Build 0.5.14
+  added diagnostics and relaxed an over-strict UI-container enabled check.
+  Build 0.5.15 added unmodified Spacebar, but the dispatched button-click message
+  did not close the dialogue; runtime logs showed that the Goodbye button's
+  command ID was zero. The 0.5.17 crash dump shows an invalid AddRef while the
+  current event was copied from manager offset `0x1C`; the game's event slot is
+  at `0x20`. Build 0.5.18 reads the native slot and queues Spore's exit action
+  until the key callback returns, then checks the active event and Goodbye
+  button again. The user confirmed that 0.5.18 hid the dialogue but left Space
+  controls locked and prevented reopening dialogue. Build 0.5.19 also sends
+  the key through Spore's native input state machine before the deferred exit.
+  The planet's "Speak with the colony" test still left the event active;
+  0.5.20 restored controls after one second but made the dialogue button flash.
+  Build 0.5.21 consumes the close key and checks for recovery on the first
+  update where the CommScreen root is hidden, with a 250 ms retry window.
+  In-game testing confirmed Space closes the colony Speak dialogue, restores
+  movement, zoom, and travel immediately, allows reopening, and leaves the
+  Speak button steady. ESC, TAB, End, and submenu behavior remain unverified.
+  Shortcuts run only when Goodbye is visible and enabled; otherwise native key
+  behavior passes through.
 - The runtime speeds the native planetary communication screen's opening by
   setting its two main vertical entrance glides to zero duration and offset.
   It does not replace the screen resource or change its content and controls.
@@ -128,17 +145,17 @@ planet. The feature does not collect when merely selecting a star.
 
 - The runtime reapplies the configured cargo maximum to the live Space-stage
   inventory with the game's `SetMaxCargoAmount()` API. Default maximum: 999.
-- In the owned colony planner, unmodified **1**, **2**, **3**, and **4** select
-  the visible House, Entertainment, Factory, and Turret palette entries through
-  the same click path as the UI. They do not place or buy anything by
-  themselves. Planner bindings take priority over hotbar bindings.
-- Outside the colony planner, unmodified **1–9** and **0** where the native
-  panel has a tenth slot are dispatched by the central game-input hook to the
-  visible native Space tool panel. Native tab layout, disabled states,
-  cooldowns, and tool selection remain owned by the game's panel.
+- In the owned colony planner, the handler attempts to map unmodified **1–4**
+  to House, Entertainment, Factory, and Turret palette entries. These did
+  nothing in 0.5.13; build 0.5.14 added diagnostics, and the current 0.5.15
+  build is not yet verified in-game.
+- Outside the colony planner, the handler attempts to route unmodified **1–9**
+  and **0** to the visible native Space tool panel. This has not yet been
+  confirmed in-game.
 
-These shortcuts no longer depend on the main/root UI window receiving a key
-message. In-game acceptance is still pending in `TODO.md`.
+The handler no longer depends on the main/root UI window receiving a focused
+key message, but that change has not made the reported dialogue/planner
+shortcuts work. See the known-failure entries in `TODO.md`.
 
 The specification's draggable custom hotbar is not implemented; these
 shortcuts use existing native per-tab tool slots. See `TODO.md`.
@@ -228,6 +245,8 @@ Runtime DLL switches compiled by `build-runtime.ps1`:
 | `PreventBioDisastersWithBioProtector` | true | Suppress future eco-disaster mission creation on protected planets |
 | `CloseDialogueWithEscape` | true | Map ESC to the native Goodbye action |
 | `CloseDialogueWithTab` | true | Map TAB to the native Goodbye action |
+| `CloseDialogueWithSpacebar` | true | Map unmodified Spacebar to Goodbye when available |
+| `CloseDialogueWithEnd` | true | Map End to the native Goodbye action |
 | `FastDialogueOpening` | true | Shorten the native communication opening animation |
 | `CollectSpiceAtGalaxyStars` | true | Collect stored player-colony spice on star arrival |
 | `EnforceCargoStackLimit` | true | Apply `Values.CargoStackLimit` to live inventory |

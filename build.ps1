@@ -3,6 +3,17 @@ param(
     [string]$ConfigurationFile = (Join-Path $PSScriptRoot 'config.psd1')
 )
 $ErrorActionPreference = 'Stop'
+function Get-Sha256FileRecord([string]$Path) {
+    $sha256 = [System.Security.Cryptography.SHA256]::Create()
+    $stream = [System.IO.File]::OpenRead($Path)
+    try {
+        $hash = [System.BitConverter]::ToString($sha256.ComputeHash($stream)).Replace('-', '')
+    } finally {
+        $stream.Dispose()
+        $sha256.Dispose()
+    }
+    [pscustomobject]@{ Hash = $hash; Path = $Path }
+}
 $ToolDirectory = (Resolve-Path -LiteralPath $ToolDirectory).Path
 $sourceProject = Join-Path $PSScriptRoot 'project'
 $dist = Join-Path $PSScriptRoot 'dist'
@@ -14,7 +25,11 @@ $kisu = Join-Path $PSScriptRoot '..\..\KisuTweaks-1.5\KisuTweaks-1.5\KisuTweaks.
 $commReference = Join-Path $PSScriptRoot 'reference\vanilla\PatchData-CommScreen-3.spui'
 $kisuReference = Join-Path $PSScriptRoot 'reference\kisu'
 $ConfigurationFile = (Resolve-Path -LiteralPath $ConfigurationFile).Path
-$config = Import-PowerShellDataFile -LiteralPath $ConfigurationFile
+$config = @{}
+Import-LocalizedData -BindingVariable config `
+    -BaseDirectory (Split-Path -Parent $ConfigurationFile) `
+    -FileName ([System.IO.Path]::GetFileNameWithoutExtension($ConfigurationFile)) `
+    -UICulture 'en-US'
 $knownOptions = @(
     'RestoreVanillaBadgeRequirements',
     'RestoreGroxExclusiveRadius',
@@ -39,6 +54,8 @@ $knownOptions = @(
     'PreventBioDisastersWithBioProtector',
     'CloseDialogueWithEscape',
     'CloseDialogueWithTab',
+    'CloseDialogueWithSpacebar',
+    'CloseDialogueWithEnd',
     'FastDialogueOpening',
     'CollectSpiceAtGalaxyStars',
     'EnforceCargoStackLimit',
@@ -261,7 +278,7 @@ try {
     Copy-Item -LiteralPath $packageCandidate -Destination $package -Force
     # build-runtime.ps1 adds the DLL and manifest to the installable archive.
     # Do not emit a misleading package-only .sporemod from the runtime edition.
-    Get-FileHash -Algorithm SHA256 -LiteralPath $package |
+    Get-Sha256FileRecord -Path $package |
         Select-Object Hash, Path | Format-List |
         Out-String | Set-Content -LiteralPath (Join-Path $reports 'SHA256.txt') -Encoding UTF8
     $verifyLog | Write-Output

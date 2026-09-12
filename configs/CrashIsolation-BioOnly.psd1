@@ -25,6 +25,7 @@
     PreventBioDisastersWithBioProtector = $true
     CloseDialogueWithEscape             = $false
     CloseDialogueWithTab                = $false
+    CloseDialogueWithSpacebar            = $false
     FastDialogueOpening                 = $false
     CollectSpiceAtGalaxyStars           = $false
     EnforceCargoStackLimit              = $false

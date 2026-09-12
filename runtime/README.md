@@ -6,25 +6,40 @@
 creation returns null and the future eco-disaster is suppressed.
 
 The DLL also randomizes spice when native assignment first reaches an
-unassigned homeworld; an already assigned homeworld is left alone. It installs
-guarded ESC/TAB communication closing, speeds up the native communication
-opening, and collects stored spice from player-controlled colonies when the
-player arrives at their star on the galaxy map. It reapplies the configured
-cargo stack limit to the live Space-stage inventory through
-`SetMaxCargoAmount()`. A detour on the game's central keyboard-input callback
-maps 1/2/3/4 to visible colony-building palette items, routes number keys to the
-visible native Space tool hotbar outside the colony planner, and maps ESC/TAB
-to the visible native communication Goodbye action. This handles keys even
-when focus is on a child UI control; submenu confirmation behavior remains
-native when Goodbye is hidden or disabled.
+unassigned homeworld; an already assigned homeworld is left alone. It has
+ESC/TAB/Spacebar communication-close and planner/hotbar keyboard handlers on
+the game's central input callback. The user reported ESC/TAB did not close
+dialogue and planner 1-4 did nothing in 0.5.13. Build 0.5.14 added diagnostics
+and relaxed an over-strict UI-container enabled check. Build 0.5.15 added
+Spacebar. Build 0.5.16's synthetic Goodbye click logged a zero command ID.
+The 0.5.17 crash dump shows an invalid AddRef from reading the current event at
+manager offset `0x1C`; the native event slot is at `0x20`. Build 0.5.18 reads
+that slot, queues the action until the input callback returns, and rechecks the
+active event and Goodbye button. The user confirmed that it hid the dialogue
+but left Space controls locked and prevented reopening dialogue. Build 0.5.19
+also passed the key through Spore's native input state machine before the
+deferred action. The planet's "Speak with the colony" test still left the
+communication event active after the window disappeared. Build 0.5.20 restored
+control, but waited one second and made the dialogue button flash. Build 0.5.21
+consumes the close key and recovers as soon as the CommScreen root is hidden,
+retrying for at most 250 ms if its close transition spans frames. In-game
+testing confirmed Space closes the planet's "Speak with the colony" dialogue,
+restores movement, zoom, and travel immediately, allows reopening, and leaves
+the Speak button steady. ESC, TAB, End, and submenu behavior remain
+unverified. The number-key Space hotbar path is also awaiting in-game
+confirmation. The DLL speeds up native
+communication opening, collects stored spice from player-controlled colonies
+when the player arrives at their star on the galaxy map, and reapplies the
+configured cargo stack limit to the live Space-stage inventory through
+`SetMaxCargoAmount()`.
 
 The colony planner can copy a layout to a validated persistent file and apply
 it to the edited colony or nearby player colonies on the same planet. The
 apply path preserves protected and already occupied mismatched structures,
 updates matching nouns in place, fills empty slots, selects a random compatible
 Sporepedia item when the palette has no selection, charges available funds,
-and reports progress to the Civs Promoted badge for each newly created
-building or turret. Crop Circles also queue a persistent, slow uplift for
+and reports one Colonist badge-count increment for each newly created building
+or turret. Crop Circles also queue a persistent, slow uplift for
 eligible non-homeworld planets.
 
 Runtime feature switches are read from the root `config.psd1` by
